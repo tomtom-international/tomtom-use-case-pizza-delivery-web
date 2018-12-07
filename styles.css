@@ -1,0 +1,251 @@
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#map {
+    min-height: 100vh;
+    height: 100%;
+    width: 100%;
+}
+
+.z-index {
+    position: relative;
+    z-index: 401;
+}
+
+/* toggle styling */
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 46px;
+    height: 25px;
+}
+
+.switch input {
+    display: none;
+}
+
+.toggle {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.toggle:before {
+    position: absolute;
+    content: "";
+    height: 21px;
+    width: 21px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .toggle {
+    background-color: #BDD731;
+}
+
+input:focus + .toggle {
+    box-shadow: 0 0 1px #BDD731;
+}
+
+input:checked + .toggle:before {
+    -webkit-transform: translateX(21px);
+    -ms-transform: translateX(21px);
+    transform: translateX(21px);
+}
+
+.toggle.round {
+    border-radius: 34px;
+}
+
+.toggle.round:before {
+    border-radius: 50%;
+}
+
+/*toggle styling end*/
+
+.leaflet-control-search-input-container,
+.leaflet-control-search-results-container {
+    width: 100% !important;
+}
+
+.leaflet-control-search-input-container {
+    border: 1px solid #DDD;
+    box-shadow: none;
+    border-radius: 0;
+    height: 40px;
+}
+
+.leaflet-control-search-results-container {
+    position: fixed;
+    margin-top: 35px;
+}
+
+.leaflet-control-search {
+    width: 100%;
+}
+
+.active {
+    border: grey solid 2px;
+    border-radius: 8px;
+    color: red;
+}
+
+.slider.slider-horizontal {
+    width: 100%;
+}
+
+.slider.slider-horizontal .slider-track {
+    height: 7px;
+}
+
+.slider.slider-disabled .slider-handle {
+    background-image: none;
+}
+
+.slider-handle.custom::before {
+    background: transparent;
+    content: url("img/ic_location_marker.png");
+}
+
+.slider-handle {
+    top: -16px;
+}
+
+.slider-track-low,
+.slider-track-high {
+    background: #CFCFCF;
+}
+
+.slider-selection {
+    background: #CFCFCF none;
+    box-shadow: none;
+}
+
+/* pizza balloon styling */
+
+.pizza-balloon {
+    display: inline-table;
+}
+
+.pizza-balloon span {
+    display: table-cell;
+    vertical-align: top;
+    font-size: 14px;
+}
+
+.pizza-balloon img {
+    display: table-cell;
+    vertical-align: bottom;
+    height: 120px;
+}
+
+.btn {
+    background-color: #BDD731;
+    border-color: #BDD731;
+    color: white;
+    border-radius: 25px;
+}
+
+.btn:disabled {
+    background-color: #F2F2F2;
+    border-color: #F2F2F2;
+    color: #CCCCCC;
+    box-shadow: none !important;
+}
+
+.img-fluid {
+    min-width: 100px;
+}
+
+.slider .slider-rangeHighlight.medium-traffic {
+    background: #FCC56E;
+}
+
+.slider .slider-rangeHighlight.high-traffic {
+    background: #E95255;
+}
+
+.slider-disabled .slider-rangeHighlight.medium-traffic {
+    background: #BABABA;
+}
+
+.slider-disabled .slider-rangeHighlight.high-traffic {
+    background: #898989;
+}
+
+.responsive-text {
+    font-size: 1.5vw;
+}
+
+@media (min-width: 1200px) {
+    .responsive-text {
+        font-size: 1.1vw;
+    }
+}
+
+.modal-dialog {
+    max-width: 98vw;
+    margin: 8px auto auto;
+    width: 100%;
+    height: 98%;
+}
+
+@media (min-width: 576px) {
+    .modal-dialog {
+        max-width: 98vw;
+        margin: 8px auto auto;
+    }
+}
+
+.modal-content {
+    height: 100%;
+    background: #F4F6F8;
+}
+
+.modal-header {
+    border-bottom: none;
+}
+
+.modal-body {
+    margin: auto;
+    width: 20%;
+    text-align: center;
+}
+
+.modal-body span {
+    color: #707070;
+}
+
+#letsStartButton {
+    padding-left: 5vw;
+    padding-right: 5vw;
+}
+
+.btn-circle {
+    width: 50px;
+    height: 50px;
+    padding: 10px 16px;
+    font-size: 18px;
+    line-height: 1.33;
+    border-radius: 25px;
+}
+
+#showHelpButton {
+    background-color: #000000;
+    opacity: .7;
+    border-color: #7c7c7c;
+}

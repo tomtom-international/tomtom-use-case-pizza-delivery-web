@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pizza delivery</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="sdk/map.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/10.2.1/css/bootstrap-slider.min.css">
+    <link rel="stylesheet" type="text/css" href="styles.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/10.2.1/bootstrap-slider.min.js"></script>
+    <script src="sdk/tomtom.min.js"></script>
+    <script src="points.js"></script>
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-3 d-flex shadow z-index flex-column">
+            <div class="row p-1 shadow-sm z-index">
+                <div class="col py-2"><img class="img-fluid" src="img/logo.png"></div>
+            </div>
+            <div class="row py-3 pl-2 bg-light">
+                <div class="col">
+                    <span>Customer location</span>
+                </div>
+            </div>
+            <div class="row pb-4 pl-2 bg-light">
+                <div class="col-1">
+                    <label class="m-0 p-2" for="search-panel"><img src="img/ic_location_marker.png"/></label>
+                </div>
+                <div id="search-panel" class="col"></div>
+            </div>
+            <div class="row pl-2 py-3">
+                <div class="col">
+                    <p>Delayed delivery</p>
+                    <label class="switch">
+                        <input id="delivery-toggle" type="checkbox">
+                        <span class="toggle round"></span>
+                    </label>
+                </div>
+                <div class="col">
+                    <p>Show traffic</p>
+                    <label class="switch">
+                        <input id="traffic-toggle" type="checkbox">
+                        <span class="toggle round"></span>
+                    </label>
+                </div>
+            </div>
+            <div class="row px-4 py-3 bg-light">
+                <span class="w-100">Choose delayed delivery time</span>
+                <span class="pb-4" id="delivery-time">--:--</span>
+                <input type="text" id="slider-input" data-slider-handle="custom" class="slider" value="0"/>
+                <label for="slider-input" class="w-100">
+                    <span>8:00</span><span class="float-right">22:00</span>
+                </label>
+            </div>
+            <div class="row py-3 bg-white">
+                <div class="col-4 d-none d-xl-block">
+                    <img class="img-fluid" src="img/ic_calculator.png"/>
+                </div>
+                <div class="col-xl-8 col-lg-12 align-items-center d-flex">
+                    <button id="calculate-range" class="btn shadow responsive-text" disabled>Calculate reachable range
+                    </button>
+                </div>
+            </div>
+            <div class="row mt-auto px-2 pb-4 text-center">
+                <div id="pizza-1" class="col">
+                    <img src="img/ic_restaurant_1_menu.png"/><br>
+                    <span>Speedy's I</span><br>
+                </div>
+                <div id="pizza-2" class="col">
+                    <img src="img/ic_restaurant_2_menu.png"/><br>
+                    <span>Speedy's II</span><br>
+                </div>
+                <div id="pizza-3" class="col">
+                    <img src="img/ic_restaurant_3_menu.png"/><br>
+                    <span>Speedy's III</span><br>
+                </div>
+            </div>
+        </div>
+        <div class="col m-0 p-0">
+            <div id="map"></div>
+            <div class="m-2 leaflet-top leaflet-right">
+                <button id="showHelpButton" type="button" class="btn btn-default btn-circle leaflet-control" data-toggle="modal" data-target="#helpModal">
+                    ?
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="helpModal" tabindex="-1" role="dialog" aria-labelledby="helpModal"
+     aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <img class="img-fluid" src="img/logo.png">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <img class="img-fluid" src="img/pizza_oven_illustration.png">
+                <h2>Pizza delivery</h2>
+                <span>Welcome to an imaginary Speedy’s Pizza delivery app. Speedy’s promises to always deliver a pizza to
+                customers in 15 minutes or less. <br><br>Provide the location of a customer to check whether he or she is in
+                    the reachable range of 15 minutes.<br>
+                    You can find source code of the application on <a href="https://github.com/tomtom-international/tomtom-use-case-pizza-delivery-web" target="_blank">Github</a>.<br><br>Happy coding! <br>TT DevRel Team<br><br></span>
+                <button id="letsStartButton" class="btn shadow responsive-text" data-dismiss="modal">LET'S START</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="pizza-delivery.js"></script>
+</body>
+</html>
