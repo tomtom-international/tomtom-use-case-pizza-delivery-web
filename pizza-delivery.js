@@ -144,9 +144,9 @@ function displayReachableRangePolygons() {
 }
 
 function toggleTrafficFlowLayer() {
-    var flowLayer = tomtom.L.MapUtils.findLayersByName('trafficFlow', map)[0];
+  var flowLayer = tomtom.L.MapUtils.findLayersByName('vectorTrafficFlow', map)[0];
     if (!flowLayer) {
-        map.addLayer(new L.TomTomTrafficFlowLayer({source: 'vector'}));
+        map.addLayer(new L.TomTomVectorTrafficFlowLayer());
     } else {
         map.removeLayer(flowLayer);
     }
