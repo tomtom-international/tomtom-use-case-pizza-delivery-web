@@ -1,14 +1,10 @@
-var map = tomtom.L.map('map', {
-    key: '<your-api-key-goes-here>',
-    center: [52.37187, 4.89218],
-    basePath: '/sdk',
-    source: 'vector',
-    styleUrlMapping: {
-        main: {
-            basic: '/sdk/styles/mono.json',
-            labels: '/sdk/styles/labels_main.json'
-        }
-    },
+var apiKey = 'YOUR_API_KEY';
+var centerCoords = [4.89218, 52.37187];
+var map = tt.map({
+    key: apiKey,
+    container: 'map',
+    center: centerCoords,
+    style: 'mono.json',
     zoom: 12
 });
 
@@ -22,6 +18,7 @@ var polygonLayers = [];
 var pizzaMarkers = [];
 var clientMarker;
 var deliveryTimeSlider;
+var trafficFlowTilesTier;
 
 function setDeliveryTimeSliderValue() {
     var currentDate = new Date();
@@ -59,37 +56,34 @@ function isDeliveryDelayed() {
 }
 
 function createMarker(geoJsonPoint) {
-    var coordinates = geoJsonPoint.geometry.coordinates.reverse();
-    var marker = tomtom.L.marker(coordinates, {
-        icon: tomtom.L.icon({
-            iconUrl: geoJsonPoint.properties.iconUrl,
-            iconSize: [60, 60],
-            iconAnchor: [30, 30],
-            popupAnchor: [0, -30]
-        }),
-        draggable: true
-    });
+    var position = geoJsonPoint.geometry.coordinates;
+    const markerElement = document.createElement('div');
+    markerElement.innerHTML = "<img src='" + geoJsonPoint.properties.iconUrl + "' style='width: 50px; height: 50px';>";
+    marker = new tt.Marker({
+        draggable: true,
+        element: markerElement
+    }).setLngLat(position).addTo(map);
     marker.on('dragend', function () {
         if (polygonLayers.length > 0) {
             displayReachableRangePolygons();
         }
     });
+    marker.polygonColor = geoJsonPoint.properties.polygonColor;
     pizzaMarkers.push(marker);
     return marker;
 }
 
 function displayPizzaMarkers() {
-    tomtom.L.geoJSON(geojson, {
-        pointToLayer: createMarker
-    }).addTo(map);
+    geojson.features.forEach(function (marker) {
+        createMarker(marker);
+    });
 }
 
 function constructRangeBatchRequest() {
     var queries = [];
-
     pizzaMarkers.forEach(function (marker) {
         var query = {
-            origin: [marker.getLatLng().lat, marker.getLatLng().lng],
+            origin: [marker.getLngLat().lng, marker.getLngLat().lat],
             timeBudgetInSec: reachableRangeBudgetTimeInSeconds
         };
         if (isDeliveryDelayed()) {
@@ -105,50 +99,71 @@ function constructRangeBatchRequest() {
 
 function clearPolygonLayers() {
     polygonLayers.forEach(function (layer) {
-        map.removeLayer(layer);
+        map.removeLayer(layer.id);
+        map.removeSource(layer.id);
     })
+    polygonLayers = [];
 }
 
-function displayMarkerPolygons() {
-    return function (polygons) {
-        polygons.forEach(function (rangeData, index) {
-            if (pizzaMarkers[index]) {
-                addPolygonToMap(rangeData, pizzaMarkers[index].feature.properties.polygonColor)
-            }
-        });
-    };
+function displayMarkerPolygons(polygons) {
+    polygons.forEach(function (rangeData, index) {
+        if (pizzaMarkers[index]) {
+            addPolygonToMap("polygon_" + index, rangeData, pizzaMarkers[index].polygonColor)
+        }
+    });
 }
 
-function addPolygonToMap(rangeData, polygonColor) {
-    var polygon = L.geoJson(rangeData, {
-        style: createMarkerPolygonStyle(polygonColor)
-    }).addTo(map);
-    polygonLayers.push(polygon);
-}
-
-function createMarkerPolygonStyle(color) {
+function buildStyle(id, data, color) {
     return {
-        color: color,
-        opacity: 0,
-        fillOpacity: 0.68
-    };
+        'id': id,
+        'type': 'fill',
+        'source': {
+            'type': 'geojson',
+            'data': data
+        },
+        'paint': {
+            'fill-color': color,
+            'fill-opacity': 0.68,
+        },
+        'layout': {}
+    }
+}
+
+function addPolygonToMap(id, rangeData, polygonColor) {
+    let polygonLayer = buildStyle(id, rangeData.toGeoJson(), polygonColor);
+    map.addLayer(polygonLayer);
+    polygonLayer.id = id;
+    polygonLayers.push(polygonLayer);
 }
 
 function displayReachableRangePolygons() {
+    closeAllPopups();
     clearPolygonLayers();
-    tomtom.reachableRange(constructRangeBatchRequest())
+    tt.services.calculateReachableRange({
+        batchMode: 'sync',
+        key: apiKey,
+        batchItems: constructRangeBatchRequest()
+    })
         .go()
-        .then(displayMarkerPolygons());
+        .then(function (polygons) {
+            displayMarkerPolygons(polygons);
+        });
 
     calculateTravelTime();
 }
 
 function toggleTrafficFlowLayer() {
-  var flowLayer = tomtom.L.MapUtils.findLayersByName('vectorTrafficFlow', map)[0];
-    if (!flowLayer) {
-        map.addLayer(new L.TomTomVectorTrafficFlowLayer());
-    } else {
-        map.removeLayer(flowLayer);
+    if (document.getElementById('traffic-toggle').checked) {
+        var flowConfig = {
+            key: apiKey,
+            style: 'tomtom://vector/1/relative',
+            refresh: 30000
+        };
+        trafficFlowTilesTier = new tt.TrafficFlowTilesTier(flowConfig);
+        map.addTier(trafficFlowTilesTier);
+    }
+    else {
+        map.removeTier(trafficFlowTilesTier.getId());
     }
 }
 
@@ -157,24 +172,28 @@ function showClientMarkerOnTheMap(result) {
     if (clientMarker) {
         map.removeLayer(clientMarker);
     }
-    clientMarker = tomtom.L.marker(result.data.position, {
-        icon: tomtom.L.icon({
-            iconUrl: 'img/pizza_marker-1.png',
-            iconSize: [50, 50],
-            iconAnchor: [25, 25]
-        })
-    }).addTo(map);
+    const markerElement = document.createElement('div');
+    markerElement.innerHTML = "<img src='img/pizza_marker-1.png' style='width: 50px; height: 50px';>";
+    var position = result.data.result.position;
+    clientMarker = new tt.Marker({ element: markerElement }).setLngLat([position.lng, position.lat]).addTo(map);
     if (polygonLayers.length > 0) {
         displayReachableRangePolygons();
     }
 }
 
 function initControlMenu() {
-    var searchBoxInstance = tomtom.searchBox({
-        collapsible: false,
-        searchOnDragEnd: 'never'
-    }).addTo(map);
-    document.getElementById('search-panel').appendChild(searchBoxInstance.getContainer());
+    var searchBoxInstance = new tt.plugins.SearchBox(tt.services.fuzzySearch, {
+        searchOptions: {
+            key: apiKey
+        },
+        filter: function (searchResult) {
+            //we want to filter out search results that don't have polygons attached
+            return Boolean(searchResult.dataSources && searchResult.dataSources.geometry &&
+                searchResult.dataSources.geometry.id);
+        },
+        noResultsMessage: 'No results with a polygon found.'
+    });
+    document.getElementById('search-panel').append(searchBoxInstance.getSearchBoxHTML());
     deliveryTimeSlider = new Slider('#slider-input', {
         min: MIN_SLIDER_RANGE,
         max: MAX_SLIDER_RANGE,
@@ -183,8 +202,8 @@ function initControlMenu() {
         tooltip: 'hide',
         enabled: false,
         rangeHighlights: [
-            {start: 510, end: 810, class: 'medium-traffic'},
-            {start: 540, end: 705, class: 'high-traffic'}
+            { start: 510, end: 810, class: 'medium-traffic' },
+            { start: 540, end: 705, class: 'high-traffic' }
         ]
     });
     deliveryTimeSlider.on('change', function (event) {
@@ -197,7 +216,7 @@ function initControlMenu() {
     document.getElementById('calculate-range').addEventListener('click', displayReachableRangePolygons);
     document.getElementById('delivery-toggle').addEventListener('change', toggleDelayedDelivery);
     document.getElementById('traffic-toggle').addEventListener('change', toggleTrafficFlowLayer);
-    searchBoxInstance.on(searchBoxInstance.Events.ResultClicked, showClientMarkerOnTheMap);
+    searchBoxInstance.on('tomtom.searchbox.resultselected', showClientMarkerOnTheMap);
 }
 
 function convertSliderValueToTimeString(sliderValue) {
@@ -226,10 +245,9 @@ function getDepartureDeliveryDate() {
 
 function constructBatchRequest() {
     var queries = [];
-
     pizzaMarkers.forEach(function (marker) {
         var query = {
-            locations: [marker.getLatLng(), clientMarker.getLatLng()],
+            locations: [marker.getLngLat(), clientMarker.getLngLat()],
             computeTravelTimeFor: 'all'
         };
         if (isDeliveryDelayed()) {
@@ -247,6 +265,7 @@ function displayBatchRoutingResults(resultData) {
     var indexShortestTime;
     var shortestTime;
     resultData.forEach(function (routeData, index) {
+        const routeGeoJson = routeData.toGeoJson();
         var pizzaElement = document.getElementById(pizzaPrefixId + (index + 1));
         pizzaElement.classList.remove('active');
         var travelTimesElements = pizzaElement.getElementsByClassName('travel-time-minutes');
@@ -255,7 +274,7 @@ function displayBatchRoutingResults(resultData) {
         }
 
         if (routeData && !routeData.error) {
-            var travelTime = routeData.features[0].properties.summary.travelTimeInSeconds;
+            var travelTime = routeGeoJson.features[0].properties.summary.travelTimeInSeconds;
             if (!shortestTime || shortestTime > travelTime) {
                 indexShortestTime = index;
                 shortestTime = travelTime;
@@ -269,8 +288,17 @@ function displayBatchRoutingResults(resultData) {
     if (typeof indexShortestTime !== 'undefined' || indexShortestTime !== null) {
         document.getElementById(pizzaPrefixId + (indexShortestTime + 1)).classList.add('active');
     }
-    map.closePopup();
+    closeAllPopups();
     createAndBindPopups();
+    pizzaMarkers[indexShortestTime].togglePopup();
+}
+
+function closeAllPopups() {
+    pizzaMarkers.forEach(function(marker) {
+        if (marker.getPopup().isOpen()) {
+            marker.togglePopup();
+        }
+    })
 }
 
 function createAndBindPopups() {
@@ -282,17 +310,19 @@ function createAndBindPopups() {
             pizzaString += '<br>' + pizzaSpans[1].textContent;
         }
         pizzaString += '</span>';
-
         var customPopup = '<div class="pizza-balloon">' + pizzaString +
             '<img src="img/pizza_oven_illustration.png" alt="pizza oven"/></div>';
-        marker.bindPopup(customPopup).addTo(map);
+        marker.setPopup(new tt.Popup({ offset: 35 }).setHTML(customPopup));
     });
 }
 
-
 function calculateTravelTime() {
     if (clientMarker && pizzaMarkers.length > 0) {
-        tomtom.routing((constructBatchRequest()))
+        tt.services.calculateRoute({
+            batchMode: 'sync',
+            key: apiKey,
+            batchItems: constructBatchRequest()
+        })
             .go()
             .then(displayBatchRoutingResults)
     }
