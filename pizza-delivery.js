@@ -170,7 +170,7 @@ function toggleTrafficFlowLayer() {
 function showClientMarkerOnTheMap(result) {
     document.getElementById('calculate-range').disabled = false;
     if (clientMarker) {
-        map.removeLayer(clientMarker);
+        clientMarker.remove();
     }
     const markerElement = document.createElement('div');
     markerElement.innerHTML = "<img src='img/pizza_marker-1.png' style='width: 50px; height: 50px';>";
@@ -184,14 +184,10 @@ function showClientMarkerOnTheMap(result) {
 function initControlMenu() {
     var searchBoxInstance = new tt.plugins.SearchBox(tt.services.fuzzySearch, {
         searchOptions: {
-            key: apiKey
+            key: apiKey,
+            center: map.getCenter()
         },
-        filter: function (searchResult) {
-            //we want to filter out search results that don't have polygons attached
-            return Boolean(searchResult.dataSources && searchResult.dataSources.geometry &&
-                searchResult.dataSources.geometry.id);
-        },
-        noResultsMessage: 'No results with a polygon found.'
+        noResultsMessage: 'No results found.'
     });
     document.getElementById('search-panel').append(searchBoxInstance.getSearchBoxHTML());
     deliveryTimeSlider = new Slider('#slider-input', {
