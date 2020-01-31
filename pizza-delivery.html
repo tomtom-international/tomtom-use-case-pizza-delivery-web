@@ -3,7 +3,6 @@
 <head>
     <title>Pizza delivery</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="sdk/map.css"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
@@ -11,7 +10,11 @@
           href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/10.2.1/css/bootstrap-slider.min.css">
     <link rel="stylesheet" type="text/css" href="styles.css"/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/10.2.1/bootstrap-slider.min.js"></script>
-    <script src="sdk/tomtom.min.js"></script>
+    <link rel='stylesheet' type='text/css' href='https://api.tomtom.com/maps-sdk-for-web/cdn/5.x/5.42.0/maps/maps.css'>
+    <script src="https://api.tomtom.com/maps-sdk-for-web/cdn/5.x/5.42.0/maps/maps-web.min.js"></script>
+    <script src="https://api.tomtom.com/maps-sdk-for-web/cdn/5.x/5.42.0/services/services-web.min.js"></script>
+    <script src="https://api.tomtom.com/maps-sdk-for-web/cdn/plugins/SearchBox/1.0.7/SearchBox-web.js"></script>
+    <link rel='stylesheet' type='text/css' href='https://api.tomtom.com/maps-sdk-for-web/cdn/plugins/SearchBox/1.0.7/SearchBox.css'>
     <script src="points.js"></script>
 </head>
 <body>
@@ -26,10 +29,7 @@
                     <span>Customer location</span>
                 </div>
             </div>
-            <div class="row pb-4 pl-2 bg-light">
-                <div class="col-1">
-                    <label class="m-0 p-2" for="search-panel"><img src="img/ic_location_marker.png"/></label>
-                </div>
+            <div id="search-panel-containter" class="row pb-4 pl-2 bg-light">
                 <div id="search-panel" class="col"></div>
             </div>
             <div class="row pl-2 py-3">
@@ -65,7 +65,7 @@
                     </button>
                 </div>
             </div>
-            <div class="row mt-auto px-2 pb-4 text-center">
+            <div class="row px-2 pb-4 text-center">
                 <div id="pizza-1" class="col">
                     <img src="img/ic_restaurant_1_menu.png"/><br>
                     <span>Speedy's I</span><br>
@@ -82,8 +82,8 @@
         </div>
         <div class="col m-0 p-0">
             <div id="map"></div>
-            <div class="m-2 leaflet-top leaflet-right">
-                <button id="showHelpButton" type="button" class="btn btn-default btn-circle leaflet-control" data-toggle="modal" data-target="#helpModal">
+            <div class="m-2">
+                <button id="showHelpButton" type="button" class="btn btn-default btn-circle" data-toggle="modal" data-target="#helpModal">
                     ?
                 </button>
             </div>
@@ -106,7 +106,7 @@
                 <span>Welcome to an imaginary Speedy’s Pizza delivery app. Speedy’s promises to always deliver a pizza to
                 customers in 15 minutes or less. <br><br>Provide the location of a customer to check whether he or she is in
                     the reachable range of 15 minutes.<br>
-                    You can find source code of the application on <a href="https://github.com/tomtom-international/tomtom-use-case-pizza-delivery-web" target="_blank">Github</a>.<br><br>Happy coding! <br>TT DevRel Team<br><br></span>
+                    You can find source code of the application on <a href="https://github.com/tomtom-international/tomtom-use-case-pizza-delivery-web/tree/master-sdk-v5" target="_blank">Github</a>.<br><br>Happy coding! <br>TT DevRel Team<br><br></span>
                 <button id="letsStartButton" class="btn shadow responsive-text" data-dismiss="modal">LET'S START</button>
             </div>
         </div>
