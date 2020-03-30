@@ -182,12 +182,15 @@ function showClientMarkerOnTheMap(result) {
 }
 
 function initControlMenu() {
-    var searchBoxInstance = new tt.plugins.SearchBox(tt.services.fuzzySearch, {
-        searchOptions: {
-            key: apiKey,
-            center: map.getCenter()
-        },
-        noResultsMessage: 'No results found.'
+    var commonOptions = {
+        key: apiKey,
+        center: map.getCenter(),
+        radius: 1000
+    };
+    var searchBoxInstance = new tt.plugins.SearchBox(tt.services, {
+        minNumberOfCharacters: 0,
+        searchOptions: commonOptions,
+        autocompleteOptions: commonOptions
     });
     document.getElementById('search-panel').append(searchBoxInstance.getSearchBoxHTML());
     deliveryTimeSlider = new Slider('#slider-input', {
