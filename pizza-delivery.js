@@ -19,6 +19,12 @@ var pizzaMarkers = [];
 var clientMarker;
 var deliveryTimeSlider;
 var trafficFlowTilesTier;
+var searchBoxInstance;
+var commonOptions = {
+    key: apiKey,
+    center: map.getCenter(),
+    radius: 1000
+};
 
 function setDeliveryTimeSliderValue() {
     var currentDate = new Date();
@@ -181,13 +187,18 @@ function showClientMarkerOnTheMap(result) {
     }
 }
 
+function updateMapCenterOption() {
+    var updatedOptions = Object.assign(commonOptions, { center: map.getCenter() });
+
+    searchBoxInstance.updateOptions({
+        minNumberOfCharacters: 0,
+        searchOptions: updatedOptions,
+        autocompleteOptions: updatedOptions
+    });
+}
+
 function initControlMenu() {
-    var commonOptions = {
-        key: apiKey,
-        center: map.getCenter(),
-        radius: 1000
-    };
-    var searchBoxInstance = new tt.plugins.SearchBox(tt.services, {
+    searchBoxInstance = new tt.plugins.SearchBox(tt.services, {
         minNumberOfCharacters: 0,
         searchOptions: commonOptions,
         autocompleteOptions: commonOptions
@@ -216,6 +227,7 @@ function initControlMenu() {
     document.getElementById('delivery-toggle').addEventListener('change', toggleDelayedDelivery);
     document.getElementById('traffic-toggle').addEventListener('change', toggleTrafficFlowLayer);
     searchBoxInstance.on('tomtom.searchbox.resultselected', showClientMarkerOnTheMap);
+    map.on('moveend', updateMapCenterOption);
 }
 
 function convertSliderValueToTimeString(sliderValue) {
