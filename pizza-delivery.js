@@ -18,7 +18,6 @@ var polygonLayers = [];
 var pizzaMarkers = [];
 var clientMarker;
 var deliveryTimeSlider;
-var trafficFlowTilesTier;
 var searchBoxInstance;
 var commonOptions = {
     key: apiKey,
@@ -112,7 +111,7 @@ function clearPolygonLayers() {
 }
 
 function displayMarkerPolygons(polygons) {
-    polygons.forEach(function (rangeData, index) {
+    polygons.batchItems.forEach(function (rangeData, index) {
         if (pizzaMarkers[index]) {
             addPolygonToMap("polygon_" + index, rangeData, pizzaMarkers[index].polygonColor)
         }
@@ -150,26 +149,19 @@ function displayReachableRangePolygons() {
         key: apiKey,
         batchItems: constructRangeBatchRequest()
     })
-        .go()
-        .then(function (polygons) {
-            displayMarkerPolygons(polygons);
-        });
+    .then(function (polygons) {
+        displayMarkerPolygons(polygons);
+    });
 
     calculateTravelTime();
 }
 
 function toggleTrafficFlowLayer() {
     if (document.getElementById('traffic-toggle').checked) {
-        var flowConfig = {
-            key: apiKey,
-            style: 'tomtom://vector/1/relative',
-            refresh: 30000
-        };
-        trafficFlowTilesTier = new tt.TrafficFlowTilesTier(flowConfig);
-        map.addTier(trafficFlowTilesTier);
+        map.showTrafficFlow();
     }
     else {
-        map.removeTier(trafficFlowTilesTier.getId());
+        map.hideTrafficFlow();
     }
 }
 
@@ -275,7 +267,7 @@ function constructBatchRequest() {
 function displayBatchRoutingResults(resultData) {
     var indexShortestTime;
     var shortestTime;
-    resultData.forEach(function (routeData, index) {
+    resultData.batchItems.forEach(function (routeData, index) {
         const routeGeoJson = routeData.toGeoJson();
         var pizzaElement = document.getElementById(pizzaPrefixId + (index + 1));
         pizzaElement.classList.remove('active');
@@ -334,8 +326,7 @@ function calculateTravelTime() {
             key: apiKey,
             batchItems: constructBatchRequest()
         })
-            .go()
-            .then(displayBatchRoutingResults)
+        .then(displayBatchRoutingResults)
     }
 }
 

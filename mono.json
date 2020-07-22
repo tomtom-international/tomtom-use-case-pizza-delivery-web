@@ -6,70 +6,95 @@
       "maxzoom": 22,
       "minzoom": 0,
       "tiles": [
-        "https://a.api.tomtom.com/map/1/tile/basic/main/{z}/{x}/{y}.pbf?key={key}",
-        "https://b.api.tomtom.com/map/1/tile/basic/main/{z}/{x}/{y}.pbf?key={key}",
-        "https://c.api.tomtom.com/map/1/tile/basic/main/{z}/{x}/{y}.pbf?key={key}",
-        "https://d.api.tomtom.com/map/1/tile/basic/main/{z}/{x}/{y}.pbf?key={key}"
+        "https://a.api.tomtom.com/map/1/tile/basic/main/{z}/{x}/{y}.pbf?key=YOUR_API_KEY",
+        "https://b.api.tomtom.com/map/1/tile/basic/main/{z}/{x}/{y}.pbf?key=YOUR_API_KEY",
+        "https://c.api.tomtom.com/map/1/tile/basic/main/{z}/{x}/{y}.pbf?key=YOUR_API_KEY",
+        "https://d.api.tomtom.com/map/1/tile/basic/main/{z}/{x}/{y}.pbf?key=YOUR_API_KEY"
       ],
+      "type": "vector"
+    },
+    "vectorTilesFlow": {
+      "maxzoom": 22,
+      "minzoom": 0,
+      "tiles": [
+        "https://a.api.tomtom.com/traffic/map/4/tile/flow/relative/{z}/{x}/{y}.pbf?key=YOUR_API_KEY",
+        "https://b.api.tomtom.com/traffic/map/4/tile/flow/relative/{z}/{x}/{y}.pbf?key=YOUR_API_KEY",
+        "https://c.api.tomtom.com/traffic/map/4/tile/flow/relative/{z}/{x}/{y}.pbf?key=YOUR_API_KEY",
+        "https://d.api.tomtom.com/traffic/map/4/tile/flow/relative/{z}/{x}/{y}.pbf?key=YOUR_API_KEY"],
       "type": "vector"
     }
   },
-  "sprite": "https://api.tomtom.com/map/1/sprite/20.1.2-3/tomtom/sprite?key={key}",
-  "glyphs": "https://api.tomtom.com/map/1/glyph/20.1.2-3/{fontstack}/{range}.pbf?key={key}",
-  "layers": [
-    {
+  "sprite": "https://api.tomtom.com/map/1/sprite/20.1.2-3/tomtom/sprite?key=YOUR_API_KEY",
+  "glyphs": "https://api.tomtom.com/map/1/glyph/20.1.2-3/{fontstack}/{range}.pbf?key=YOUR_API_KEY",
+  "layers": [{
       "id": "background",
       "type": "background",
-      "paint": {"background-color": "rgba(244, 244, 244, 1)"}
+      "paint": {
+        "background-color": "rgba(244, 244, 244, 1)"
+      }
     },
     {
       "id": "National park",
       "type": "fill",
       "source": "vectorTiles",
       "source-layer": "National park",
-      "paint": {"fill-color": "rgba(238, 238, 238, 1)"}
+      "paint": {
+        "fill-color": "rgba(238, 238, 238, 1)"
+      }
     },
     {
       "id": "Regional park",
       "type": "fill",
       "source": "vectorTiles",
       "source-layer": "Regional park",
-      "paint": {"fill-color": "rgba(238, 238, 238, 1)"}
+      "paint": {
+        "fill-color": "rgba(238, 238, 238, 1)"
+      }
     },
     {
       "id": "Park",
       "type": "fill",
       "source": "vectorTiles",
       "source-layer": "Park",
-      "paint": {"fill-color": "rgba(238, 238, 238, 1)"}
+      "paint": {
+        "fill-color": "rgba(238, 238, 238, 1)"
+      }
     },
     {
       "id": "National or state park",
       "type": "fill",
       "source": "vectorTiles",
       "source-layer": "National or state park",
-      "paint": {"fill-color": "rgba(238, 238, 238, 1)"}
+      "paint": {
+        "fill-color": "rgba(238, 238, 238, 1)"
+      }
     },
     {
       "id": "State or province park",
       "type": "fill",
       "source": "vectorTiles",
       "source-layer": "State or province park",
-      "paint": {"fill-color": "rgba(238, 238, 238, 1)"}
+      "paint": {
+        "fill-color": "rgba(238, 238, 238, 1)"
+      }
     },
     {
       "id": "Forest",
       "type": "fill",
       "source": "vectorTiles",
       "source-layer": "Forest",
-      "paint": {"fill-color": "rgba(238, 238, 238, 1)"}
+      "paint": {
+        "fill-color": "rgba(238, 238, 238, 1)"
+      }
     },
     {
       "id": "Beach or dune",
       "type": "fill",
       "source": "vectorTiles",
       "source-layer": "Beach or dune",
-      "paint": {"fill-color": "rgba(238, 238, 238, 1)"}
+      "paint": {
+        "fill-color": "rgba(238, 238, 238, 1)"
+      }
     },
     {
       "id": "Woodland",
@@ -77,7 +102,9 @@
       "source": "vectorTiles",
       "source-layer": "Woodland",
       "minzoom": 6,
-      "paint": {"fill-color": "rgba(238, 238, 238, 1)"}
+      "paint": {
+        "fill-color": "rgba(238, 238, 238, 1)"
+      }
     },
     {
       "id": "Built-up area",
@@ -99,49 +126,63 @@
       "type": "fill",
       "source": "vectorTiles",
       "source-layer": "County park",
-      "paint": {"fill-color": "rgba(238, 238, 238, 1)"}
+      "paint": {
+        "fill-color": "rgba(238, 238, 238, 1)"
+      }
     },
     {
       "id": "Sand",
       "type": "fill",
       "source": "vectorTiles",
       "source-layer": "Sand",
-      "paint": {"fill-color": "rgba(238, 238, 238, 1)"}
+      "paint": {
+        "fill-color": "rgba(238, 238, 238, 1)"
+      }
     },
     {
       "id": "Moor or heathland",
       "type": "fill",
       "source": "vectorTiles",
       "source-layer": "Moor or heathland",
-      "paint": {"fill-color": "rgba(238, 238, 238, 1)"}
+      "paint": {
+        "fill-color": "rgba(238, 238, 238, 1)"
+      }
     },
     {
       "id": "Military",
       "type": "fill",
       "source": "vectorTiles",
       "source-layer": "Military",
-      "paint": {"fill-color": "rgb(205, 210, 205)"}
+      "paint": {
+        "fill-color": "rgb(205, 210, 205)"
+      }
     },
     {
       "id": "Town railway ground",
       "type": "fill",
       "source": "vectorTiles",
       "source-layer": "Town railway ground",
-      "paint": {"fill-color": "rgba(238, 238, 238, 1)"}
+      "paint": {
+        "fill-color": "rgba(238, 238, 238, 1)"
+      }
     },
     {
       "id": "City park",
       "type": "fill",
       "source": "vectorTiles",
       "source-layer": "City park",
-      "paint": {"fill-color": "rgba(238, 238, 238, 1)"}
+      "paint": {
+        "fill-color": "rgba(238, 238, 238, 1)"
+      }
     },
     {
       "id": "Cemetery",
       "type": "fill",
       "source": "vectorTiles",
       "source-layer": "Cemetery",
-      "paint": {"fill-color": "rgba(238, 238, 238, 1)"}
+      "paint": {
+        "fill-color": "rgba(238, 238, 238, 1)"
+      }
     },
     {
       "id": "Industrial area",
@@ -149,7 +190,9 @@
       "source": "vectorTiles",
       "source-layer": "Industrial area",
       "minzoom": 12,
-      "paint": {"fill-color": "rgba(239, 240, 239, 1)"}
+      "paint": {
+        "fill-color": "rgba(239, 240, 239, 1)"
+      }
     },
     {
       "id": "Industrial harbor area",
@@ -157,161 +200,208 @@
       "source": "vectorTiles",
       "source-layer": "Industrial harbor area",
       "minzoom": 12,
-      "paint": {"fill-color": "rgba(239, 240, 239, 1)"}
+      "paint": {
+        "fill-color": "rgba(239, 240, 239, 1)"
+      }
     },
     {
       "id": "Hospital",
       "type": "fill",
       "source": "vectorTiles",
       "source-layer": "Hospital",
-      "paint": {"fill-color": "#EFF0EF"}
+      "paint": {
+        "fill-color": "#EFF0EF"
+      }
     },
     {
       "id": "Town greens",
       "type": "fill",
       "source": "vectorTiles",
       "source-layer": "Town greens",
-      "paint": {"fill-color": "rgba(238, 238, 238, 1)"}
+      "paint": {
+        "fill-color": "rgba(238, 238, 238, 1)"
+      }
     },
     {
       "id": "Golf",
       "type": "fill",
       "source": "vectorTiles",
       "source-layer": "Golf",
-      "paint": {"fill-color": "rgba(238, 238, 238, 1)"}
+      "paint": {
+        "fill-color": "rgba(238, 238, 238, 1)"
+      }
     },
     {
       "id": "Shopping",
       "type": "fill",
       "source": "vectorTiles",
       "source-layer": "Shopping",
-      "paint": {"fill-color": "rgba(239, 240, 239, 1)"}
+      "paint": {
+        "fill-color": "rgba(239, 240, 239, 1)"
+      }
     },
     {
       "id": "Airport",
       "type": "fill",
       "source": "vectorTiles",
       "source-layer": "Airport",
-      "paint": {"fill-color": "rgba(239, 240, 239, 1)"}
+      "paint": {
+        "fill-color": "rgba(239, 240, 239, 1)"
+      }
     },
     {
       "id": "Runway",
       "type": "fill",
       "source": "vectorTiles",
       "source-layer": "Runway",
-      "paint": {"fill-color": "rgba(221, 221, 221, 1)"}
+      "paint": {
+        "fill-color": "rgba(221, 221, 221, 1)"
+      }
     },
     {
       "id": "Town paved area",
       "type": "fill",
       "source": "vectorTiles",
       "source-layer": "Town paved area",
-      "paint": {"fill-color": "rgb(236, 236, 236)"}
+      "paint": {
+        "fill-color": "rgb(236, 236, 236)"
+      }
     },
     {
       "id": "Town garden path",
       "type": "fill",
       "source": "vectorTiles",
       "source-layer": "Town garden path",
-      "paint": {"fill-color": "rgba(247, 247, 247, 1)"}
+      "paint": {
+        "fill-color": "rgba(247, 247, 247, 1)"
+      }
     },
     {
       "id": "Town school ground",
       "type": "fill",
       "source": "vectorTiles",
       "source-layer": "Town school ground",
-      "paint": {"fill-color": "rgba(233, 233, 233, 1)"}
+      "paint": {
+        "fill-color": "rgba(233, 233, 233, 1)"
+      }
     },
     {
       "id": "University",
       "type": "fill",
       "source": "vectorTiles",
       "source-layer": "University",
-      "paint": {"fill-color": "rgba(238, 238, 238, 1)"}
+      "paint": {
+        "fill-color": "rgba(238, 238, 238, 1)"
+      }
     },
     {
       "id": "School",
       "type": "fill",
       "source": "vectorTiles",
       "source-layer": "School",
-      "paint": {"fill-color": "rgba(238, 238, 238, 1)"}
+      "paint": {
+        "fill-color": "rgba(238, 238, 238, 1)"
+      }
     },
     {
       "id": "Pool",
       "type": "fill",
       "source": "vectorTiles",
       "source-layer": "Pool",
-      "paint": {"fill-color": "rgba(233, 233, 233, 1)"}
+      "paint": {
+        "fill-color": "rgba(233, 233, 233, 1)"
+      }
     },
     {
       "id": "Zoo",
       "type": "fill",
       "source": "vectorTiles",
       "source-layer": "Zoo",
-      "paint": {"fill-color": "rgba(238, 238, 238, 1)"}
+      "paint": {
+        "fill-color": "rgba(238, 238, 238, 1)"
+      }
     },
     {
       "id": "Stadium",
       "type": "fill",
       "source": "vectorTiles",
       "source-layer": "Stadium",
-      "paint": {"fill-color": "rgba(233, 233, 233, 1)"}
+      "paint": {
+        "fill-color": "rgba(233, 233, 233, 1)"
+      }
     },
     {
       "id": "Sports hall",
       "type": "fill",
       "source": "vectorTiles",
       "source-layer": "Sports hall",
-      "paint": {"fill-color": "rgba(238, 238, 238, 1)"}
+      "paint": {
+        "fill-color": "rgba(238, 238, 238, 1)"
+      }
     },
     {
       "id": "Amusement park",
       "type": "fill",
       "source": "vectorTiles",
       "source-layer": "Amusement park",
-      "paint": {"fill-color": "rgba(238, 238, 238, 1)"}
+      "paint": {
+        "fill-color": "rgba(238, 238, 238, 1)"
+      }
     },
     {
       "id": "Town grass",
       "type": "fill",
       "source": "vectorTiles",
       "source-layer": "Town grass",
-      "paint": {"fill-color": "rgba(238, 238, 238, 1)"}
+      "paint": {
+        "fill-color": "rgba(238, 238, 238, 1)"
+      }
     },
     {
       "id": "Town swimming pool",
       "type": "fill",
       "source": "vectorTiles",
       "source-layer": "Town swimming pool",
-      "paint": {"fill-color": "rgba(227, 227, 227, 1)"}
+      "paint": {
+        "fill-color": "rgba(227, 227, 227, 1)"
+      }
     },
     {
       "id": "Town walkway",
       "type": "fill",
       "source": "vectorTiles",
       "source-layer": "Town walkway",
-      "paint": {"fill-color": "rgb(236, 236, 236)"}
+      "paint": {
+        "fill-color": "rgb(236, 236, 236)"
+      }
     },
     {
       "id": "Town factory ground",
       "type": "fill",
       "source": "vectorTiles",
       "source-layer": "Town factory ground",
-      "paint": {"fill-color": "rgba(233, 233, 233, 1)"}
+      "paint": {
+        "fill-color": "rgba(233, 233, 233, 1)"
+      }
     },
     {
       "id": "Town water body",
       "type": "fill",
       "source": "vectorTiles",
       "source-layer": "Town water body",
-      "paint": {"fill-color": "#cad2d3"}
+      "paint": {
+        "fill-color": "#cad2d3"
+      }
     },
     {
       "id": "Place of worship",
       "type": "fill",
       "source": "vectorTiles",
       "source-layer": "Place of worship",
-      "paint": {"fill-color": "#E9E9E9", "fill-outline-color": "#BBBBBB"}
+      "paint": {
+        "fill-color": "#E9E9E9",
+        "fill-outline-color": "#BBBBBB"
+      }
     },
     {
       "id": "Railway Station",
@@ -319,14 +409,19 @@
       "source": "vectorTiles",
       "source-layer": "Railway Station",
       "minzoom": 16,
-      "paint": {"fill-color": "#E3E3E3", "fill-outline-color": "#BBBBBB"}
+      "paint": {
+        "fill-color": "#E3E3E3",
+        "fill-outline-color": "#BBBBBB"
+      }
     },
     {
       "id": "Parking area",
       "type": "fill",
       "source": "vectorTiles",
       "source-layer": "Parking area",
-      "paint": {"fill-color": "#E9E9E9"}
+      "paint": {
+        "fill-color": "#E9E9E9"
+      }
     },
     {
       "id": "Subway Station",
@@ -334,63 +429,82 @@
       "source": "vectorTiles",
       "source-layer": "Subway Station",
       "minzoom": 16,
-      "paint": {"fill-color": "#E3E3E3", "fill-outline-color": "#BBBBBB"}
+      "paint": {
+        "fill-color": "#E3E3E3",
+        "fill-outline-color": "#BBBBBB"
+      }
     },
     {
       "id": "Town hospital ground",
       "type": "fill",
       "source": "vectorTiles",
       "source-layer": "Town hospital ground",
-      "paint": {"fill-color": "rgba(239, 240, 239, 1)"}
+      "paint": {
+        "fill-color": "rgba(239, 240, 239, 1)"
+      }
     },
     {
       "id": "Meridian",
       "type": "fill",
       "source": "vectorTiles",
       "source-layer": "Meridian",
-      "paint": {"fill-color": "#F0F0EA"}
+      "paint": {
+        "fill-color": "#F0F0EA"
+      }
     },
     {
       "id": "Sidewalk",
       "type": "fill",
       "source": "vectorTiles",
       "source-layer": "Sidewalk",
-      "paint": {"fill-color": "#F3F3F3"}
+      "paint": {
+        "fill-color": "#F3F3F3"
+      }
     },
     {
       "id": "Breakwater",
       "type": "fill",
       "source": "vectorTiles",
       "source-layer": "Breakwater",
-      "paint": {"fill-color": "#C1CACB"}
+      "paint": {
+        "fill-color": "#C1CACB"
+      }
     },
     {
       "id": "Other water",
       "type": "fill",
       "source": "vectorTiles",
       "source-layer": "Other water",
-      "paint": {"fill-color": "#cad2d3"}
+      "paint": {
+        "fill-color": "#cad2d3"
+      }
     },
     {
       "id": "Intermittent water",
       "type": "fill",
       "source": "vectorTiles",
       "source-layer": "Intermittent water",
-      "paint": {"fill-color": "#D1D9DA"}
+      "paint": {
+        "fill-color": "#D1D9DA"
+      }
     },
     {
       "id": "Lake",
       "type": "fill",
       "source": "vectorTiles",
       "source-layer": "Lake",
-      "paint": {"fill-color": "#cad2d3"}
+      "paint": {
+        "fill-color": "#cad2d3"
+      }
     },
     {
       "id": "Ocean or sea",
       "type": "fill",
       "source": "vectorTiles",
       "source-layer": "Ocean or sea",
-      "paint": {"fill-color": "#cad2d3"}
+      "paint": {
+        "fill-color": "#cad2d3"
+      }
     },
     {
       "id": "Ocean",
@@ -398,7 +512,12 @@
       "source": "vectorTiles",
       "source-layer": "Ocean",
       "paint": {
-        "fill-color": {"stops": [[0, "#cad2d3"], [6, "#cad2d3"]]},
+        "fill-color": {
+          "stops": [
+            [0, "#cad2d3"],
+            [6, "#cad2d3"]
+          ]
+        },
         "fill-translate-anchor": "map"
       }
     },
@@ -407,14 +526,18 @@
       "type": "fill",
       "source": "vectorTiles",
       "source-layer": "Sea",
-      "paint": {"fill-color": "#cad2d3"}
+      "paint": {
+        "fill-color": "#cad2d3"
+      }
     },
     {
       "id": "River",
       "type": "fill",
       "source": "vectorTiles",
       "source-layer": "River",
-      "paint": {"fill-color": "#cad2d3"}
+      "paint": {
+        "fill-color": "#cad2d3"
+      }
     },
     {
       "id": "Water line",
@@ -428,7 +551,13 @@
       },
       "paint": {
         "line-color": "#cad2d3",
-        "line-width": {"stops": [[11, 0.6], [15, 1.2], [18, 1.8]]}
+        "line-width": {
+          "stops": [
+            [11, 0.6],
+            [15, 1.2],
+            [18, 1.8]
+          ]
+        }
       }
     },
     {
@@ -472,14 +601,20 @@
       "type": "fill",
       "source": "vectorTiles",
       "source-layer": "Government Administration Office",
-      "paint": {"fill-color": "#E9E9E9", "fill-outline-color": "#CCCCCC"}
+      "paint": {
+        "fill-color": "#E9E9E9",
+        "fill-outline-color": "#CCCCCC"
+      }
     },
     {
       "id": "Other building",
       "type": "fill",
       "source": "vectorTiles",
       "source-layer": "Other building",
-      "paint": {"fill-color": "#E9E9E9", "fill-outline-color": "#CCCCCC"}
+      "paint": {
+        "fill-color": "#E9E9E9",
+        "fill-outline-color": "#CCCCCC"
+      }
     },
     {
       "id": "School building",
@@ -496,21 +631,28 @@
       "type": "fill",
       "source": "vectorTiles",
       "source-layer": "Institution",
-      "paint": {"fill-color": "#EEEEEE", "fill-outline-color": "#D1D1D1"}
+      "paint": {
+        "fill-color": "#EEEEEE",
+        "fill-outline-color": "#D1D1D1"
+      }
     },
     {
       "id": "Pedestrian Deck",
       "type": "fill",
       "source": "vectorTiles",
       "source-layer": "Pedestrian Deck",
-      "paint": {"fill-color": "#E9E9E9"}
+      "paint": {
+        "fill-color": "#E9E9E9"
+      }
     },
     {
       "id": "Other town block",
       "type": "fill",
       "source": "vectorTiles",
       "source-layer": "Other town block",
-      "paint": {"fill-color": "#EEEEEE"}
+      "paint": {
+        "fill-color": "#EEEEEE"
+      }
     },
     {
       "id": "Factory building",
@@ -527,21 +669,30 @@
       "type": "fill",
       "source": "vectorTiles",
       "source-layer": "Hospital building",
-      "paint": {"fill-color": "#E3E3E3", "fill-outline-color": "#BBBBBB"}
+      "paint": {
+        "fill-color": "#E3E3E3",
+        "fill-outline-color": "#BBBBBB"
+      }
     },
     {
       "id": "Hotel building",
       "type": "fill",
       "source": "vectorTiles",
       "source-layer": "Hotel building",
-      "paint": {"fill-color": "#E9E9E9", "fill-outline-color": "#BBBBBB"}
+      "paint": {
+        "fill-color": "#E9E9E9",
+        "fill-outline-color": "#BBBBBB"
+      }
     },
     {
       "id": "Cultural Facility",
       "type": "fill",
       "source": "vectorTiles",
       "source-layer": "Cultural Facility",
-      "paint": {"fill-color": "#E9E9E9", "fill-outline-color": "#BBBBBB"}
+      "paint": {
+        "fill-color": "#E9E9E9",
+        "fill-outline-color": "#BBBBBB"
+      }
     },
     {
       "id": "Toll minor local road t",
@@ -747,7 +898,15 @@
       "paint": {
         "line-color": "rgba(229, 231, 232, 1)",
         "line-width": {
-          "stops": [[4, 1], [5, 1], [6, 1], [7, 2], [8, 8], [18, 30], [24, 40]]
+          "stops": [
+            [4, 1],
+            [5, 1],
+            [6, 1],
+            [7, 2],
+            [8, 8],
+            [18, 30],
+            [24, 40]
+          ]
         }
       }
     },
@@ -991,7 +1150,13 @@
       "paint": {
         "line-color": "rgba(221, 221, 221, 1)",
         "line-width": {
-          "stops": [[14, 2.5], [15, 8], [16, 11], [17, 15], [18, 19]]
+          "stops": [
+            [14, 2.5],
+            [15, 8],
+            [16, 11],
+            [17, 15],
+            [18, 19]
+          ]
         }
       }
     },
@@ -1010,7 +1175,13 @@
       "paint": {
         "line-color": "rgba(221, 221, 221, 1)",
         "line-width": {
-          "stops": [[14, 3.5], [15, 9], [16, 13], [17, 17], [18, 21]]
+          "stops": [
+            [14, 3.5],
+            [15, 9],
+            [16, 13],
+            [17, 17],
+            [18, 21]
+          ]
         }
       }
     },
@@ -1200,7 +1371,13 @@
       "paint": {
         "line-color": "rgba(221, 221, 221, 1)",
         "line-width": {
-          "stops": [[14, 2.5], [15, 6], [16, 10], [17, 14], [18, 17]]
+          "stops": [
+            [14, 2.5],
+            [15, 6],
+            [16, 10],
+            [17, 14],
+            [18, 17]
+          ]
         }
       }
     },
@@ -1219,7 +1396,13 @@
       "paint": {
         "line-color": "rgba(221, 221, 221, 1)",
         "line-width": {
-          "stops": [[14, 2.5], [15, 8], [16, 11], [17, 15], [18, 19]]
+          "stops": [
+            [14, 2.5],
+            [15, 8],
+            [16, 11],
+            [17, 15],
+            [18, 19]
+          ]
         }
       }
     },
@@ -1238,7 +1421,13 @@
       "paint": {
         "line-color": "rgba(221, 221, 221, 1)",
         "line-width": {
-          "stops": [[14, 3.5], [15, 9], [16, 13], [17, 17], [18, 21]]
+          "stops": [
+            [14, 3.5],
+            [15, 9],
+            [16, 13],
+            [17, 17],
+            [18, 21]
+          ]
         }
       }
     },
@@ -1429,7 +1618,14 @@
       "paint": {
         "line-color": "rgba(255, 255, 255, 1)",
         "line-width": {
-          "stops": [[13, 1], [14, 1.5], [15, 4], [16, 8], [17, 12], [18, 14]]
+          "stops": [
+            [13, 1],
+            [14, 1.5],
+            [15, 4],
+            [16, 8],
+            [17, 12],
+            [18, 14]
+          ]
         }
       }
     },
@@ -1440,11 +1636,21 @@
       "source-layer": "Non public road",
       "minzoom": 15,
       "filter": ["==", "z_level", -2],
-      "layout": {"line-cap": "round", "line-join": "round"},
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round"
+      },
       "paint": {
         "line-color": "rgba(241, 241, 241, 1)",
         "line-dasharray": [0.1, 3],
-        "line-width": {"stops": [[15, 1], [16, 1.5], [17, 3], [18, 5]]}
+        "line-width": {
+          "stops": [
+            [15, 1],
+            [16, 1.5],
+            [17, 3],
+            [18, 5]
+          ]
+        }
       }
     },
     {
@@ -1461,7 +1667,15 @@
       },
       "paint": {
         "line-color": "rgba(221, 221, 221, 1)",
-        "line-width": {"stops": [[14, 1], [15, 1.5], [16, 2], [17, 4], [18, 6]]}
+        "line-width": {
+          "stops": [
+            [14, 1],
+            [15, 1.5],
+            [16, 2],
+            [17, 4],
+            [18, 6]
+          ]
+        }
       }
     },
     {
@@ -1478,7 +1692,15 @@
       },
       "paint": {
         "line-color": "rgba(233, 233, 233, 1)",
-        "line-width": {"stops": [[14, 1], [15, 1.5], [16, 2], [17, 4], [18, 6]]}
+        "line-width": {
+          "stops": [
+            [14, 1],
+            [15, 1.5],
+            [16, 2],
+            [17, 4],
+            [18, 6]
+          ]
+        }
       }
     },
     {
@@ -1487,12 +1709,21 @@
       "source": "vectorTiles",
       "source-layer": "Walkway road",
       "filter": ["==", "z_level", -2],
-      "layout": {"line-cap": "round", "line-join": "round"},
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round"
+      },
       "paint": {
         "line-color": "rgba(225, 225, 225, 1)",
         "line-dasharray": [0.1, 3],
         "line-width": {
-          "stops": [[14, 0.5], [15, 1], [16, 1.5], [17, 3], [18, 5]]
+          "stops": [
+            [14, 0.5],
+            [15, 1],
+            [16, 1.5],
+            [17, 3],
+            [18, 5]
+          ]
         }
       }
     },
@@ -1510,7 +1741,15 @@
       },
       "paint": {
         "line-color": "rgb(255, 255, 255)",
-        "line-width": {"stops": [[14, 1], [15, 1.5], [16, 2], [17, 4], [18, 6]]}
+        "line-width": {
+          "stops": [
+            [14, 1],
+            [15, 1.5],
+            [16, 2],
+            [17, 4],
+            [18, 6]
+          ]
+        }
       }
     },
     {
@@ -1531,9 +1770,20 @@
       },
       "paint": {
         "line-color": {
-          "stops": [[14, "rgba(232, 232, 232, 1)"], [14, "rgb(255, 255, 255)"]]
+          "stops": [
+            [14, "rgba(232, 232, 232, 1)"],
+            [14, "rgb(255, 255, 255)"]
+          ]
         },
-        "line-width": {"stops": [[14, 3], [15, 5], [16, 8], [17, 12], [18, 14]]}
+        "line-width": {
+          "stops": [
+            [14, 3],
+            [15, 5],
+            [16, 8],
+            [17, 12],
+            [18, 14]
+          ]
+        }
       }
     },
     {
@@ -1560,9 +1810,18 @@
           ]
         },
         "line-pattern": "under-construction",
-        "line-width": {"stops": [[14, 3], [15, 5], [16, 8], [17, 12], [18, 14]]}
+        "line-width": {
+          "stops": [
+            [14, 3],
+            [15, 5],
+            [16, 8],
+            [17, 12],
+            [18, 14]
+          ]
+        }
       }
     },
+    
     {
       "id": "Toll minor local road arrow - level-2",
       "type": "symbol",
@@ -1619,10 +1878,20 @@
       },
       "paint": {
         "line-color": {
-          "stops": [[14, "rgba(232, 232, 232, 1)"], [14, "rgb(255, 255, 255)"]]
+          "stops": [
+            [14, "rgba(232, 232, 232, 1)"],
+            [14, "rgb(255, 255, 255)"]
+          ]
         },
         "line-width": {
-          "stops": [[13, 1], [14, 3], [15, 5], [16, 8], [17, 12], [18, 14]]
+          "stops": [
+            [13, 1],
+            [14, 3],
+            [15, 5],
+            [16, 8],
+            [17, 12],
+            [18, 14]
+          ]
         }
       }
     },
@@ -1651,7 +1920,14 @@
         },
         "line-pattern": "under-construction",
         "line-width": {
-          "stops": [[13, 1], [14, 3], [15, 5], [16, 8], [17, 12], [18, 14]]
+          "stops": [
+            [13, 1],
+            [14, 3],
+            [15, 5],
+            [16, 8],
+            [17, 12],
+            [18, 14]
+          ]
         }
       }
     },
@@ -1712,7 +1988,13 @@
       "paint": {
         "line-color": "rgb(255, 255, 255)",
         "line-width": {
-          "stops": [[14, 4], [15, 6], [16, 10], [17, 14], [18, 16]]
+          "stops": [
+            [14, 4],
+            [15, 6],
+            [16, 10],
+            [17, 14],
+            [18, 16]
+          ]
         }
       }
     },
@@ -1741,7 +2023,13 @@
         },
         "line-pattern": "under-construction",
         "line-width": {
-          "stops": [[14, 4], [15, 6], [16, 10], [17, 14], [18, 16]]
+          "stops": [
+            [14, 4],
+            [15, 6],
+            [16, 10],
+            [17, 14],
+            [18, 16]
+          ]
         }
       }
     },
@@ -1800,9 +2088,21 @@
         "line-round-limit": 1.05
       },
       "paint": {
-        "line-color": {"stops": [[14, "#E8E8E8"], [14, "rgb(255, 255, 255)"]]},
+        "line-color": {
+          "stops": [
+            [14, "#E8E8E8"],
+            [14, "rgb(255, 255, 255)"]
+          ]
+        },
         "line-width": {
-          "stops": [[13, 1], [14, 4], [15, 6], [16, 10], [17, 14], [18, 16]]
+          "stops": [
+            [13, 1],
+            [14, 4],
+            [15, 6],
+            [16, 10],
+            [17, 14],
+            [18, 16]
+          ]
         }
       }
     },
@@ -1831,7 +2131,14 @@
         },
         "line-pattern": "under-construction-gray",
         "line-width": {
-          "stops": [[13, 1], [14, 4], [15, 6], [16, 10], [17, 14], [18, 16]]
+          "stops": [
+            [13, 1],
+            [14, 4],
+            [15, 6],
+            [16, 10],
+            [17, 14],
+            [18, 16]
+          ]
         }
       }
     },
@@ -1891,7 +2198,10 @@
       },
       "paint": {
         "line-color": {
-          "stops": [[12, "#DDDDDD"], [12, "rgba(255, 255, 255, 1)"]]
+          "stops": [
+            [12, "#DDDDDD"],
+            [12, "rgba(255, 255, 255, 1)"]
+          ]
         },
         "line-width": {
           "stops": [
@@ -2000,7 +2310,10 @@
       },
       "paint": {
         "line-color": {
-          "stops": [[12, "#DDDDDD"], [12, "rgba(255, 255, 255, 1)"]]
+          "stops": [
+            [12, "#DDDDDD"],
+            [12, "rgba(255, 255, 255, 1)"]
+          ]
         },
         "line-width": {
           "stops": [
@@ -2109,7 +2422,10 @@
       },
       "paint": {
         "line-color": {
-          "stops": [[11, "#DDDDDD"], [11, "rgba(255, 255, 255, 1)"]]
+          "stops": [
+            [11, "#DDDDDD"],
+            [11, "rgba(255, 255, 255, 1)"]
+          ]
         },
         "line-width": {
           "stops": [
@@ -2219,7 +2535,10 @@
       },
       "paint": {
         "line-color": {
-          "stops": [[11, "#DDDDDD"], [11, "rgba(255, 255, 255, 1)"]]
+          "stops": [
+            [11, "#DDDDDD"],
+            [11, "rgba(255, 255, 255, 1)"]
+          ]
         },
         "line-width": {
           "stops": [
@@ -2330,7 +2649,10 @@
       },
       "paint": {
         "line-color": {
-          "stops": [[10, "#DDDDDD"], [10, "rgba(255, 255, 255, 1)"]]
+          "stops": [
+            [10, "#DDDDDD"],
+            [10, "rgba(255, 255, 255, 1)"]
+          ]
         },
         "line-width": {
           "stops": [
@@ -2435,7 +2757,10 @@
       },
       "paint": {
         "line-color": {
-          "stops": [[10, "#DDDDDD"], [10, "rgba(255, 255, 255, 1)"]]
+          "stops": [
+            [10, "#DDDDDD"],
+            [10, "rgba(255, 255, 255, 1)"]
+          ]
         },
         "line-width": {
           "stops": [
@@ -2808,7 +3133,10 @@
       },
       "paint": {
         "line-color": {
-          "stops": [[8, "rgb(175, 158, 139)"], [9, "rgb(247, 191, 119)"]]
+          "stops": [
+            [8, "rgb(175, 158, 139)"],
+            [9, "rgb(247, 191, 119)"]
+          ]
         },
         "line-pattern": "under-construction-gray",
         "line-width": {
@@ -2917,7 +3245,10 @@
       },
       "paint": {
         "line-color": {
-          "stops": [[4, "rgb(175, 158, 139)"], [9, "rgb(247, 191, 119)"]]
+          "stops": [
+            [4, "rgb(175, 158, 139)"],
+            [9, "rgb(247, 191, 119)"]
+          ]
         },
         "line-pattern": "under-construction-gray",
         "line-width": {
@@ -3218,7 +3549,13 @@
       "paint": {
         "line-color": "rgba(221, 221, 221, 1)",
         "line-width": {
-          "stops": [[14, 2.5], [15, 8], [16, 11], [17, 15], [18, 19]]
+          "stops": [
+            [14, 2.5],
+            [15, 8],
+            [16, 11],
+            [17, 15],
+            [18, 19]
+          ]
         }
       }
     },
@@ -3237,7 +3574,13 @@
       "paint": {
         "line-color": "rgb(189, 189, 189)",
         "line-width": {
-          "stops": [[14, 3.5], [15, 9], [16, 13], [17, 17], [18, 21]]
+          "stops": [
+            [14, 3.5],
+            [15, 9],
+            [16, 13],
+            [17, 17],
+            [18, 21]
+          ]
         }
       }
     },
@@ -3427,7 +3770,13 @@
       "paint": {
         "line-color": "rgba(221, 221, 221, 1)",
         "line-width": {
-          "stops": [[14, 2.5], [15, 6], [16, 10], [17, 14], [18, 17]]
+          "stops": [
+            [14, 2.5],
+            [15, 6],
+            [16, 10],
+            [17, 14],
+            [18, 17]
+          ]
         }
       }
     },
@@ -3446,7 +3795,13 @@
       "paint": {
         "line-color": "rgba(221, 221, 221, 1)",
         "line-width": {
-          "stops": [[14, 2.5], [15, 8], [16, 11], [17, 15], [18, 19]]
+          "stops": [
+            [14, 2.5],
+            [15, 8],
+            [16, 11],
+            [17, 15],
+            [18, 19]
+          ]
         }
       }
     },
@@ -3465,7 +3820,13 @@
       "paint": {
         "line-color": "rgba(221, 221, 221, 1)",
         "line-width": {
-          "stops": [[14, 3.5], [15, 9], [16, 13], [17, 17], [18, 21]]
+          "stops": [
+            [14, 3.5],
+            [15, 9],
+            [16, 13],
+            [17, 17],
+            [18, 21]
+          ]
         }
       }
     },
@@ -3656,7 +4017,14 @@
       "paint": {
         "line-color": "rgba(255, 255, 255, 1)",
         "line-width": {
-          "stops": [[13, 1], [14, 1.5], [15, 4], [16, 8], [17, 12], [18, 14]]
+          "stops": [
+            [13, 1],
+            [14, 1.5],
+            [15, 4],
+            [16, 8],
+            [17, 12],
+            [18, 14]
+          ]
         }
       }
     },
@@ -3667,11 +4035,21 @@
       "source-layer": "Non public road",
       "minzoom": 15,
       "filter": ["==", "z_level", -1],
-      "layout": {"line-cap": "round", "line-join": "round"},
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round"
+      },
       "paint": {
         "line-color": "rgba(241, 241, 241, 1)",
         "line-dasharray": [0.1, 3],
-        "line-width": {"stops": [[15, 1], [16, 1.5], [17, 3], [18, 5]]}
+        "line-width": {
+          "stops": [
+            [15, 1],
+            [16, 1.5],
+            [17, 3],
+            [18, 5]
+          ]
+        }
       }
     },
     {
@@ -3688,7 +4066,15 @@
       },
       "paint": {
         "line-color": "rgba(221, 221, 221, 1)",
-        "line-width": {"stops": [[14, 1], [15, 1.5], [16, 2], [17, 4], [18, 6]]}
+        "line-width": {
+          "stops": [
+            [14, 1],
+            [15, 1.5],
+            [16, 2],
+            [17, 4],
+            [18, 6]
+          ]
+        }
       }
     },
     {
@@ -3705,7 +4091,15 @@
       },
       "paint": {
         "line-color": "rgba(233, 233, 233, 1)",
-        "line-width": {"stops": [[14, 1], [15, 1.5], [16, 2], [17, 4], [18, 6]]}
+        "line-width": {
+          "stops": [
+            [14, 1],
+            [15, 1.5],
+            [16, 2],
+            [17, 4],
+            [18, 6]
+          ]
+        }
       }
     },
     {
@@ -3714,12 +4108,21 @@
       "source": "vectorTiles",
       "source-layer": "Walkway road",
       "filter": ["==", "z_level", -1],
-      "layout": {"line-cap": "round", "line-join": "round"},
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round"
+      },
       "paint": {
         "line-color": "rgba(225, 225, 225, 1)",
         "line-dasharray": [0.1, 3],
         "line-width": {
-          "stops": [[14, 0.5], [15, 1], [16, 1.5], [17, 3], [18, 5]]
+          "stops": [
+            [14, 0.5],
+            [15, 1],
+            [16, 1.5],
+            [17, 3],
+            [18, 5]
+          ]
         }
       }
     },
@@ -3737,7 +4140,15 @@
       },
       "paint": {
         "line-color": "rgb(255, 255, 255)",
-        "line-width": {"stops": [[14, 1], [15, 1.5], [16, 2], [17, 4], [18, 6]]}
+        "line-width": {
+          "stops": [
+            [14, 1],
+            [15, 1.5],
+            [16, 2],
+            [17, 4],
+            [18, 6]
+          ]
+        }
       }
     },
     {
@@ -3758,9 +4169,20 @@
       },
       "paint": {
         "line-color": {
-          "stops": [[14, "rgba(232, 232, 232, 1)"], [14, "rgb(255, 255, 255)"]]
+          "stops": [
+            [14, "rgba(232, 232, 232, 1)"],
+            [14, "rgb(255, 255, 255)"]
+          ]
         },
-        "line-width": {"stops": [[14, 3], [15, 5], [16, 8], [17, 12], [18, 14]]}
+        "line-width": {
+          "stops": [
+            [14, 3],
+            [15, 5],
+            [16, 8],
+            [17, 12],
+            [18, 14]
+          ]
+        }
       }
     },
     {
@@ -3787,7 +4209,15 @@
           ]
         },
         "line-pattern": "under-construction-gray",
-        "line-width": {"stops": [[14, 3], [15, 5], [16, 8], [17, 12], [18, 14]]}
+        "line-width": {
+          "stops": [
+            [14, 3],
+            [15, 5],
+            [16, 8],
+            [17, 12],
+            [18, 14]
+          ]
+        }
       }
     },
     {
@@ -3846,10 +4276,20 @@
       },
       "paint": {
         "line-color": {
-          "stops": [[14, "rgba(232, 232, 232, 1)"], [14, "rgb(255, 255, 255)"]]
+          "stops": [
+            [14, "rgba(232, 232, 232, 1)"],
+            [14, "rgb(255, 255, 255)"]
+          ]
         },
         "line-width": {
-          "stops": [[13, 1], [14, 3], [15, 5], [16, 8], [17, 12], [18, 14]]
+          "stops": [
+            [13, 1],
+            [14, 3],
+            [15, 5],
+            [16, 8],
+            [17, 12],
+            [18, 14]
+          ]
         }
       }
     },
@@ -3878,7 +4318,14 @@
         },
         "line-pattern": "under-construction-gray",
         "line-width": {
-          "stops": [[13, 1], [14, 3], [15, 5], [16, 8], [17, 12], [18, 14]]
+          "stops": [
+            [13, 1],
+            [14, 3],
+            [15, 5],
+            [16, 8],
+            [17, 12],
+            [18, 14]
+          ]
         }
       }
     },
@@ -3937,9 +4384,20 @@
         "line-round-limit": 1.05
       },
       "paint": {
-        "line-color": {"stops": [[14, "#E8E8E8"], [14, "rgb(255, 255, 255)"]]},
+        "line-color": {
+          "stops": [
+            [14, "#E8E8E8"],
+            [14, "rgb(255, 255, 255)"]
+          ]
+        },
         "line-width": {
-          "stops": [[14, 4], [15, 6], [16, 10], [17, 14], [18, 16]]
+          "stops": [
+            [14, 4],
+            [15, 6],
+            [16, 10],
+            [17, 14],
+            [18, 16]
+          ]
         }
       }
     },
@@ -3968,7 +4426,13 @@
         },
         "line-pattern": "under-construction-gray",
         "line-width": {
-          "stops": [[14, 4], [15, 6], [16, 10], [17, 14], [18, 16]]
+          "stops": [
+            [14, 4],
+            [15, 6],
+            [16, 10],
+            [17, 14],
+            [18, 16]
+          ]
         }
       }
     },
@@ -4027,9 +4491,21 @@
         "line-round-limit": 1.05
       },
       "paint": {
-        "line-color": {"stops": [[14, "#E8E8E8"], [14, "rgb(255, 255, 255)"]]},
+        "line-color": {
+          "stops": [
+            [14, "#E8E8E8"],
+            [14, "rgb(255, 255, 255)"]
+          ]
+        },
         "line-width": {
-          "stops": [[13, 1], [14, 4], [15, 6], [16, 10], [17, 14], [18, 16]]
+          "stops": [
+            [13, 1],
+            [14, 4],
+            [15, 6],
+            [16, 10],
+            [17, 14],
+            [18, 16]
+          ]
         }
       }
     },
@@ -4058,7 +4534,14 @@
         },
         "line-pattern": "under-construction-gray",
         "line-width": {
-          "stops": [[13, 1], [14, 4], [15, 6], [16, 10], [17, 14], [18, 16]]
+          "stops": [
+            [13, 1],
+            [14, 4],
+            [15, 6],
+            [16, 10],
+            [17, 14],
+            [18, 16]
+          ]
         }
       }
     },
@@ -4118,7 +4601,10 @@
       },
       "paint": {
         "line-color": {
-          "stops": [[12, "#DDDDDD"], [12, "rgba(255, 255, 255, 1)"]]
+          "stops": [
+            [12, "#DDDDDD"],
+            [12, "rgba(255, 255, 255, 1)"]
+          ]
         },
         "line-width": {
           "stops": [
@@ -4227,7 +4713,10 @@
       },
       "paint": {
         "line-color": {
-          "stops": [[12, "#DDDDDD"], [12, "rgba(255, 255, 255, 1)"]]
+          "stops": [
+            [12, "#DDDDDD"],
+            [12, "rgba(255, 255, 255, 1)"]
+          ]
         },
         "line-width": {
           "stops": [
@@ -4336,7 +4825,10 @@
       },
       "paint": {
         "line-color": {
-          "stops": [[11, "#DDDDDD"], [11, "rgba(255, 255, 255, 1)"]]
+          "stops": [
+            [11, "#DDDDDD"],
+            [11, "rgba(255, 255, 255, 1)"]
+          ]
         },
         "line-width": {
           "stops": [
@@ -4446,7 +4938,10 @@
       },
       "paint": {
         "line-color": {
-          "stops": [[11, "#DDDDDD"], [11, "rgba(255, 255, 255, 1)"]]
+          "stops": [
+            [11, "#DDDDDD"],
+            [11, "rgba(255, 255, 255, 1)"]
+          ]
         },
         "line-width": {
           "stops": [
@@ -4557,7 +5052,10 @@
       },
       "paint": {
         "line-color": {
-          "stops": [[10, "#DDDDDD"], [10, "rgba(255, 255, 255, 1)"]]
+          "stops": [
+            [10, "#DDDDDD"],
+            [10, "rgba(255, 255, 255, 1)"]
+          ]
         },
         "line-width": {
           "stops": [
@@ -4662,7 +5160,10 @@
       },
       "paint": {
         "line-color": {
-          "stops": [[10, "#DDDDDD"], [10, "rgba(255, 255, 255, 1)"]]
+          "stops": [
+            [10, "#DDDDDD"],
+            [10, "rgba(255, 255, 255, 1)"]
+          ]
         },
         "line-width": {
           "stops": [
@@ -5035,7 +5536,10 @@
       },
       "paint": {
         "line-color": {
-          "stops": [[8, "rgb(175, 158, 139)"], [9, "rgb(247, 191, 119)"]]
+          "stops": [
+            [8, "rgb(175, 158, 139)"],
+            [9, "rgb(247, 191, 119)"]
+          ]
         },
         "line-pattern": "under-construction-gray",
         "line-width": {
@@ -5144,7 +5648,10 @@
       },
       "paint": {
         "line-color": {
-          "stops": [[4, "rgb(175, 158, 139)"], [9, "rgb(247, 191, 119)"]]
+          "stops": [
+            [4, "rgb(175, 158, 139)"],
+            [9, "rgb(247, 191, 119)"]
+          ]
         },
         "line-pattern": "under-construction-gray",
         "line-width": {
@@ -5444,7 +5951,13 @@
       "paint": {
         "line-color": "rgba(221, 221, 221, 1)",
         "line-width": {
-          "stops": [[14, 3], [15, 6], [16, 10], [17, 15], [18, 18]]
+          "stops": [
+            [14, 3],
+            [15, 6],
+            [16, 10],
+            [17, 15],
+            [18, 18]
+          ]
         }
       }
     },
@@ -5462,7 +5975,13 @@
       "paint": {
         "line-color": "rgba(221, 221, 221, 1)",
         "line-width": {
-          "stops": [[14, 3.5], [15, 9], [16, 13], [17, 17], [18, 21]]
+          "stops": [
+            [14, 3.5],
+            [15, 9],
+            [16, 13],
+            [17, 17],
+            [18, 21]
+          ]
         }
       }
     },
@@ -5642,7 +6161,13 @@
       "paint": {
         "line-color": "rgba(221, 221, 221, 1)",
         "line-width": {
-          "stops": [[14, 2.5], [15, 8], [16, 11], [17, 15], [18, 19]]
+          "stops": [
+            [14, 2.5],
+            [15, 8],
+            [16, 11],
+            [17, 15],
+            [18, 19]
+          ]
         }
       }
     },
@@ -5660,7 +6185,13 @@
       "paint": {
         "line-color": "rgba(221, 221, 221, 1)",
         "line-width": {
-          "stops": [[14, 3.5], [15, 9], [16, 13], [17, 17], [18, 21]]
+          "stops": [
+            [14, 3.5],
+            [15, 9],
+            [16, 13],
+            [17, 17],
+            [18, 21]
+          ]
         }
       }
     },
@@ -5846,7 +6377,15 @@
             [14, "rgba(231, 231, 231, 1)"]
           ]
         },
-        "line-width": {"stops": [[14, 2], [15, 4], [16, 8], [17, 11], [18, 14]]}
+        "line-width": {
+          "stops": [
+            [14, 2],
+            [15, 4],
+            [16, 8],
+            [17, 11],
+            [18, 14]
+          ]
+        }
       }
     },
     {
@@ -5864,7 +6403,15 @@
       "paint": {
         "line-color": "rgb(228, 224, 217)",
         "line-pattern": "under-construction-gray",
-        "line-width": {"stops": [[14, 2], [15, 4], [16, 8], [17, 11], [18, 14]]}
+        "line-width": {
+          "stops": [
+            [14, 2],
+            [15, 4],
+            [16, 8],
+            [17, 11],
+            [18, 14]
+          ]
+        }
       }
     },
     {
@@ -5922,7 +6469,15 @@
             [14, "rgba(231, 231, 231, 1)"]
           ]
         },
-        "line-width": {"stops": [[14, 2], [15, 4], [16, 8], [17, 11], [18, 14]]}
+        "line-width": {
+          "stops": [
+            [14, 2],
+            [15, 4],
+            [16, 8],
+            [17, 11],
+            [18, 14]
+          ]
+        }
       }
     },
     {
@@ -5940,7 +6495,15 @@
       "paint": {
         "line-color": "rgb(228, 224, 217)",
         "line-pattern": "under-construction-gray",
-        "line-width": {"stops": [[14, 2], [15, 4], [16, 8], [17, 11], [18, 14]]}
+        "line-width": {
+          "stops": [
+            [14, 2],
+            [15, 4],
+            [16, 8],
+            [17, 11],
+            [18, 14]
+          ]
+        }
       }
     },
     {
@@ -5993,10 +6556,19 @@
       },
       "paint": {
         "line-color": {
-          "stops": [[14, "#E8E8E8"], [14, "rgba(231, 231, 231, 1)"]]
+          "stops": [
+            [14, "#E8E8E8"],
+            [14, "rgba(231, 231, 231, 1)"]
+          ]
         },
         "line-width": {
-          "stops": [[14, 4], [15, 6], [16, 10], [17, 14], [18, 16]]
+          "stops": [
+            [14, 4],
+            [15, 6],
+            [16, 10],
+            [17, 14],
+            [18, 16]
+          ]
         }
       }
     },
@@ -6016,7 +6588,13 @@
         "line-color": "rgb(228, 224, 217)",
         "line-pattern": "under-construction-gray",
         "line-width": {
-          "stops": [[14, 4], [15, 6], [16, 10], [17, 14], [18, 16]]
+          "stops": [
+            [14, 4],
+            [15, 6],
+            [16, 10],
+            [17, 14],
+            [18, 16]
+          ]
         }
       }
     },
@@ -6070,10 +6648,19 @@
       },
       "paint": {
         "line-color": {
-          "stops": [[14, "#E8E8E8"], [14, "rgba(231, 231, 231, 1)"]]
+          "stops": [
+            [14, "#E8E8E8"],
+            [14, "rgba(231, 231, 231, 1)"]
+          ]
         },
         "line-width": {
-          "stops": [[14, 4], [15, 6], [16, 10], [17, 14], [18, 16]]
+          "stops": [
+            [14, 4],
+            [15, 6],
+            [16, 10],
+            [17, 14],
+            [18, 16]
+          ]
         }
       }
     },
@@ -6093,7 +6680,13 @@
         "line-color": "rgb(228, 224, 217)",
         "line-pattern": "under-construction-gray",
         "line-width": {
-          "stops": [[14, 4], [15, 6], [16, 10], [17, 14], [18, 16]]
+          "stops": [
+            [14, 4],
+            [15, 6],
+            [16, 10],
+            [17, 14],
+            [18, 16]
+          ]
         }
       }
     },
@@ -6339,7 +6932,10 @@
       },
       "paint": {
         "line-color": {
-          "stops": [[11, "#DDDDDD"], [11, "rgba(231, 231, 231, 1)"]]
+          "stops": [
+            [11, "#DDDDDD"],
+            [11, "rgba(231, 231, 231, 1)"]
+          ]
         },
         "line-width": {
           "stops": [
@@ -6434,7 +7030,10 @@
       },
       "paint": {
         "line-color": {
-          "stops": [[11, "#DDDDDD"], [11, "rgba(231, 231, 231, 1)"]]
+          "stops": [
+            [11, "#DDDDDD"],
+            [11, "rgba(231, 231, 231, 1)"]
+          ]
         },
         "line-width": {
           "stops": [
@@ -6529,7 +7128,10 @@
       },
       "paint": {
         "line-color": {
-          "stops": [[10, "#DDDDDD"], [10, "rgba(231, 231, 231, 1)"]]
+          "stops": [
+            [10, "#DDDDDD"],
+            [10, "rgba(231, 231, 231, 1)"]
+          ]
         },
         "line-width": {
           "stops": [
@@ -6626,7 +7228,10 @@
       },
       "paint": {
         "line-color": {
-          "stops": [[10, "#DDDDDD"], [10, "rgba(231, 231, 231, 1)"]]
+          "stops": [
+            [10, "#DDDDDD"],
+            [10, "rgba(231, 231, 231, 1)"]
+          ]
         },
         "line-width": {
           "stops": [
@@ -7313,7 +7918,13 @@
       },
       "paint": {
         "line-color": "rgba(179, 179, 179, 1)",
-        "line-width": {"stops": [[13, 2], [15, 3], [18, 4]]}
+        "line-width": {
+          "stops": [
+            [13, 2],
+            [15, 3],
+            [18, 4]
+          ]
+        }
       }
     },
     {
@@ -7330,7 +7941,13 @@
       "paint": {
         "line-color": "rgba(255, 255, 255, 1)",
         "line-dasharray": [3, 4],
-        "line-width": {"stops": [[13, 1.5], [15, 2], [18, 2.5]]}
+        "line-width": {
+          "stops": [
+            [13, 1.5],
+            [15, 2],
+            [18, 2.5]
+          ]
+        }
       }
     },
     {
@@ -7348,7 +7965,13 @@
       "paint": {
         "line-color": "rgba(221, 221, 221, 1)",
         "line-width": {
-          "stops": [[14, 2.5], [15, 8], [16, 11], [17, 15], [18, 19]]
+          "stops": [
+            [14, 2.5],
+            [15, 8],
+            [16, 11],
+            [17, 15],
+            [18, 19]
+          ]
         }
       }
     },
@@ -7367,7 +7990,13 @@
       "paint": {
         "line-color": "rgb(189, 189, 189)",
         "line-width": {
-          "stops": [[14, 3.5], [15, 9], [16, 13], [17, 17], [18, 21]]
+          "stops": [
+            [14, 3.5],
+            [15, 9],
+            [16, 13],
+            [17, 17],
+            [18, 21]
+          ]
         }
       }
     },
@@ -7557,7 +8186,13 @@
       "paint": {
         "line-color": "rgba(221, 221, 221, 1)",
         "line-width": {
-          "stops": [[14, 2.5], [15, 6], [16, 10], [17, 14], [18, 17]]
+          "stops": [
+            [14, 2.5],
+            [15, 6],
+            [16, 10],
+            [17, 14],
+            [18, 17]
+          ]
         }
       }
     },
@@ -7576,7 +8211,13 @@
       "paint": {
         "line-color": "rgba(221, 221, 221, 1)",
         "line-width": {
-          "stops": [[14, 2.5], [15, 8], [16, 11], [17, 15], [18, 19]]
+          "stops": [
+            [14, 2.5],
+            [15, 8],
+            [16, 11],
+            [17, 15],
+            [18, 19]
+          ]
         }
       }
     },
@@ -7595,7 +8236,13 @@
       "paint": {
         "line-color": "rgba(221, 221, 221, 1)",
         "line-width": {
-          "stops": [[14, 3.5], [15, 9], [16, 13], [17, 17], [18, 21]]
+          "stops": [
+            [14, 3.5],
+            [15, 9],
+            [16, 13],
+            [17, 17],
+            [18, 21]
+          ]
         }
       }
     },
@@ -7786,7 +8433,14 @@
       "paint": {
         "line-color": "rgba(255, 255, 255, 1)",
         "line-width": {
-          "stops": [[13, 1], [14, 1.5], [15, 4], [16, 8], [17, 12], [18, 14]]
+          "stops": [
+            [13, 1],
+            [14, 1.5],
+            [15, 4],
+            [16, 8],
+            [17, 12],
+            [18, 14]
+          ]
         }
       }
     },
@@ -7797,11 +8451,21 @@
       "source-layer": "Non public road",
       "minzoom": 15,
       "filter": ["!has", "z_level"],
-      "layout": {"line-cap": "round", "line-join": "round"},
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round"
+      },
       "paint": {
         "line-color": "rgba(241, 241, 241, 1)",
         "line-dasharray": [0.1, 3],
-        "line-width": {"stops": [[15, 1], [16, 1.5], [17, 3], [18, 5]]}
+        "line-width": {
+          "stops": [
+            [15, 1],
+            [16, 1.5],
+            [17, 3],
+            [18, 5]
+          ]
+        }
       }
     },
     {
@@ -7818,7 +8482,15 @@
       },
       "paint": {
         "line-color": "rgba(221, 221, 221, 1)",
-        "line-width": {"stops": [[14, 1], [15, 1.5], [16, 2], [17, 4], [18, 6]]}
+        "line-width": {
+          "stops": [
+            [14, 1],
+            [15, 1.5],
+            [16, 2],
+            [17, 4],
+            [18, 6]
+          ]
+        }
       }
     },
     {
@@ -7835,7 +8507,15 @@
       },
       "paint": {
         "line-color": "rgba(233, 233, 233, 1)",
-        "line-width": {"stops": [[14, 1], [15, 1.5], [16, 2], [17, 4], [18, 6]]}
+        "line-width": {
+          "stops": [
+            [14, 1],
+            [15, 1.5],
+            [16, 2],
+            [17, 4],
+            [18, 6]
+          ]
+        }
       }
     },
     {
@@ -7844,12 +8524,21 @@
       "source": "vectorTiles",
       "source-layer": "Walkway road",
       "filter": ["!has", "z_level"],
-      "layout": {"line-cap": "round", "line-join": "round"},
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round"
+      },
       "paint": {
         "line-color": "rgba(225, 225, 225, 1)",
         "line-dasharray": [0.1, 3],
         "line-width": {
-          "stops": [[14, 0.5], [15, 1], [16, 1.5], [17, 3], [18, 5]]
+          "stops": [
+            [14, 0.5],
+            [15, 1],
+            [16, 1.5],
+            [17, 3],
+            [18, 5]
+          ]
         }
       }
     },
@@ -7867,7 +8556,15 @@
       },
       "paint": {
         "line-color": "rgb(255, 255, 255)",
-        "line-width": {"stops": [[14, 1], [15, 1.5], [16, 2], [17, 4], [18, 6]]}
+        "line-width": {
+          "stops": [
+            [14, 1],
+            [15, 1.5],
+            [16, 2],
+            [17, 4],
+            [18, 6]
+          ]
+        }
       }
     },
     {
@@ -7888,9 +8585,20 @@
       },
       "paint": {
         "line-color": {
-          "stops": [[14, "rgba(232, 232, 232, 1)"], [14, "rgb(255, 255, 255)"]]
+          "stops": [
+            [14, "rgba(232, 232, 232, 1)"],
+            [14, "rgb(255, 255, 255)"]
+          ]
         },
-        "line-width": {"stops": [[14, 3], [15, 5], [16, 8], [17, 12], [18, 14]]}
+        "line-width": {
+          "stops": [
+            [14, 3],
+            [15, 5],
+            [16, 8],
+            [17, 12],
+            [18, 14]
+          ]
+        }
       }
     },
     {
@@ -7917,7 +8625,15 @@
           ]
         },
         "line-pattern": "under-construction-gray",
-        "line-width": {"stops": [[14, 3], [15, 5], [16, 8], [17, 12], [18, 14]]}
+        "line-width": {
+          "stops": [
+            [14, 3],
+            [15, 5],
+            [16, 8],
+            [17, 12],
+            [18, 14]
+          ]
+        }
       }
     },
     {
@@ -7976,10 +8692,20 @@
       },
       "paint": {
         "line-color": {
-          "stops": [[14, "rgba(232, 232, 232, 1)"], [14, "rgb(255, 255, 255)"]]
+          "stops": [
+            [14, "rgba(232, 232, 232, 1)"],
+            [14, "rgb(255, 255, 255)"]
+          ]
         },
         "line-width": {
-          "stops": [[13, 1], [14, 3], [15, 5], [16, 8], [17, 12], [18, 14]]
+          "stops": [
+            [13, 1],
+            [14, 3],
+            [15, 5],
+            [16, 8],
+            [17, 12],
+            [18, 14]
+          ]
         }
       }
     },
@@ -8008,7 +8734,14 @@
         },
         "line-pattern": "under-construction-gray",
         "line-width": {
-          "stops": [[13, 1], [14, 3], [15, 5], [16, 8], [17, 12], [18, 14]]
+          "stops": [
+            [13, 1],
+            [14, 3],
+            [15, 5],
+            [16, 8],
+            [17, 12],
+            [18, 14]
+          ]
         }
       }
     },
@@ -8067,9 +8800,20 @@
         "line-round-limit": 1.05
       },
       "paint": {
-        "line-color": {"stops": [[14, "#E8E8E8"], [14, "rgb(255, 255, 255)"]]},
+        "line-color": {
+          "stops": [
+            [14, "#E8E8E8"],
+            [14, "rgb(255, 255, 255)"]
+          ]
+        },
         "line-width": {
-          "stops": [[14, 4], [15, 6], [16, 10], [17, 14], [18, 16]]
+          "stops": [
+            [14, 4],
+            [15, 6],
+            [16, 10],
+            [17, 14],
+            [18, 16]
+          ]
         }
       }
     },
@@ -8093,7 +8837,13 @@
         "line-color": "rgb(255, 255, 255)",
         "line-pattern": "under-construction-gray",
         "line-width": {
-          "stops": [[14, 4], [15, 6], [16, 10], [17, 14], [18, 16]]
+          "stops": [
+            [14, 4],
+            [15, 6],
+            [16, 10],
+            [17, 14],
+            [18, 16]
+          ]
         }
       }
     },
@@ -8152,9 +8902,21 @@
         "line-round-limit": 1.05
       },
       "paint": {
-        "line-color": {"stops": [[14, "#E8E8E8"], [14, "rgb(255, 255, 255)"]]},
+        "line-color": {
+          "stops": [
+            [14, "#E8E8E8"],
+            [14, "rgb(255, 255, 255)"]
+          ]
+        },
         "line-width": {
-          "stops": [[13, 1], [14, 4], [15, 6], [16, 10], [17, 14], [18, 16]]
+          "stops": [
+            [13, 1],
+            [14, 4],
+            [15, 6],
+            [16, 10],
+            [17, 14],
+            [18, 16]
+          ]
         }
       }
     },
@@ -8183,7 +8945,14 @@
         },
         "line-pattern": "under-construction-gray",
         "line-width": {
-          "stops": [[13, 1], [14, 4], [15, 6], [16, 10], [17, 14], [18, 16]]
+          "stops": [
+            [13, 1],
+            [14, 4],
+            [15, 6],
+            [16, 10],
+            [17, 14],
+            [18, 16]
+          ]
         }
       }
     },
@@ -8243,7 +9012,10 @@
       },
       "paint": {
         "line-color": {
-          "stops": [[12, "#DDDDDD"], [12, "rgba(255, 255, 255, 1)"]]
+          "stops": [
+            [12, "#DDDDDD"],
+            [12, "rgba(255, 255, 255, 1)"]
+          ]
         },
         "line-width": {
           "stops": [
@@ -8352,7 +9124,10 @@
       },
       "paint": {
         "line-color": {
-          "stops": [[12, "#DDDDDD"], [12, "rgba(255, 255, 255, 1)"]]
+          "stops": [
+            [12, "#DDDDDD"],
+            [12, "rgba(255, 255, 255, 1)"]
+          ]
         },
         "line-width": {
           "stops": [
@@ -8461,7 +9236,10 @@
       },
       "paint": {
         "line-color": {
-          "stops": [[11, "#DDDDDD"], [11, "rgba(255, 255, 255, 1)"]]
+          "stops": [
+            [11, "#DDDDDD"],
+            [11, "rgba(255, 255, 255, 1)"]
+          ]
         },
         "line-width": {
           "stops": [
@@ -8571,7 +9349,10 @@
       },
       "paint": {
         "line-color": {
-          "stops": [[11, "#DDDDDD"], [11, "rgba(255, 255, 255, 1)"]]
+          "stops": [
+            [11, "#DDDDDD"],
+            [11, "rgba(255, 255, 255, 1)"]
+          ]
         },
         "line-width": {
           "stops": [
@@ -8682,7 +9463,10 @@
       },
       "paint": {
         "line-color": {
-          "stops": [[10, "#DDDDDD"], [10, "rgba(255, 255, 255, 1)"]]
+          "stops": [
+            [10, "#DDDDDD"],
+            [10, "rgba(255, 255, 255, 1)"]
+          ]
         },
         "line-width": {
           "stops": [
@@ -8787,7 +9571,10 @@
       },
       "paint": {
         "line-color": {
-          "stops": [[10, "#DDDDDD"], [10, "rgba(255, 255, 255, 1)"]]
+          "stops": [
+            [10, "#DDDDDD"],
+            [10, "rgba(255, 255, 255, 1)"]
+          ]
         },
         "line-width": {
           "stops": [
@@ -8821,7 +9608,10 @@
       },
       "paint": {
         "line-color": {
-          "stops": [[10, "#DDDDDD"], [10, "rgba(255, 255, 255, 1)"]]
+          "stops": [
+            [10, "#DDDDDD"],
+            [10, "rgba(255, 255, 255, 1)"]
+          ]
         },
         "line-width": {
           "stops": [
@@ -9161,7 +9951,10 @@
       },
       "paint": {
         "line-color": {
-          "stops": [[8, "rgb(175, 158, 139)"], [9, "rgb(247, 191, 119)"]]
+          "stops": [
+            [8, "rgb(175, 158, 139)"],
+            [9, "rgb(247, 191, 119)"]
+          ]
         },
         "line-pattern": "under-construction-gray",
         "line-width": {
@@ -9270,7 +10063,10 @@
       },
       "paint": {
         "line-color": {
-          "stops": [[4, "rgb(175, 158, 139)"], [9, "rgb(247, 191, 119)"]]
+          "stops": [
+            [4, "rgb(175, 158, 139)"],
+            [9, "rgb(247, 191, 119)"]
+          ]
         },
         "line-pattern": "under-construction-gray",
         "line-width": {
@@ -9572,7 +10368,13 @@
       "paint": {
         "line-color": "rgba(221, 221, 221, 1)",
         "line-width": {
-          "stops": [[14, 2.5], [15, 8], [16, 11], [17, 15], [18, 19]]
+          "stops": [
+            [14, 2.5],
+            [15, 8],
+            [16, 11],
+            [17, 15],
+            [18, 19]
+          ]
         }
       }
     },
@@ -9591,7 +10393,13 @@
       "paint": {
         "line-color": "rgb(189, 189, 189)",
         "line-width": {
-          "stops": [[14, 3.5], [15, 9], [16, 13], [17, 17], [18, 21]]
+          "stops": [
+            [14, 3.5],
+            [15, 9],
+            [16, 13],
+            [17, 17],
+            [18, 21]
+          ]
         }
       }
     },
@@ -9781,7 +10589,13 @@
       "paint": {
         "line-color": "rgba(221, 221, 221, 1)",
         "line-width": {
-          "stops": [[14, 2.5], [15, 6], [16, 10], [17, 14], [18, 17]]
+          "stops": [
+            [14, 2.5],
+            [15, 6],
+            [16, 10],
+            [17, 14],
+            [18, 17]
+          ]
         }
       }
     },
@@ -9800,7 +10614,13 @@
       "paint": {
         "line-color": "rgba(221, 221, 221, 1)",
         "line-width": {
-          "stops": [[14, 2.5], [15, 8], [16, 11], [17, 15], [18, 19]]
+          "stops": [
+            [14, 2.5],
+            [15, 8],
+            [16, 11],
+            [17, 15],
+            [18, 19]
+          ]
         }
       }
     },
@@ -9819,7 +10639,13 @@
       "paint": {
         "line-color": "rgba(221, 221, 221, 1)",
         "line-width": {
-          "stops": [[14, 3.5], [15, 9], [16, 13], [17, 17], [18, 21]]
+          "stops": [
+            [14, 3.5],
+            [15, 9],
+            [16, 13],
+            [17, 17],
+            [18, 21]
+          ]
         }
       }
     },
@@ -9982,7 +10808,14 @@
       "paint": {
         "line-color": "rgba(255, 255, 255, 1)",
         "line-width": {
-          "stops": [[13, 1], [14, 1.5], [15, 4], [16, 8], [17, 12], [18, 14]]
+          "stops": [
+            [13, 1],
+            [14, 1.5],
+            [15, 4],
+            [16, 8],
+            [17, 12],
+            [18, 14]
+          ]
         }
       }
     },
@@ -9993,11 +10826,21 @@
       "source-layer": "Non public road",
       "minzoom": 15,
       "filter": ["==", "z_level", 1],
-      "layout": {"line-cap": "round", "line-join": "round"},
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round"
+      },
       "paint": {
         "line-color": "rgba(241, 241, 241, 1)",
         "line-dasharray": [0.1, 3],
-        "line-width": {"stops": [[15, 1], [16, 1.5], [17, 3], [18, 5]]}
+        "line-width": {
+          "stops": [
+            [15, 1],
+            [16, 1.5],
+            [17, 3],
+            [18, 5]
+          ]
+        }
       }
     },
     {
@@ -10014,7 +10857,15 @@
       },
       "paint": {
         "line-color": "rgba(221, 221, 221, 1)",
-        "line-width": {"stops": [[14, 1], [15, 1.5], [16, 2], [17, 4], [18, 6]]}
+        "line-width": {
+          "stops": [
+            [14, 1],
+            [15, 1.5],
+            [16, 2],
+            [17, 4],
+            [18, 6]
+          ]
+        }
       }
     },
     {
@@ -10031,7 +10882,15 @@
       },
       "paint": {
         "line-color": "rgba(233, 233, 233, 1)",
-        "line-width": {"stops": [[14, 1], [15, 1.5], [16, 2], [17, 4], [18, 6]]}
+        "line-width": {
+          "stops": [
+            [14, 1],
+            [15, 1.5],
+            [16, 2],
+            [17, 4],
+            [18, 6]
+          ]
+        }
       }
     },
     {
@@ -10040,12 +10899,21 @@
       "source": "vectorTiles",
       "source-layer": "Walkway road",
       "filter": ["==", "z_level", 1],
-      "layout": {"line-cap": "round", "line-join": "round"},
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round"
+      },
       "paint": {
         "line-color": "rgba(225, 225, 225, 1)",
         "line-dasharray": [0.1, 3],
         "line-width": {
-          "stops": [[14, 0.5], [15, 1], [16, 1.5], [17, 3], [18, 5]]
+          "stops": [
+            [14, 0.5],
+            [15, 1],
+            [16, 1.5],
+            [17, 3],
+            [18, 5]
+          ]
         }
       }
     },
@@ -10063,7 +10931,15 @@
       },
       "paint": {
         "line-color": "rgb(255, 255, 255)",
-        "line-width": {"stops": [[14, 1], [15, 1.5], [16, 2], [17, 4], [18, 6]]}
+        "line-width": {
+          "stops": [
+            [14, 1],
+            [15, 1.5],
+            [16, 2],
+            [17, 4],
+            [18, 6]
+          ]
+        }
       }
     },
     {
@@ -10084,9 +10960,20 @@
       },
       "paint": {
         "line-color": {
-          "stops": [[14, "rgba(232, 232, 232, 1)"], [14, "rgb(255, 255, 255)"]]
+          "stops": [
+            [14, "rgba(232, 232, 232, 1)"],
+            [14, "rgb(255, 255, 255)"]
+          ]
         },
-        "line-width": {"stops": [[14, 3], [15, 5], [16, 8], [17, 12], [18, 14]]}
+        "line-width": {
+          "stops": [
+            [14, 3],
+            [15, 5],
+            [16, 8],
+            [17, 12],
+            [18, 14]
+          ]
+        }
       }
     },
     {
@@ -10113,7 +11000,15 @@
           ]
         },
         "line-pattern": "under-construction-gray",
-        "line-width": {"stops": [[14, 3], [15, 5], [16, 8], [17, 12], [18, 14]]}
+        "line-width": {
+          "stops": [
+            [14, 3],
+            [15, 5],
+            [16, 8],
+            [17, 12],
+            [18, 14]
+          ]
+        }
       }
     },
     {
@@ -10172,10 +11067,20 @@
       },
       "paint": {
         "line-color": {
-          "stops": [[14, "rgba(232, 232, 232, 1)"], [14, "rgb(255, 255, 255)"]]
+          "stops": [
+            [14, "rgba(232, 232, 232, 1)"],
+            [14, "rgb(255, 255, 255)"]
+          ]
         },
         "line-width": {
-          "stops": [[13, 1], [14, 3], [15, 5], [16, 8], [17, 12], [18, 14]]
+          "stops": [
+            [13, 1],
+            [14, 3],
+            [15, 5],
+            [16, 8],
+            [17, 12],
+            [18, 14]
+          ]
         }
       }
     },
@@ -10204,7 +11109,14 @@
         },
         "line-pattern": "under-construction-gray",
         "line-width": {
-          "stops": [[13, 1], [14, 3], [15, 5], [16, 8], [17, 12], [18, 14]]
+          "stops": [
+            [13, 1],
+            [14, 3],
+            [15, 5],
+            [16, 8],
+            [17, 12],
+            [18, 14]
+          ]
         }
       }
     },
@@ -10263,9 +11175,20 @@
         "line-round-limit": 1.05
       },
       "paint": {
-        "line-color": {"stops": [[14, "#E8E8E8"], [14, "rgb(255, 255, 255)"]]},
+        "line-color": {
+          "stops": [
+            [14, "#E8E8E8"],
+            [14, "rgb(255, 255, 255)"]
+          ]
+        },
         "line-width": {
-          "stops": [[14, 4], [15, 6], [16, 10], [17, 14], [18, 16]]
+          "stops": [
+            [14, 4],
+            [15, 6],
+            [16, 10],
+            [17, 14],
+            [18, 16]
+          ]
         }
       }
     },
@@ -10294,7 +11217,13 @@
         },
         "line-pattern": "under-construction-gray",
         "line-width": {
-          "stops": [[14, 4], [15, 6], [16, 10], [17, 14], [18, 16]]
+          "stops": [
+            [14, 4],
+            [15, 6],
+            [16, 10],
+            [17, 14],
+            [18, 16]
+          ]
         }
       }
     },
@@ -10353,9 +11282,21 @@
         "line-round-limit": 1.05
       },
       "paint": {
-        "line-color": {"stops": [[14, "#E8E8E8"], [14, "rgb(255, 255, 255)"]]},
+        "line-color": {
+          "stops": [
+            [14, "#E8E8E8"],
+            [14, "rgb(255, 255, 255)"]
+          ]
+        },
         "line-width": {
-          "stops": [[13, 1], [14, 4], [15, 6], [16, 10], [17, 14], [18, 16]]
+          "stops": [
+            [13, 1],
+            [14, 4],
+            [15, 6],
+            [16, 10],
+            [17, 14],
+            [18, 16]
+          ]
         }
       }
     },
@@ -10384,7 +11325,14 @@
         },
         "line-pattern": "under-construction-gray",
         "line-width": {
-          "stops": [[13, 1], [14, 4], [15, 6], [16, 10], [17, 14], [18, 16]]
+          "stops": [
+            [13, 1],
+            [14, 4],
+            [15, 6],
+            [16, 10],
+            [17, 14],
+            [18, 16]
+          ]
         }
       }
     },
@@ -10444,7 +11392,10 @@
       },
       "paint": {
         "line-color": {
-          "stops": [[12, "#DDDDDD"], [12, "rgba(255, 255, 255, 1)"]]
+          "stops": [
+            [12, "#DDDDDD"],
+            [12, "rgba(255, 255, 255, 1)"]
+          ]
         },
         "line-width": {
           "stops": [
@@ -10553,7 +11504,10 @@
       },
       "paint": {
         "line-color": {
-          "stops": [[12, "#DDDDDD"], [12, "rgba(255, 255, 255, 1)"]]
+          "stops": [
+            [12, "#DDDDDD"],
+            [12, "rgba(255, 255, 255, 1)"]
+          ]
         },
         "line-width": {
           "stops": [
@@ -10662,7 +11616,10 @@
       },
       "paint": {
         "line-color": {
-          "stops": [[11, "#DDDDDD"], [11, "rgba(255, 255, 255, 1)"]]
+          "stops": [
+            [11, "#DDDDDD"],
+            [11, "rgba(255, 255, 255, 1)"]
+          ]
         },
         "line-width": {
           "stops": [
@@ -10772,7 +11729,10 @@
       },
       "paint": {
         "line-color": {
-          "stops": [[11, "#DDDDDD"], [11, "rgba(255, 255, 255, 1)"]]
+          "stops": [
+            [11, "#DDDDDD"],
+            [11, "rgba(255, 255, 255, 1)"]
+          ]
         },
         "line-width": {
           "stops": [
@@ -10883,7 +11843,10 @@
       },
       "paint": {
         "line-color": {
-          "stops": [[10, "#DDDDDD"], [10, "rgba(255, 255, 255, 1)"]]
+          "stops": [
+            [10, "#DDDDDD"],
+            [10, "rgba(255, 255, 255, 1)"]
+          ]
         },
         "line-width": {
           "stops": [
@@ -10988,7 +11951,10 @@
       },
       "paint": {
         "line-color": {
-          "stops": [[10, "#DDDDDD"], [10, "rgba(255, 255, 255, 1)"]]
+          "stops": [
+            [10, "#DDDDDD"],
+            [10, "rgba(255, 255, 255, 1)"]
+          ]
         },
         "line-width": {
           "stops": [
@@ -11361,7 +12327,10 @@
       },
       "paint": {
         "line-color": {
-          "stops": [[8, "rgb(175, 158, 139)"], [9, "rgb(247, 191, 119)"]]
+          "stops": [
+            [8, "rgb(175, 158, 139)"],
+            [9, "rgb(247, 191, 119)"]
+          ]
         },
         "line-pattern": "under-construction-gray",
         "line-width": {
@@ -11470,7 +12439,10 @@
       },
       "paint": {
         "line-color": {
-          "stops": [[4, "rgb(175, 158, 139)"], [9, "rgb(247, 191, 119)"]]
+          "stops": [
+            [4, "rgb(175, 158, 139)"],
+            [9, "rgb(247, 191, 119)"]
+          ]
         },
         "line-pattern": "under-construction-gray",
         "line-width": {
@@ -11771,7 +12743,13 @@
       "paint": {
         "line-color": "rgba(221, 221, 221, 1)",
         "line-width": {
-          "stops": [[14, 2.5], [15, 8], [16, 11], [17, 15], [18, 19]]
+          "stops": [
+            [14, 2.5],
+            [15, 8],
+            [16, 11],
+            [17, 15],
+            [18, 19]
+          ]
         }
       }
     },
@@ -11790,7 +12768,13 @@
       "paint": {
         "line-color": "rgb(189, 189, 189)",
         "line-width": {
-          "stops": [[14, 3.5], [15, 9], [16, 13], [17, 17], [18, 21]]
+          "stops": [
+            [14, 3.5],
+            [15, 9],
+            [16, 13],
+            [17, 17],
+            [18, 21]
+          ]
         }
       }
     },
@@ -11980,7 +12964,13 @@
       "paint": {
         "line-color": "rgba(221, 221, 221, 1)",
         "line-width": {
-          "stops": [[14, 2.5], [15, 6], [16, 10], [17, 14], [18, 17]]
+          "stops": [
+            [14, 2.5],
+            [15, 6],
+            [16, 10],
+            [17, 14],
+            [18, 17]
+          ]
         }
       }
     },
@@ -11999,7 +12989,13 @@
       "paint": {
         "line-color": "rgba(221, 221, 221, 1)",
         "line-width": {
-          "stops": [[14, 2.5], [15, 8], [16, 11], [17, 15], [18, 19]]
+          "stops": [
+            [14, 2.5],
+            [15, 8],
+            [16, 11],
+            [17, 15],
+            [18, 19]
+          ]
         }
       }
     },
@@ -12018,7 +13014,13 @@
       "paint": {
         "line-color": "rgba(221, 221, 221, 1)",
         "line-width": {
-          "stops": [[14, 3.5], [15, 9], [16, 13], [17, 17], [18, 21]]
+          "stops": [
+            [14, 3.5],
+            [15, 9],
+            [16, 13],
+            [17, 17],
+            [18, 21]
+          ]
         }
       }
     },
@@ -12209,7 +13211,14 @@
       "paint": {
         "line-color": "rgba(255, 255, 255, 1)",
         "line-width": {
-          "stops": [[13, 1], [14, 1.5], [15, 4], [16, 8], [17, 12], [18, 14]]
+          "stops": [
+            [13, 1],
+            [14, 1.5],
+            [15, 4],
+            [16, 8],
+            [17, 12],
+            [18, 14]
+          ]
         }
       }
     },
@@ -12220,11 +13229,21 @@
       "source-layer": "Non public road",
       "minzoom": 15,
       "filter": ["==", "z_level", 2],
-      "layout": {"line-cap": "round", "line-join": "round"},
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round"
+      },
       "paint": {
         "line-color": "rgba(241, 241, 241, 1)",
         "line-dasharray": [0.1, 3],
-        "line-width": {"stops": [[15, 1], [16, 1.5], [17, 3], [18, 5]]}
+        "line-width": {
+          "stops": [
+            [15, 1],
+            [16, 1.5],
+            [17, 3],
+            [18, 5]
+          ]
+        }
       }
     },
     {
@@ -12241,7 +13260,15 @@
       },
       "paint": {
         "line-color": "rgba(221, 221, 221, 1)",
-        "line-width": {"stops": [[14, 1], [15, 1.5], [16, 2], [17, 4], [18, 6]]}
+        "line-width": {
+          "stops": [
+            [14, 1],
+            [15, 1.5],
+            [16, 2],
+            [17, 4],
+            [18, 6]
+          ]
+        }
       }
     },
     {
@@ -12258,7 +13285,15 @@
       },
       "paint": {
         "line-color": "rgba(233, 233, 233, 1)",
-        "line-width": {"stops": [[14, 1], [15, 1.5], [16, 2], [17, 4], [18, 6]]}
+        "line-width": {
+          "stops": [
+            [14, 1],
+            [15, 1.5],
+            [16, 2],
+            [17, 4],
+            [18, 6]
+          ]
+        }
       }
     },
     {
@@ -12267,12 +13302,21 @@
       "source": "vectorTiles",
       "source-layer": "Walkway road",
       "filter": ["==", "z_level", 2],
-      "layout": {"line-cap": "round", "line-join": "round"},
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round"
+      },
       "paint": {
         "line-color": "rgba(225, 225, 225, 1)",
         "line-dasharray": [0.1, 3],
         "line-width": {
-          "stops": [[14, 0.5], [15, 1], [16, 1.5], [17, 3], [18, 5]]
+          "stops": [
+            [14, 0.5],
+            [15, 1],
+            [16, 1.5],
+            [17, 3],
+            [18, 5]
+          ]
         }
       }
     },
@@ -12290,7 +13334,15 @@
       },
       "paint": {
         "line-color": "rgb(255, 255, 255)",
-        "line-width": {"stops": [[14, 1], [15, 1.5], [16, 2], [17, 4], [18, 6]]}
+        "line-width": {
+          "stops": [
+            [14, 1],
+            [15, 1.5],
+            [16, 2],
+            [17, 4],
+            [18, 6]
+          ]
+        }
       }
     },
     {
@@ -12311,9 +13363,20 @@
       },
       "paint": {
         "line-color": {
-          "stops": [[14, "rgba(232, 232, 232, 1)"], [14, "rgb(255, 255, 255)"]]
+          "stops": [
+            [14, "rgba(232, 232, 232, 1)"],
+            [14, "rgb(255, 255, 255)"]
+          ]
         },
-        "line-width": {"stops": [[14, 3], [15, 5], [16, 8], [17, 12], [18, 14]]}
+        "line-width": {
+          "stops": [
+            [14, 3],
+            [15, 5],
+            [16, 8],
+            [17, 12],
+            [18, 14]
+          ]
+        }
       }
     },
     {
@@ -12340,7 +13403,15 @@
           ]
         },
         "line-pattern": "under-construction-gray",
-        "line-width": {"stops": [[14, 3], [15, 5], [16, 8], [17, 12], [18, 14]]}
+        "line-width": {
+          "stops": [
+            [14, 3],
+            [15, 5],
+            [16, 8],
+            [17, 12],
+            [18, 14]
+          ]
+        }
       }
     },
     {
@@ -12399,10 +13470,20 @@
       },
       "paint": {
         "line-color": {
-          "stops": [[14, "rgba(232, 232, 232, 1)"], [14, "rgb(255, 255, 255)"]]
+          "stops": [
+            [14, "rgba(232, 232, 232, 1)"],
+            [14, "rgb(255, 255, 255)"]
+          ]
         },
         "line-width": {
-          "stops": [[13, 1], [14, 3], [15, 5], [16, 8], [17, 12], [18, 14]]
+          "stops": [
+            [13, 1],
+            [14, 3],
+            [15, 5],
+            [16, 8],
+            [17, 12],
+            [18, 14]
+          ]
         }
       }
     },
@@ -12431,7 +13512,14 @@
         },
         "line-pattern": "under-construction-gray",
         "line-width": {
-          "stops": [[13, 1], [14, 3], [15, 5], [16, 8], [17, 12], [18, 14]]
+          "stops": [
+            [13, 1],
+            [14, 3],
+            [15, 5],
+            [16, 8],
+            [17, 12],
+            [18, 14]
+          ]
         }
       }
     },
@@ -12490,9 +13578,20 @@
         "line-round-limit": 1.05
       },
       "paint": {
-        "line-color": {"stops": [[14, "#E8E8E8"], [14, "rgb(255, 255, 255)"]]},
+        "line-color": {
+          "stops": [
+            [14, "#E8E8E8"],
+            [14, "rgb(255, 255, 255)"]
+          ]
+        },
         "line-width": {
-          "stops": [[14, 4], [15, 6], [16, 10], [17, 14], [18, 16]]
+          "stops": [
+            [14, 4],
+            [15, 6],
+            [16, 10],
+            [17, 14],
+            [18, 16]
+          ]
         }
       }
     },
@@ -12521,7 +13620,13 @@
         },
         "line-pattern": "under-construction-gray",
         "line-width": {
-          "stops": [[14, 4], [15, 6], [16, 10], [17, 14], [18, 16]]
+          "stops": [
+            [14, 4],
+            [15, 6],
+            [16, 10],
+            [17, 14],
+            [18, 16]
+          ]
         }
       }
     },
@@ -12580,9 +13685,21 @@
         "line-round-limit": 1.05
       },
       "paint": {
-        "line-color": {"stops": [[14, "#E8E8E8"], [14, "rgb(255, 255, 255)"]]},
+        "line-color": {
+          "stops": [
+            [14, "#E8E8E8"],
+            [14, "rgb(255, 255, 255)"]
+          ]
+        },
         "line-width": {
-          "stops": [[13, 1], [14, 4], [15, 6], [16, 10], [17, 14], [18, 16]]
+          "stops": [
+            [13, 1],
+            [14, 4],
+            [15, 6],
+            [16, 10],
+            [17, 14],
+            [18, 16]
+          ]
         }
       }
     },
@@ -12611,7 +13728,14 @@
         },
         "line-pattern": "under-construction-gray",
         "line-width": {
-          "stops": [[13, 1], [14, 4], [15, 6], [16, 10], [17, 14], [18, 16]]
+          "stops": [
+            [13, 1],
+            [14, 4],
+            [15, 6],
+            [16, 10],
+            [17, 14],
+            [18, 16]
+          ]
         }
       }
     },
@@ -12671,7 +13795,10 @@
       },
       "paint": {
         "line-color": {
-          "stops": [[12, "#DDDDDD"], [12, "rgba(255, 255, 255, 1)"]]
+          "stops": [
+            [12, "#DDDDDD"],
+            [12, "rgba(255, 255, 255, 1)"]
+          ]
         },
         "line-width": {
           "stops": [
@@ -12780,7 +13907,10 @@
       },
       "paint": {
         "line-color": {
-          "stops": [[12, "#DDDDDD"], [12, "rgba(255, 255, 255, 1)"]]
+          "stops": [
+            [12, "#DDDDDD"],
+            [12, "rgba(255, 255, 255, 1)"]
+          ]
         },
         "line-width": {
           "stops": [
@@ -12889,7 +14019,10 @@
       },
       "paint": {
         "line-color": {
-          "stops": [[11, "#DDDDDD"], [11, "rgba(255, 255, 255, 1)"]]
+          "stops": [
+            [11, "#DDDDDD"],
+            [11, "rgba(255, 255, 255, 1)"]
+          ]
         },
         "line-width": {
           "stops": [
@@ -12999,7 +14132,10 @@
       },
       "paint": {
         "line-color": {
-          "stops": [[11, "#DDDDDD"], [11, "rgba(255, 255, 255, 1)"]]
+          "stops": [
+            [11, "#DDDDDD"],
+            [11, "rgba(255, 255, 255, 1)"]
+          ]
         },
         "line-width": {
           "stops": [
@@ -13110,7 +14246,10 @@
       },
       "paint": {
         "line-color": {
-          "stops": [[10, "#DDDDDD"], [10, "rgba(255, 255, 255, 1)"]]
+          "stops": [
+            [10, "#DDDDDD"],
+            [10, "rgba(255, 255, 255, 1)"]
+          ]
         },
         "line-width": {
           "stops": [
@@ -13215,7 +14354,10 @@
       },
       "paint": {
         "line-color": {
-          "stops": [[10, "#DDDDDD"], [10, "rgba(255, 255, 255, 1)"]]
+          "stops": [
+            [10, "#DDDDDD"],
+            [10, "rgba(255, 255, 255, 1)"]
+          ]
         },
         "line-width": {
           "stops": [
@@ -13588,7 +14730,10 @@
       },
       "paint": {
         "line-color": {
-          "stops": [[8, "rgb(175, 158, 139)"], [9, "rgb(247, 191, 119)"]]
+          "stops": [
+            [8, "rgb(175, 158, 139)"],
+            [9, "rgb(247, 191, 119)"]
+          ]
         },
         "line-pattern": "under-construction-gray",
         "line-width": {
@@ -13697,7 +14842,10 @@
       },
       "paint": {
         "line-color": {
-          "stops": [[4, "rgb(175, 158, 139)"], [9, "rgb(247, 191, 119)"]]
+          "stops": [
+            [4, "rgb(175, 158, 139)"],
+            [9, "rgb(247, 191, 119)"]
+          ]
         },
         "line-pattern": "under-construction-gray",
         "line-width": {
@@ -13998,7 +15146,13 @@
       "paint": {
         "line-color": "rgba(221, 221, 221, 1)",
         "line-width": {
-          "stops": [[14, 2.5], [15, 8], [16, 11], [17, 15], [18, 19]]
+          "stops": [
+            [14, 2.5],
+            [15, 8],
+            [16, 11],
+            [17, 15],
+            [18, 19]
+          ]
         }
       }
     },
@@ -14017,7 +15171,13 @@
       "paint": {
         "line-color": "rgb(189, 189, 189)",
         "line-width": {
-          "stops": [[14, 3.5], [15, 9], [16, 13], [17, 17], [18, 21]]
+          "stops": [
+            [14, 3.5],
+            [15, 9],
+            [16, 13],
+            [17, 17],
+            [18, 21]
+          ]
         }
       }
     },
@@ -14207,7 +15367,13 @@
       "paint": {
         "line-color": "rgba(221, 221, 221, 1)",
         "line-width": {
-          "stops": [[14, 2.5], [15, 6], [16, 10], [17, 14], [18, 17]]
+          "stops": [
+            [14, 2.5],
+            [15, 6],
+            [16, 10],
+            [17, 14],
+            [18, 17]
+          ]
         }
       }
     },
@@ -14226,7 +15392,13 @@
       "paint": {
         "line-color": "rgba(221, 221, 221, 1)",
         "line-width": {
-          "stops": [[14, 2.5], [15, 8], [16, 11], [17, 15], [18, 19]]
+          "stops": [
+            [14, 2.5],
+            [15, 8],
+            [16, 11],
+            [17, 15],
+            [18, 19]
+          ]
         }
       }
     },
@@ -14245,7 +15417,13 @@
       "paint": {
         "line-color": "rgba(221, 221, 221, 1)",
         "line-width": {
-          "stops": [[14, 3.5], [15, 9], [16, 13], [17, 17], [18, 21]]
+          "stops": [
+            [14, 3.5],
+            [15, 9],
+            [16, 13],
+            [17, 17],
+            [18, 21]
+          ]
         }
       }
     },
@@ -14436,7 +15614,14 @@
       "paint": {
         "line-color": "rgba(255, 255, 255, 1)",
         "line-width": {
-          "stops": [[13, 1], [14, 1.5], [15, 4], [16, 8], [17, 12], [18, 14]]
+          "stops": [
+            [13, 1],
+            [14, 1.5],
+            [15, 4],
+            [16, 8],
+            [17, 12],
+            [18, 14]
+          ]
         }
       }
     },
@@ -14447,11 +15632,21 @@
       "source-layer": "Non public road",
       "minzoom": 15,
       "filter": ["==", "z_level", 3],
-      "layout": {"line-cap": "round", "line-join": "round"},
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round"
+      },
       "paint": {
         "line-color": "rgba(241, 241, 241, 1)",
         "line-dasharray": [0.1, 3],
-        "line-width": {"stops": [[15, 1], [16, 1.5], [17, 3], [18, 5]]}
+        "line-width": {
+          "stops": [
+            [15, 1],
+            [16, 1.5],
+            [17, 3],
+            [18, 5]
+          ]
+        }
       }
     },
     {
@@ -14468,7 +15663,15 @@
       },
       "paint": {
         "line-color": "rgba(221, 221, 221, 1)",
-        "line-width": {"stops": [[14, 1], [15, 1.5], [16, 2], [17, 4], [18, 6]]}
+        "line-width": {
+          "stops": [
+            [14, 1],
+            [15, 1.5],
+            [16, 2],
+            [17, 4],
+            [18, 6]
+          ]
+        }
       }
     },
     {
@@ -14485,7 +15688,15 @@
       },
       "paint": {
         "line-color": "rgba(233, 233, 233, 1)",
-        "line-width": {"stops": [[14, 1], [15, 1.5], [16, 2], [17, 4], [18, 6]]}
+        "line-width": {
+          "stops": [
+            [14, 1],
+            [15, 1.5],
+            [16, 2],
+            [17, 4],
+            [18, 6]
+          ]
+        }
       }
     },
     {
@@ -14494,12 +15705,21 @@
       "source": "vectorTiles",
       "source-layer": "Walkway road",
       "filter": ["==", "z_level", 3],
-      "layout": {"line-cap": "round", "line-join": "round"},
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round"
+      },
       "paint": {
         "line-color": "rgba(225, 225, 225, 1)",
         "line-dasharray": [0.1, 3],
         "line-width": {
-          "stops": [[14, 0.5], [15, 1], [16, 1.5], [17, 3], [18, 5]]
+          "stops": [
+            [14, 0.5],
+            [15, 1],
+            [16, 1.5],
+            [17, 3],
+            [18, 5]
+          ]
         }
       }
     },
@@ -14517,7 +15737,15 @@
       },
       "paint": {
         "line-color": "rgb(255, 255, 255)",
-        "line-width": {"stops": [[14, 1], [15, 1.5], [16, 2], [17, 4], [18, 6]]}
+        "line-width": {
+          "stops": [
+            [14, 1],
+            [15, 1.5],
+            [16, 2],
+            [17, 4],
+            [18, 6]
+          ]
+        }
       }
     },
     {
@@ -14538,9 +15766,20 @@
       },
       "paint": {
         "line-color": {
-          "stops": [[14, "rgba(232, 232, 232, 1)"], [14, "rgb(255, 255, 255)"]]
+          "stops": [
+            [14, "rgba(232, 232, 232, 1)"],
+            [14, "rgb(255, 255, 255)"]
+          ]
         },
-        "line-width": {"stops": [[14, 3], [15, 5], [16, 8], [17, 12], [18, 14]]}
+        "line-width": {
+          "stops": [
+            [14, 3],
+            [15, 5],
+            [16, 8],
+            [17, 12],
+            [18, 14]
+          ]
+        }
       }
     },
     {
@@ -14567,7 +15806,15 @@
           ]
         },
         "line-pattern": "under-construction-gray",
-        "line-width": {"stops": [[14, 3], [15, 5], [16, 8], [17, 12], [18, 14]]}
+        "line-width": {
+          "stops": [
+            [14, 3],
+            [15, 5],
+            [16, 8],
+            [17, 12],
+            [18, 14]
+          ]
+        }
       }
     },
     {
@@ -14626,10 +15873,20 @@
       },
       "paint": {
         "line-color": {
-          "stops": [[14, "rgba(232, 232, 232, 1)"], [14, "rgb(255, 255, 255)"]]
+          "stops": [
+            [14, "rgba(232, 232, 232, 1)"],
+            [14, "rgb(255, 255, 255)"]
+          ]
         },
         "line-width": {
-          "stops": [[13, 1], [14, 3], [15, 5], [16, 8], [17, 12], [18, 14]]
+          "stops": [
+            [13, 1],
+            [14, 3],
+            [15, 5],
+            [16, 8],
+            [17, 12],
+            [18, 14]
+          ]
         }
       }
     },
@@ -14658,7 +15915,14 @@
         },
         "line-pattern": "under-construction-gray",
         "line-width": {
-          "stops": [[13, 1], [14, 3], [15, 5], [16, 8], [17, 12], [18, 14]]
+          "stops": [
+            [13, 1],
+            [14, 3],
+            [15, 5],
+            [16, 8],
+            [17, 12],
+            [18, 14]
+          ]
         }
       }
     },
@@ -14717,9 +15981,20 @@
         "line-round-limit": 1.05
       },
       "paint": {
-        "line-color": {"stops": [[14, "#E8E8E8"], [14, "rgb(255, 255, 255)"]]},
+        "line-color": {
+          "stops": [
+            [14, "#E8E8E8"],
+            [14, "rgb(255, 255, 255)"]
+          ]
+        },
         "line-width": {
-          "stops": [[14, 4], [15, 6], [16, 10], [17, 14], [18, 16]]
+          "stops": [
+            [14, 4],
+            [15, 6],
+            [16, 10],
+            [17, 14],
+            [18, 16]
+          ]
         }
       }
     },
@@ -14748,7 +16023,13 @@
         },
         "line-pattern": "under-construction-gray",
         "line-width": {
-          "stops": [[14, 4], [15, 6], [16, 10], [17, 14], [18, 16]]
+          "stops": [
+            [14, 4],
+            [15, 6],
+            [16, 10],
+            [17, 14],
+            [18, 16]
+          ]
         }
       }
     },
@@ -14807,9 +16088,21 @@
         "line-round-limit": 1.05
       },
       "paint": {
-        "line-color": {"stops": [[14, "#E8E8E8"], [14, "rgb(255, 255, 255)"]]},
+        "line-color": {
+          "stops": [
+            [14, "#E8E8E8"],
+            [14, "rgb(255, 255, 255)"]
+          ]
+        },
         "line-width": {
-          "stops": [[13, 1], [14, 4], [15, 6], [16, 10], [17, 14], [18, 16]]
+          "stops": [
+            [13, 1],
+            [14, 4],
+            [15, 6],
+            [16, 10],
+            [17, 14],
+            [18, 16]
+          ]
         }
       }
     },
@@ -14838,7 +16131,14 @@
         },
         "line-pattern": "under-construction-gray",
         "line-width": {
-          "stops": [[13, 1], [14, 4], [15, 6], [16, 10], [17, 14], [18, 16]]
+          "stops": [
+            [13, 1],
+            [14, 4],
+            [15, 6],
+            [16, 10],
+            [17, 14],
+            [18, 16]
+          ]
         }
       }
     },
@@ -14898,7 +16198,10 @@
       },
       "paint": {
         "line-color": {
-          "stops": [[12, "#DDDDDD"], [12, "rgba(255, 255, 255, 1)"]]
+          "stops": [
+            [12, "#DDDDDD"],
+            [12, "rgba(255, 255, 255, 1)"]
+          ]
         },
         "line-width": {
           "stops": [
@@ -15007,7 +16310,10 @@
       },
       "paint": {
         "line-color": {
-          "stops": [[12, "#DDDDDD"], [12, "rgba(255, 255, 255, 1)"]]
+          "stops": [
+            [12, "#DDDDDD"],
+            [12, "rgba(255, 255, 255, 1)"]
+          ]
         },
         "line-width": {
           "stops": [
@@ -15116,7 +16422,10 @@
       },
       "paint": {
         "line-color": {
-          "stops": [[11, "#DDDDDD"], [11, "rgba(255, 255, 255, 1)"]]
+          "stops": [
+            [11, "#DDDDDD"],
+            [11, "rgba(255, 255, 255, 1)"]
+          ]
         },
         "line-width": {
           "stops": [
@@ -15226,7 +16535,10 @@
       },
       "paint": {
         "line-color": {
-          "stops": [[11, "#DDDDDD"], [11, "rgba(255, 255, 255, 1)"]]
+          "stops": [
+            [11, "#DDDDDD"],
+            [11, "rgba(255, 255, 255, 1)"]
+          ]
         },
         "line-width": {
           "stops": [
@@ -15337,7 +16649,10 @@
       },
       "paint": {
         "line-color": {
-          "stops": [[10, "#DDDDDD"], [10, "rgba(255, 255, 255, 1)"]]
+          "stops": [
+            [10, "#DDDDDD"],
+            [10, "rgba(255, 255, 255, 1)"]
+          ]
         },
         "line-width": {
           "stops": [
@@ -15442,7 +16757,10 @@
       },
       "paint": {
         "line-color": {
-          "stops": [[10, "#DDDDDD"], [10, "rgba(255, 255, 255, 1)"]]
+          "stops": [
+            [10, "#DDDDDD"],
+            [10, "rgba(255, 255, 255, 1)"]
+          ]
         },
         "line-width": {
           "stops": [
@@ -15815,7 +17133,10 @@
       },
       "paint": {
         "line-color": {
-          "stops": [[8, "rgb(175, 158, 139)"], [9, "rgb(247, 191, 119)"]]
+          "stops": [
+            [8, "rgb(175, 158, 139)"],
+            [9, "rgb(247, 191, 119)"]
+          ]
         },
         "line-pattern": "under-construction",
         "line-width": {
@@ -15924,7 +17245,10 @@
       },
       "paint": {
         "line-color": {
-          "stops": [[4, "rgb(175, 158, 139)"], [9, "rgb(247, 191, 119)"]]
+          "stops": [
+            [4, "rgb(175, 158, 139)"],
+            [9, "rgb(247, 191, 119)"]
+          ]
         },
         "line-pattern": "under-construction",
         "line-width": {
@@ -16266,7 +17590,15 @@
         },
         "line-dasharray": [2, 2],
         "line-offset": 0,
-        "line-width": {"stops": [[0, 1], [1, 1], [6, 1.5], [8, 2], [18, 3]]}
+        "line-width": {
+          "stops": [
+            [0, 1],
+            [1, 1],
+            [6, 1.5],
+            [8, 2],
+            [18, 3]
+          ]
+        }
       }
     },
     {
@@ -16283,7 +17615,13 @@
         "line-color": "rgba(100, 99, 99, 1)",
         "line-dasharray": [2, 3],
         "line-opacity": 1,
-        "line-width": {"stops": [[0, 1], [8, 3], [18, 4]]}
+        "line-width": {
+          "stops": [
+            [0, 1],
+            [8, 3],
+            [18, 4]
+          ]
+        }
       }
     },
     {
@@ -16300,8 +17638,1562 @@
         "line-color": "rgba(181, 181, 181, 1)",
         "line-dasharray": [3, 3],
         "line-opacity": 1,
-        "line-width": {"stops": [[0, 1], [8, 3]]}
+        "line-width": {
+          "stops": [
+            [0, 1],
+            [8, 3]
+          ]
+        }
       }
+    },
+    {
+      "filter": ["all", ["==", "road_type", "Parking road"],
+        ["has", "road_closure"]
+      ],
+      "id": "Traffic flow Road Closure Outline Parking road",
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round"
+      },
+      "metadata": "group:flow",
+      "minzoom": 15,
+      "paint": {
+        "line-color": {
+          "property": "traffic_level",
+          "stops": [
+            [0, "#666666"]
+          ],
+          "type": "interval"
+        },
+        "line-offset": ["interpolate", ["linear"],
+          ["zoom"], 15, ["case", ["has", "left_hand_traffic"], -0.7, 0.7], 18, ["case", ["has", "left_hand_traffic"], -1.86667, 1.86667]
+        ],
+        "line-width": ["interpolate", ["linear"],
+          ["zoom"], 15, 1.75, 18, 4.66667
+        ]
+      },
+      "source": "vectorTilesFlow",
+      "source-layer": "Traffic flow",
+      "type": "line"
+    }, {
+      "filter": ["all", ["==", "road_type", "Parking road"],
+        ["!has", "road_closure"]
+      ],
+      "id": "Traffic flow  Parking road",
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round"
+      },
+      "metadata": "group:flow",
+      "minzoom": 15,
+      "paint": {
+        "line-color": {
+          "property": "traffic_level",
+          "stops": [
+            [0, "#e70704"],
+            [0.15, "#f18237"],
+            [0.35, "#f1bf40"],
+            [0.75, "#2eab30"]
+          ],
+          "type": "interval"
+        },
+        "line-offset": ["interpolate", ["linear"],
+          ["zoom"], 15, ["case", ["has", "left_hand_traffic"], -0.525, 0.525], 18, ["case", ["has", "left_hand_traffic"], -1.05, 1.05]
+        ],
+        "line-width": ["interpolate", ["linear"],
+          ["zoom"], 15, 0.5625, 18, 1.5
+        ]
+      },
+      "source": "vectorTilesFlow",
+      "source-layer": "Traffic flow",
+      "type": "line"
+    }, {
+      "filter": ["all", ["==", "road_type", "Parking road"],
+        ["<=", "traffic_level", 0.75],
+        ["!has", "road_closure"]
+      ],
+      "id": "Traffic flow Pattern Parking road",
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round"
+      },
+      "metadata": "group:flow",
+      "minzoom": 15,
+      "paint": {
+        "line-offset": ["interpolate", ["linear"],
+          ["zoom"], 15, ["case", ["has", "left_hand_traffic"], -0.525, 0.525], 18, ["case", ["has", "left_hand_traffic"], -1.05, 1.05]
+        ],
+        "line-opacity": ["interpolate", ["linear"],
+          ["zoom"], 15, 0, 16, 1
+        ],
+        "line-pattern": {
+          "property": "traffic_level",
+          "stops": [
+            [0, "traffic-flow-stationary"],
+            [0.15, "traffic-flow-queueing"],
+            [0.35, "traffic-flow-slow"]
+          ],
+          "type": "interval"
+        },
+        "line-width": ["interpolate", ["linear"],
+          ["zoom"], 15, 0.5625, 18, 1.5
+        ]
+      },
+      "source": "vectorTilesFlow",
+      "source-layer": "Traffic flow",
+      "type": "line"
+    }, {
+      "filter": ["all", ["==", "road_type", "Parking road"],
+        ["<=", "traffic_level", 0.75],
+        ["has", "road_closure"]
+      ],
+      "id": "Traffic flow Road Closure Pattern Parking road",
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round"
+      },
+      "metadata": "group:flow",
+      "minzoom": 15,
+      "paint": {
+        "line-offset": ["interpolate", ["linear"],
+          ["zoom"], 15, ["case", ["has", "left_hand_traffic"], -0.7, 0.7], 18, ["case", ["has", "left_hand_traffic"], -1.86667, 1.86667]
+        ],
+        "line-pattern": {
+          "property": "traffic_level",
+          "stops": [
+            [0, "traffic-diagonal-closed"]
+          ],
+          "type": "interval"
+        },
+        "line-width": ["interpolate", ["linear"],
+          ["zoom"], 15, 1.25, 18, 3.33333
+        ]
+      },
+      "source": "vectorTilesFlow",
+      "source-layer": "Traffic flow",
+      "type": "line"
+    }, {
+      "filter": ["all", ["==", "road_type", "Non public road"],
+        ["!has", "road_closure"]
+      ],
+      "id": "Traffic flow Outline Non public road",
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round"
+      },
+      "metadata": "group:flow",
+      "minzoom": 15,
+      "paint": {
+        "line-color": {
+          "property": "traffic_level",
+          "stops": [
+            [0, "#a50704"],
+            [0.15, "#df4b15"],
+            [0.35, "#e87b3d"],
+            [0.75, "#245723"]
+          ],
+          "type": "interval"
+        },
+        "line-offset": ["interpolate", ["linear"],
+          ["zoom"], 15, ["case", ["has", "left_hand_traffic"], -1.07917, 1.07917], 18, ["case", ["has", "left_hand_traffic"], -2.45, 2.45]
+        ],
+        "line-width": ["interpolate", ["linear"],
+          ["zoom"], 15, 1.61875, 18, 4.9
+        ]
+      },
+      "source": "vectorTilesFlow",
+      "source-layer": "Traffic flow",
+      "type": "line"
+    }, {
+      "filter": ["all", ["==", "road_type", "Non public road"],
+        ["has", "road_closure"]
+      ],
+      "id": "Traffic flow Road Closure Outline Non public road",
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round"
+      },
+      "metadata": "group:flow",
+      "minzoom": 15,
+      "paint": {
+        "line-color": {
+          "property": "traffic_level",
+          "stops": [
+            [0, "#666666"]
+          ],
+          "type": "interval"
+        },
+        "line-offset": ["interpolate", ["linear"],
+          ["zoom"], 15, ["case", ["has", "left_hand_traffic"], -1.43889, 1.43889], 18, ["case", ["has", "left_hand_traffic"], -4.35556, 4.35556]
+        ],
+        "line-width": ["interpolate", ["linear"],
+          ["zoom"], 15, 3.59722, 18, 10.8889
+        ]
+      },
+      "source": "vectorTilesFlow",
+      "source-layer": "Traffic flow",
+      "type": "line"
+    }, {
+      "filter": ["all", ["==", "road_type", "Non public road"],
+        ["!has", "road_closure"]
+      ],
+      "id": "Traffic flow  Non public road",
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round"
+      },
+      "metadata": "group:flow",
+      "minzoom": 15,
+      "paint": {
+        "line-color": {
+          "property": "traffic_level",
+          "stops": [
+            [0, "#e70704"],
+            [0.15, "#f18237"],
+            [0.35, "#f1bf40"],
+            [0.75, "#2eab30"]
+          ],
+          "type": "interval"
+        },
+        "line-offset": ["interpolate", ["linear"],
+          ["zoom"], 15, ["case", ["has", "left_hand_traffic"], -1.07917, 1.07917], 18, ["case", ["has", "left_hand_traffic"], -2.45, 2.45]
+        ],
+        "line-width": ["interpolate", ["linear"],
+          ["zoom"], 15, 1.15625, 18, 3.5
+        ]
+      },
+      "source": "vectorTilesFlow",
+      "source-layer": "Traffic flow",
+      "type": "line"
+    }, {
+      "filter": ["all", ["==", "road_type", "Non public road"],
+        ["<=", "traffic_level", 0.75],
+        ["!has", "road_closure"]
+      ],
+      "id": "Traffic flow Pattern Non public road",
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round"
+      },
+      "metadata": "group:flow",
+      "minzoom": 15,
+      "paint": {
+        "line-offset": ["interpolate", ["linear"],
+          ["zoom"], 15, ["case", ["has", "left_hand_traffic"], -1.07917, 1.07917], 18, ["case", ["has", "left_hand_traffic"], -2.45, 2.45]
+        ],
+        "line-opacity": ["interpolate", ["linear"],
+          ["zoom"], 15, 0, 16, 1
+        ],
+        "line-pattern": {
+          "property": "traffic_level",
+          "stops": [
+            [0, "traffic-flow-stationary"],
+            [0.15, "traffic-flow-queueing"],
+            [0.35, "traffic-flow-slow"]
+          ],
+          "type": "interval"
+        },
+        "line-width": ["interpolate", ["linear"],
+          ["zoom"], 15, 1.15625, 18, 3.5
+        ]
+      },
+      "source": "vectorTilesFlow",
+      "source-layer": "Traffic flow",
+      "type": "line"
+    }, {
+      "filter": ["all", ["==", "road_type", "Non public road"],
+        ["<=", "traffic_level", 0.75],
+        ["has", "road_closure"]
+      ],
+      "id": "Traffic flow Road Closure Pattern Non public road",
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round"
+      },
+      "metadata": "group:flow",
+      "minzoom": 15,
+      "paint": {
+        "line-offset": ["interpolate", ["linear"],
+          ["zoom"], 15, ["case", ["has", "left_hand_traffic"], -1.43889, 1.43889], 18, ["case", ["has", "left_hand_traffic"], -4.35556, 4.35556]
+        ],
+        "line-pattern": {
+          "property": "traffic_level",
+          "stops": [
+            [0, "traffic-diagonal-closed"]
+          ],
+          "type": "interval"
+        },
+        "line-width": ["interpolate", ["linear"],
+          ["zoom"], 15, 2.56944, 18, 7.77778
+        ]
+      },
+      "source": "vectorTilesFlow",
+      "source-layer": "Traffic flow",
+      "type": "line"
+    }, {
+      "filter": ["all", ["==", "road_type", "Minor local road"],
+        ["!has", "road_closure"]
+      ],
+      "id": "Traffic flow Outline Minor local road",
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round"
+      },
+      "metadata": "group:flow",
+      "minzoom": 15,
+      "paint": {
+        "line-color": {
+          "property": "traffic_level",
+          "stops": [
+            [0, "#a50704"],
+            [0.15, "#df4b15"],
+            [0.35, "#e87b3d"],
+            [0.75, "#245723"]
+          ],
+          "type": "interval"
+        },
+        "line-offset": ["interpolate", ["linear"],
+          ["zoom"], 15, ["case", ["has", "left_hand_traffic"], -1.26, 1.26], 18, ["case", ["has", "left_hand_traffic"], -2.1, 2.1]
+        ],
+        "line-width": ["interpolate", ["linear"],
+          ["zoom"], 15, 1.89, 18, 4.2
+        ]
+      },
+      "source": "vectorTilesFlow",
+      "source-layer": "Traffic flow",
+      "type": "line"
+    }, {
+      "filter": ["all", ["==", "road_type", "Minor local road"],
+        ["has", "road_closure"]
+      ],
+      "id": "Traffic flow Road Closure Outline Minor local road",
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round"
+      },
+      "metadata": "group:flow",
+      "minzoom": 15,
+      "paint": {
+        "line-color": {
+          "property": "traffic_level",
+          "stops": [
+            [0, "#666666"]
+          ],
+          "type": "interval"
+        },
+        "line-offset": ["interpolate", ["linear"],
+          ["zoom"], 15, ["case", ["has", "left_hand_traffic"], -1.68, 1.68], 18, ["case", ["has", "left_hand_traffic"], -3.73333, 3.73333]
+        ],
+        "line-width": ["interpolate", ["linear"],
+          ["zoom"], 15, 4.2, 18, 9.33333
+        ]
+      },
+      "source": "vectorTilesFlow",
+      "source-layer": "Traffic flow",
+      "type": "line"
+    }, {
+      "filter": ["all", ["==", "road_type", "Minor local road"],
+        ["!has", "road_closure"]
+      ],
+      "id": "Traffic flow  Minor local road",
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round"
+      },
+      "metadata": "group:flow",
+      "minzoom": 15,
+      "paint": {
+        "line-color": {
+          "property": "traffic_level",
+          "stops": [
+            [0, "#e70704"],
+            [0.15, "#f18237"],
+            [0.35, "#f1bf40"],
+            [0.75, "#2eab30"]
+          ],
+          "type": "interval"
+        },
+        "line-offset": ["interpolate", ["linear"],
+          ["zoom"], 15, ["case", ["has", "left_hand_traffic"], -1.26, 1.26], 18, ["case", ["has", "left_hand_traffic"], -2.1, 2.1]
+        ],
+        "line-width": ["interpolate", ["linear"],
+          ["zoom"], 15, 1.35, 18, 3
+        ]
+      },
+      "source": "vectorTilesFlow",
+      "source-layer": "Traffic flow",
+      "type": "line"
+    }, {
+      "filter": ["all", ["==", "road_type", "Minor local road"],
+        ["<=", "traffic_level", 0.75],
+        ["!has", "road_closure"]
+      ],
+      "id": "Traffic flow Pattern Minor local road",
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round"
+      },
+      "metadata": "group:flow",
+      "minzoom": 15,
+      "paint": {
+        "line-offset": ["interpolate", ["linear"],
+          ["zoom"], 15, ["case", ["has", "left_hand_traffic"], -1.26, 1.26], 18, ["case", ["has", "left_hand_traffic"], -2.1, 2.1]
+        ],
+        "line-opacity": ["interpolate", ["linear"],
+          ["zoom"], 15, 0, 16, 1
+        ],
+        "line-pattern": {
+          "property": "traffic_level",
+          "stops": [
+            [0, "traffic-flow-stationary"],
+            [0.15, "traffic-flow-queueing"],
+            [0.35, "traffic-flow-slow"]
+          ],
+          "type": "interval"
+        },
+        "line-width": ["interpolate", ["linear"],
+          ["zoom"], 15, 1.35, 18, 3
+        ]
+      },
+      "source": "vectorTilesFlow",
+      "source-layer": "Traffic flow",
+      "type": "line"
+    }, {
+      "filter": ["all", ["==", "road_type", "Minor local road"],
+        ["<=", "traffic_level", 0.75],
+        ["has", "road_closure"]
+      ],
+      "id": "Traffic flow Road Closure Pattern Minor local road",
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round"
+      },
+      "metadata": "group:flow",
+      "minzoom": 15,
+      "paint": {
+        "line-offset": ["interpolate", ["linear"],
+          ["zoom"], 15, ["case", ["has", "left_hand_traffic"], -1.68, 1.68], 18, ["case", ["has", "left_hand_traffic"], -3.73333, 3.73333]
+        ],
+        "line-pattern": {
+          "property": "traffic_level",
+          "stops": [
+            [0, "traffic-diagonal-closed"]
+          ],
+          "type": "interval"
+        },
+        "line-width": ["interpolate", ["linear"],
+          ["zoom"], 15, 3, 18, 6.66667
+        ]
+      },
+      "source": "vectorTilesFlow",
+      "source-layer": "Traffic flow",
+      "type": "line"
+    }, {
+      "filter": ["all", ["==", "road_type", "Local road"],
+        ["!has", "road_closure"]
+      ],
+      "id": "Traffic flow Outline Local road",
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round"
+      },
+      "metadata": "group:flow",
+      "minzoom": 15,
+      "paint": {
+        "line-color": {
+          "property": "traffic_level",
+          "stops": [
+            [0, "#a50704"],
+            [0.15, "#df4b15"],
+            [0.35, "#e87b3d"],
+            [0.75, "#245723"]
+          ],
+          "type": "interval"
+        },
+        "line-offset": ["interpolate", ["linear"],
+          ["zoom"], 15, ["case", ["has", "left_hand_traffic"], -1.49333, 1.49333], 18, ["case", ["has", "left_hand_traffic"], -2.275, 2.275]
+        ],
+        "line-width": ["interpolate", ["linear"],
+          ["zoom"], 15, 2.24, 18, 4.55
+        ]
+      },
+      "source": "vectorTilesFlow",
+      "source-layer": "Traffic flow",
+      "type": "line"
+    }, {
+      "filter": ["all", ["==", "road_type", "Local road"],
+        ["has", "road_closure"]
+      ],
+      "id": "Traffic flow Road Closure Outline Local road",
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round"
+      },
+      "metadata": "group:flow",
+      "minzoom": 15,
+      "paint": {
+        "line-color": {
+          "property": "traffic_level",
+          "stops": [
+            [0, "#666666"]
+          ],
+          "type": "interval"
+        },
+        "line-offset": ["interpolate", ["linear"],
+          ["zoom"], 15, ["case", ["has", "left_hand_traffic"], -1.99111, 1.99111], 18, ["case", ["has", "left_hand_traffic"], -4.04444, 4.04444]
+        ],
+        "line-width": ["interpolate", ["linear"],
+          ["zoom"], 15, 4.97778, 18, 10.1111
+        ]
+      },
+      "source": "vectorTilesFlow",
+      "source-layer": "Traffic flow",
+      "type": "line"
+    }, {
+      "filter": ["all", ["==", "road_type", "Local road"],
+        ["!has", "road_closure"]
+      ],
+      "id": "Traffic flow  Local road",
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round"
+      },
+      "metadata": "group:flow",
+      "minzoom": 15,
+      "paint": {
+        "line-color": {
+          "property": "traffic_level",
+          "stops": [
+            [0, "#e70704"],
+            [0.15, "#f18237"],
+            [0.35, "#f1bf40"],
+            [0.75, "#2eab30"]
+          ],
+          "type": "interval"
+        },
+        "line-offset": ["interpolate", ["linear"],
+          ["zoom"], 15, ["case", ["has", "left_hand_traffic"], -1.49333, 1.49333], 18, ["case", ["has", "left_hand_traffic"], -2.275, 2.275]
+        ],
+        "line-width": ["interpolate", ["linear"],
+          ["zoom"], 15, 1.6, 18, 3.25
+        ]
+      },
+      "source": "vectorTilesFlow",
+      "source-layer": "Traffic flow",
+      "type": "line"
+    }, {
+      "filter": ["all", ["==", "road_type", "Local road"],
+        ["<=", "traffic_level", 0.75],
+        ["!has", "road_closure"]
+      ],
+      "id": "Traffic flow Pattern Local road",
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round"
+      },
+      "metadata": "group:flow",
+      "minzoom": 15,
+      "paint": {
+        "line-offset": ["interpolate", ["linear"],
+          ["zoom"], 15, ["case", ["has", "left_hand_traffic"], -1.49333, 1.49333], 18, ["case", ["has", "left_hand_traffic"], -2.275, 2.275]
+        ],
+        "line-opacity": ["interpolate", ["linear"],
+          ["zoom"], 15, 0, 16, 1
+        ],
+        "line-pattern": {
+          "property": "traffic_level",
+          "stops": [
+            [0, "traffic-flow-stationary"],
+            [0.15, "traffic-flow-queueing"],
+            [0.35, "traffic-flow-slow"]
+          ],
+          "type": "interval"
+        },
+        "line-width": ["interpolate", ["linear"],
+          ["zoom"], 15, 1.6, 18, 3.25
+        ]
+      },
+      "source": "vectorTilesFlow",
+      "source-layer": "Traffic flow",
+      "type": "line"
+    }, {
+      "filter": ["all", ["==", "road_type", "Local road"],
+        ["<=", "traffic_level", 0.75],
+        ["has", "road_closure"]
+      ],
+      "id": "Traffic flow Road Closure Pattern Local road",
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round"
+      },
+      "metadata": "group:flow",
+      "minzoom": 15,
+      "paint": {
+        "line-offset": ["interpolate", ["linear"],
+          ["zoom"], 15, ["case", ["has", "left_hand_traffic"], -1.99111, 1.99111], 18, ["case", ["has", "left_hand_traffic"], -4.04444, 4.04444]
+        ],
+        "line-pattern": {
+          "property": "traffic_level",
+          "stops": [
+            [0, "traffic-diagonal-closed"]
+          ],
+          "type": "interval"
+        },
+        "line-width": ["interpolate", ["linear"],
+          ["zoom"], 15, 3.55556, 18, 7.22222
+        ]
+      },
+      "source": "vectorTilesFlow",
+      "source-layer": "Traffic flow",
+      "type": "line"
+    }, {
+      "filter": ["all", ["==", "road_type", "Major local road"],
+        ["!has", "road_closure"]
+      ],
+      "id": "Traffic flow Outline Major local road",
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round"
+      },
+      "metadata": "group:flow",
+      "minzoom": 15,
+      "paint": {
+        "line-color": {
+          "property": "traffic_level",
+          "stops": [
+            [0, "#a50704"],
+            [0.15, "#df4b15"],
+            [0.35, "#e87b3d"],
+            [0.75, "#245723"]
+          ],
+          "type": "interval"
+        },
+        "line-offset": ["interpolate", ["linear"],
+          ["zoom"], 15, ["case", ["has", "left_hand_traffic"], -1.63333, 1.63333], 18, ["case", ["has", "left_hand_traffic"], -2.275, 2.275]
+        ],
+        "line-width": ["interpolate", ["linear"],
+          ["zoom"], 15, 2.45, 18, 4.55
+        ]
+      },
+      "source": "vectorTilesFlow",
+      "source-layer": "Traffic flow",
+      "type": "line"
+    }, {
+      "filter": ["all", ["==", "road_type", "Major local road"],
+        ["has", "road_closure"]
+      ],
+      "id": "Traffic flow Road Closure Outline Major local road",
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round"
+      },
+      "metadata": "group:flow",
+      "minzoom": 15,
+      "paint": {
+        "line-color": {
+          "property": "traffic_level",
+          "stops": [
+            [0, "#666666"]
+          ],
+          "type": "interval"
+        },
+        "line-offset": ["interpolate", ["linear"],
+          ["zoom"], 15, ["case", ["has", "left_hand_traffic"], -2.17778, 2.17778], 18, ["case", ["has", "left_hand_traffic"], -4.04444, 4.04444]
+        ],
+        "line-width": ["interpolate", ["linear"],
+          ["zoom"], 15, 5.44444, 18, 10.1111
+        ]
+      },
+      "source": "vectorTilesFlow",
+      "source-layer": "Traffic flow",
+      "type": "line"
+    }, {
+      "filter": ["all", ["==", "road_type", "Major local road"],
+        ["!has", "road_closure"]
+      ],
+      "id": "Traffic flow  Major local road",
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round"
+      },
+      "metadata": "group:flow",
+      "minzoom": 15,
+      "paint": {
+        "line-color": {
+          "property": "traffic_level",
+          "stops": [
+            [0, "#e70704"],
+            [0.15, "#f18237"],
+            [0.35, "#f1bf40"],
+            [0.75, "#2eab30"]
+          ],
+          "type": "interval"
+        },
+        "line-offset": ["interpolate", ["linear"],
+          ["zoom"], 15, ["case", ["has", "left_hand_traffic"], -1.63333, 1.63333], 18, ["case", ["has", "left_hand_traffic"], -2.275, 2.275]
+        ],
+        "line-width": ["interpolate", ["linear"],
+          ["zoom"], 15, 1.75, 18, 3.25
+        ]
+      },
+      "source": "vectorTilesFlow",
+      "source-layer": "Traffic flow",
+      "type": "line"
+    }, {
+      "filter": ["all", ["==", "road_type", "Major local road"],
+        ["<=", "traffic_level", 0.75],
+        ["!has", "road_closure"]
+      ],
+      "id": "Traffic flow Pattern Major local road",
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round"
+      },
+      "metadata": "group:flow",
+      "minzoom": 15,
+      "paint": {
+        "line-offset": ["interpolate", ["linear"],
+          ["zoom"], 15, ["case", ["has", "left_hand_traffic"], -1.63333, 1.63333], 18, ["case", ["has", "left_hand_traffic"], -2.275, 2.275]
+        ],
+        "line-opacity": ["interpolate", ["linear"],
+          ["zoom"], 15, 0, 16, 1
+        ],
+        "line-pattern": {
+          "property": "traffic_level",
+          "stops": [
+            [0, "traffic-flow-stationary"],
+            [0.15, "traffic-flow-queueing"],
+            [0.35, "traffic-flow-slow"]
+          ],
+          "type": "interval"
+        },
+        "line-width": ["interpolate", ["linear"],
+          ["zoom"], 15, 1.75, 18, 3.25
+        ]
+      },
+      "source": "vectorTilesFlow",
+      "source-layer": "Traffic flow",
+      "type": "line"
+    }, {
+      "filter": ["all", ["==", "road_type", "Major local road"],
+        ["<=", "traffic_level", 0.75],
+        ["has", "road_closure"]
+      ],
+      "id": "Traffic flow Road Closure Pattern Major local road",
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round"
+      },
+      "metadata": "group:flow",
+      "minzoom": 15,
+      "paint": {
+        "line-offset": ["interpolate", ["linear"],
+          ["zoom"], 15, ["case", ["has", "left_hand_traffic"], -2.17778, 2.17778], 18, ["case", ["has", "left_hand_traffic"], -4.04444, 4.04444]
+        ],
+        "line-pattern": {
+          "property": "traffic_level",
+          "stops": [
+            [0, "traffic-diagonal-closed"]
+          ],
+          "type": "interval"
+        },
+        "line-width": ["interpolate", ["linear"],
+          ["zoom"], 15, 3.88889, 18, 7.22222
+        ]
+      },
+      "source": "vectorTilesFlow",
+      "source-layer": "Traffic flow",
+      "type": "line"
+    }, {
+      "filter": ["all", ["==", "road_type", "Connecting road"],
+        ["!has", "road_closure"]
+      ],
+      "id": "Traffic flow Outline Connecting road",
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round"
+      },
+      "metadata": "group:flow",
+      "minzoom": 15,
+      "paint": {
+        "line-color": {
+          "property": "traffic_level",
+          "stops": [
+            [0, "#a50704"],
+            [0.15, "#df4b15"],
+            [0.35, "#e87b3d"],
+            [0.75, "#245723"]
+          ],
+          "type": "interval"
+        },
+        "line-offset": ["interpolate", ["linear"],
+          ["zoom"], 15, ["case", ["has", "left_hand_traffic"], -1.96, 1.96], 18, ["case", ["has", "left_hand_traffic"], -2.625, 2.625]
+        ],
+        "line-width": ["interpolate", ["linear"],
+          ["zoom"], 15, 2.94, 18, 5.25
+        ]
+      },
+      "source": "vectorTilesFlow",
+      "source-layer": "Traffic flow",
+      "type": "line"
+    }, {
+      "filter": ["all", ["==", "road_type", "Connecting road"],
+        ["has", "road_closure"]
+      ],
+      "id": "Traffic flow Road Closure Outline Connecting road",
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round"
+      },
+      "metadata": "group:flow",
+      "minzoom": 15,
+      "paint": {
+        "line-color": {
+          "property": "traffic_level",
+          "stops": [
+            [0, "#666666"]
+          ],
+          "type": "interval"
+        },
+        "line-offset": ["interpolate", ["linear"],
+          ["zoom"], 15, ["case", ["has", "left_hand_traffic"], -2.61333, 2.61333], 18, ["case", ["has", "left_hand_traffic"], -4.66667, 4.66667]
+        ],
+        "line-width": ["interpolate", ["linear"],
+          ["zoom"], 15, 6.53333, 18, 11.6667
+        ]
+      },
+      "source": "vectorTilesFlow",
+      "source-layer": "Traffic flow",
+      "type": "line"
+    }, {
+      "filter": ["all", ["==", "road_type", "Connecting road"],
+        ["!has", "road_closure"]
+      ],
+      "id": "Traffic flow  Connecting road",
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round"
+      },
+      "metadata": "group:flow",
+      "minzoom": 15,
+      "paint": {
+        "line-color": {
+          "property": "traffic_level",
+          "stops": [
+            [0, "#e70704"],
+            [0.15, "#f18237"],
+            [0.35, "#f1bf40"],
+            [0.75, "#2eab30"]
+          ],
+          "type": "interval"
+        },
+        "line-offset": ["interpolate", ["linear"],
+          ["zoom"], 15, ["case", ["has", "left_hand_traffic"], -1.96, 1.96], 18, ["case", ["has", "left_hand_traffic"], -2.625, 2.625]
+        ],
+        "line-width": ["interpolate", ["linear"],
+          ["zoom"], 15, 2.1, 18, 3.75
+        ]
+      },
+      "source": "vectorTilesFlow",
+      "source-layer": "Traffic flow",
+      "type": "line"
+    }, {
+      "filter": ["all", ["==", "road_type", "Connecting road"],
+        ["<=", "traffic_level", 0.75],
+        ["!has", "road_closure"]
+      ],
+      "id": "Traffic flow Pattern Connecting road",
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round"
+      },
+      "metadata": "group:flow",
+      "minzoom": 15,
+      "paint": {
+        "line-offset": ["interpolate", ["linear"],
+          ["zoom"], 15, ["case", ["has", "left_hand_traffic"], -1.96, 1.96], 18, ["case", ["has", "left_hand_traffic"], -2.625, 2.625]
+        ],
+        "line-opacity": ["interpolate", ["linear"],
+          ["zoom"], 15, 0, 16, 1
+        ],
+        "line-pattern": {
+          "property": "traffic_level",
+          "stops": [
+            [0, "traffic-flow-stationary"],
+            [0.15, "traffic-flow-queueing"],
+            [0.35, "traffic-flow-slow"]
+          ],
+          "type": "interval"
+        },
+        "line-width": ["interpolate", ["linear"],
+          ["zoom"], 15, 2.1, 18, 3.75
+        ]
+      },
+      "source": "vectorTilesFlow",
+      "source-layer": "Traffic flow",
+      "type": "line"
+    }, {
+      "filter": ["all", ["==", "road_type", "Connecting road"],
+        ["<=", "traffic_level", 0.75],
+        ["has", "road_closure"]
+      ],
+      "id": "Traffic flow Road Closure Pattern Connecting road",
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round"
+      },
+      "metadata": "group:flow",
+      "minzoom": 15,
+      "paint": {
+        "line-offset": ["interpolate", ["linear"],
+          ["zoom"], 15, ["case", ["has", "left_hand_traffic"], -2.61333, 2.61333], 18, ["case", ["has", "left_hand_traffic"], -4.66667, 4.66667]
+        ],
+        "line-pattern": {
+          "property": "traffic_level",
+          "stops": [
+            [0, "traffic-diagonal-closed"]
+          ],
+          "type": "interval"
+        },
+        "line-width": ["interpolate", ["linear"],
+          ["zoom"], 15, 4.66667, 18, 8.33333
+        ]
+      },
+      "source": "vectorTilesFlow",
+      "source-layer": "Traffic flow",
+      "type": "line"
+    }, {
+      "filter": ["all", ["==", "road_type", "Secondary road"],
+        ["!has", "road_closure"]
+      ],
+      "id": "Traffic flow Outline Secondary road",
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round"
+      },
+      "metadata": "group:flow",
+      "minzoom": 13,
+      "paint": {
+        "line-color": {
+          "property": "traffic_level",
+          "stops": [
+            [0, "#a50704"],
+            [0.15, "#df4b15"],
+            [0.35, "#e87b3d"],
+            [0.75, "#245723"]
+          ],
+          "type": "interval"
+        },
+        "line-offset": ["interpolate", ["linear"],
+          ["zoom"], 13, ["case", ["has", "left_hand_traffic"], -0.933333, 0.933333], 18, ["case", ["has", "left_hand_traffic"], -2.625, 2.625]
+        ],
+        "line-width": ["interpolate", ["linear"],
+          ["zoom"], 13, 1.4, 18, 5.25
+        ]
+      },
+      "source": "vectorTilesFlow",
+      "source-layer": "Traffic flow",
+      "type": "line"
+    }, {
+      "filter": ["all", ["==", "road_type", "Secondary road"],
+        ["has", "road_closure"]
+      ],
+      "id": "Traffic flow Road Closure Outline Secondary road",
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round"
+      },
+      "metadata": "group:flow",
+      "minzoom": 13,
+      "paint": {
+        "line-color": {
+          "property": "traffic_level",
+          "stops": [
+            [0, "#666666"]
+          ],
+          "type": "interval"
+        },
+        "line-offset": ["interpolate", ["linear"],
+          ["zoom"], 13, ["case", ["has", "left_hand_traffic"], -1.24444, 1.24444], 18, ["case", ["has", "left_hand_traffic"], -4.66667, 4.66667]
+        ],
+        "line-width": ["interpolate", ["linear"],
+          ["zoom"], 13, 3.11111, 18, 11.6667
+        ]
+      },
+      "source": "vectorTilesFlow",
+      "source-layer": "Traffic flow",
+      "type": "line"
+    }, {
+      "filter": ["all", ["==", "road_type", "Secondary road"],
+        ["!has", "road_closure"]
+      ],
+      "id": "Traffic flow  Secondary road",
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round"
+      },
+      "metadata": "group:flow",
+      "minzoom": 13,
+      "paint": {
+        "line-color": {
+          "property": "traffic_level",
+          "stops": [
+            [0, "#e70704"],
+            [0.15, "#f18237"],
+            [0.35, "#f1bf40"],
+            [0.75, "#2eab30"]
+          ],
+          "type": "interval"
+        },
+        "line-offset": ["interpolate", ["linear"],
+          ["zoom"], 13, ["case", ["has", "left_hand_traffic"], -0.933333, 0.933333], 18, ["case", ["has", "left_hand_traffic"], -2.625, 2.625]
+        ],
+        "line-width": ["interpolate", ["linear"],
+          ["zoom"], 13, 1, 18, 3.75
+        ]
+      },
+      "source": "vectorTilesFlow",
+      "source-layer": "Traffic flow",
+      "type": "line"
+    }, {
+      "filter": ["all", ["==", "road_type", "Secondary road"],
+        ["<=", "traffic_level", 0.75],
+        ["!has", "road_closure"]
+      ],
+      "id": "Traffic flow Pattern Secondary road",
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round"
+      },
+      "metadata": "group:flow",
+      "minzoom": 15,
+      "paint": {
+        "line-offset": ["interpolate", ["linear"],
+          ["zoom"], 13, ["case", ["has", "left_hand_traffic"], -0.933333, 0.933333], 18, ["case", ["has", "left_hand_traffic"], -2.625, 2.625]
+        ],
+        "line-opacity": ["interpolate", ["linear"],
+          ["zoom"], 15, 0, 16, 1
+        ],
+        "line-pattern": {
+          "property": "traffic_level",
+          "stops": [
+            [0, "traffic-flow-stationary"],
+            [0.15, "traffic-flow-queueing"],
+            [0.35, "traffic-flow-slow"]
+          ],
+          "type": "interval"
+        },
+        "line-width": ["interpolate", ["linear"],
+          ["zoom"], 13, 1, 18, 3.75
+        ]
+      },
+      "source": "vectorTilesFlow",
+      "source-layer": "Traffic flow",
+      "type": "line"
+    }, {
+      "filter": ["all", ["==", "road_type", "Secondary road"],
+        ["<=", "traffic_level", 0.75],
+        ["has", "road_closure"]
+      ],
+      "id": "Traffic flow Road Closure Pattern Secondary road",
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round"
+      },
+      "metadata": "group:flow",
+      "minzoom": 13,
+      "paint": {
+        "line-offset": ["interpolate", ["linear"],
+          ["zoom"], 13, ["case", ["has", "left_hand_traffic"], -1.24444, 1.24444], 18, ["case", ["has", "left_hand_traffic"], -4.66667, 4.66667]
+        ],
+        "line-pattern": {
+          "property": "traffic_level",
+          "stops": [
+            [0, "traffic-diagonal-closed"]
+          ],
+          "type": "interval"
+        },
+        "line-width": ["interpolate", ["linear"],
+          ["zoom"], 13, 2.22222, 18, 8.33333
+        ]
+      },
+      "source": "vectorTilesFlow",
+      "source-layer": "Traffic flow",
+      "type": "line"
+    }, {
+      "filter": ["all", ["==", "road_type", "Major road"],
+        ["!has", "road_closure"]
+      ],
+      "id": "Traffic flow Outline Major road",
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round"
+      },
+      "metadata": "group:flow",
+      "minzoom": 12,
+      "paint": {
+        "line-color": {
+          "property": "traffic_level",
+          "stops": [
+            [0, "#a50704"],
+            [0.15, "#df4b15"],
+            [0.35, "#e87b3d"],
+            [0.75, "#245723"]
+          ],
+          "type": "interval"
+        },
+        "line-offset": ["interpolate", ["linear"],
+          ["zoom"], 12, ["case", ["has", "left_hand_traffic"], -0.77, 0.77], 18, ["case", ["has", "left_hand_traffic"], -2.8, 2.8]
+        ],
+        "line-width": ["interpolate", ["linear"],
+          ["zoom"], 12, 1.155, 13, 1.4, 18, 5.6
+        ]
+      },
+      "source": "vectorTilesFlow",
+      "source-layer": "Traffic flow",
+      "type": "line"
+    }, {
+      "filter": ["all", ["==", "road_type", "Major road"],
+        ["has", "road_closure"]
+      ],
+      "id": "Traffic flow Road Closure Outline Major road",
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round"
+      },
+      "metadata": "group:flow",
+      "minzoom": 12,
+      "paint": {
+        "line-color": {
+          "property": "traffic_level",
+          "stops": [
+            [0, "#666666"]
+          ],
+          "type": "interval"
+        },
+        "line-offset": ["interpolate", ["linear"],
+          ["zoom"], 12, ["case", ["has", "left_hand_traffic"], -1.02667, 1.02667], 13, ["case", ["has", "left_hand_traffic"], -1.24444, 1.24444], 18, ["case", ["has", "left_hand_traffic"], -4.97778, 4.97778]
+        ],
+        "line-width": ["interpolate", ["linear"],
+          ["zoom"], 12, 2.56667, 13, 3.11111, 18, 12.4444
+        ]
+      },
+      "source": "vectorTilesFlow",
+      "source-layer": "Traffic flow",
+      "type": "line"
+    }, {
+      "filter": ["all", ["==", "road_type", "Major road"],
+        ["!has", "road_closure"]
+      ],
+      "id": "Traffic flow  Major road",
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round"
+      },
+      "metadata": "group:flow",
+      "minzoom": 12,
+      "paint": {
+        "line-color": {
+          "property": "traffic_level",
+          "stops": [
+            [0, "#e70704"],
+            [0.15, "#f18237"],
+            [0.35, "#f1bf40"],
+            [0.75, "#2eab30"]
+          ],
+          "type": "interval"
+        },
+        "line-offset": ["interpolate", ["linear"],
+          ["zoom"], 12, ["case", ["has", "left_hand_traffic"], -0.77, 0.77], 18, ["case", ["has", "left_hand_traffic"], -2.8, 2.8]
+        ],
+        "line-width": ["interpolate", ["linear"],
+          ["zoom"], 12, 0.825, 18, 4
+        ]
+      },
+      "source": "vectorTilesFlow",
+      "source-layer": "Traffic flow",
+      "type": "line"
+    }, {
+      "filter": ["all", ["==", "road_type", "Major road"],
+        ["<=", "traffic_level", 0.75],
+        ["!has", "road_closure"]
+      ],
+      "id": "Traffic flow Pattern Major road",
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round"
+      },
+      "metadata": "group:flow",
+      "minzoom": 15,
+      "paint": {
+        "line-offset": ["interpolate", ["linear"],
+          ["zoom"], 12, ["case", ["has", "left_hand_traffic"], -0.77, 0.77], 18, ["case", ["has", "left_hand_traffic"], -2.8, 2.8]
+        ],
+        "line-opacity": ["interpolate", ["linear"],
+          ["zoom"], 15, 0, 16, 1
+        ],
+        "line-pattern": {
+          "property": "traffic_level",
+          "stops": [
+            [0, "traffic-flow-stationary"],
+            [0.15, "traffic-flow-queueing"],
+            [0.35, "traffic-flow-slow"]
+          ],
+          "type": "interval"
+        },
+        "line-width": ["interpolate", ["linear"],
+          ["zoom"], 12, 0.825, 18, 4
+        ]
+      },
+      "source": "vectorTilesFlow",
+      "source-layer": "Traffic flow",
+      "type": "line"
+    }, {
+      "filter": ["all", ["==", "road_type", "Major road"],
+        ["<=", "traffic_level", 0.75],
+        ["has", "road_closure"]
+      ],
+      "id": "Traffic flow Road Closure Pattern Major road",
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round"
+      },
+      "metadata": "group:flow",
+      "minzoom": 12,
+      "paint": {
+        "line-offset": ["interpolate", ["linear"],
+          ["zoom"], 12, ["case", ["has", "left_hand_traffic"], -1.02667, 1.02667], 13, ["case", ["has", "left_hand_traffic"], -1.24444, 1.24444], 18, ["case", ["has", "left_hand_traffic"], -4.97778, 4.97778]
+        ],
+        "line-pattern": {
+          "property": "traffic_level",
+          "stops": [
+            [0, "traffic-diagonal-closed"]
+          ],
+          "type": "interval"
+        },
+        "line-width": ["interpolate", ["linear"],
+          ["zoom"], 12, 1.83333, 13, 2.22222, 18, 8.88889
+        ]
+      },
+      "source": "vectorTilesFlow",
+      "source-layer": "Traffic flow",
+      "type": "line"
+    }, {
+      "filter": ["all", ["==", "road_type", "International road"],
+        ["!has", "road_closure"]
+      ],
+      "id": "Traffic flow Outline International road",
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round"
+      },
+      "metadata": "group:flow",
+      "minzoom": 7,
+      "paint": {
+        "line-color": {
+          "property": "traffic_level",
+          "stops": [
+            [0, "#a50704"],
+            [0.15, "#df4b15"],
+            [0.35, "#e87b3d"],
+            [0.75, "#245723"]
+          ],
+          "type": "interval"
+        },
+        "line-offset": ["interpolate", ["linear"],
+          ["zoom"], 7, ["case", ["has", "left_hand_traffic"], -0.320833, 0.320833], 18, ["case", ["has", "left_hand_traffic"], -2.8, 2.8]
+        ],
+        "line-width": ["interpolate", ["linear"],
+          ["zoom"], 7, 0.48125, 13, 1.4, 18, 5.6
+        ]
+      },
+      "source": "vectorTilesFlow",
+      "source-layer": "Traffic flow",
+      "type": "line"
+    }, {
+      "filter": ["all", ["==", "road_type", "International road"],
+        ["has", "road_closure"]
+      ],
+      "id": "Traffic flow Road Closure Outline International road",
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round"
+      },
+      "metadata": "group:flow",
+      "minzoom": 7,
+      "paint": {
+        "line-color": {
+          "property": "traffic_level",
+          "stops": [
+            [0, "#666666"]
+          ],
+          "type": "interval"
+        },
+        "line-offset": ["interpolate", ["linear"],
+          ["zoom"], 7, ["case", ["has", "left_hand_traffic"], -0.427778, 0.427778], 13, ["case", ["has", "left_hand_traffic"], -1.24444, 1.24444], 18, ["case", ["has", "left_hand_traffic"], -4.97778, 4.97778]
+        ],
+        "line-width": ["interpolate", ["linear"],
+          ["zoom"], 7, 1.06944, 13, 3.11111, 18, 12.4444
+        ]
+      },
+      "source": "vectorTilesFlow",
+      "source-layer": "Traffic flow",
+      "type": "line"
+    }, {
+      "filter": ["all", ["==", "road_type", "International road"],
+        ["!has", "road_closure"]
+      ],
+      "id": "Traffic flow  International road",
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round"
+      },
+      "metadata": "group:flow",
+      "minzoom": 7,
+      "paint": {
+        "line-color": {
+          "property": "traffic_level",
+          "stops": [
+            [0, "#e70704"],
+            [0.15, "#f18237"],
+            [0.35, "#f1bf40"],
+            [0.75, "#2eab30"]
+          ],
+          "type": "interval"
+        },
+        "line-offset": ["interpolate", ["linear"],
+          ["zoom"], 7, ["case", ["has", "left_hand_traffic"], -0.320833, 0.320833], 18, ["case", ["has", "left_hand_traffic"], -2.8, 2.8]
+        ],
+        "line-width": ["interpolate", ["linear"],
+          ["zoom"], 7, 0.34375, 18, 4
+        ]
+      },
+      "source": "vectorTilesFlow",
+      "source-layer": "Traffic flow",
+      "type": "line"
+    }, {
+      "filter": ["all", ["==", "road_type", "International road"],
+        ["<=", "traffic_level", 0.75],
+        ["!has", "road_closure"]
+      ],
+      "id": "Traffic flow Pattern International road",
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round"
+      },
+      "metadata": "group:flow",
+      "minzoom": 15,
+      "paint": {
+        "line-offset": ["interpolate", ["linear"],
+          ["zoom"], 7, ["case", ["has", "left_hand_traffic"], -0.320833, 0.320833], 18, ["case", ["has", "left_hand_traffic"], -2.8, 2.8]
+        ],
+        "line-opacity": ["interpolate", ["linear"],
+          ["zoom"], 15, 0, 16, 1
+        ],
+        "line-pattern": {
+          "property": "traffic_level",
+          "stops": [
+            [0, "traffic-flow-stationary"],
+            [0.15, "traffic-flow-queueing"],
+            [0.35, "traffic-flow-slow"]
+          ],
+          "type": "interval"
+        },
+        "line-width": ["interpolate", ["linear"],
+          ["zoom"], 7, 0.34375, 18, 4
+        ]
+      },
+      "source": "vectorTilesFlow",
+      "source-layer": "Traffic flow",
+      "type": "line"
+    }, {
+      "filter": ["all", ["==", "road_type", "International road"],
+        ["<=", "traffic_level", 0.75],
+        ["has", "road_closure"]
+      ],
+      "id": "Traffic flow Road Closure Pattern International road",
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round"
+      },
+      "metadata": "group:flow",
+      "minzoom": 7,
+      "paint": {
+        "line-offset": ["interpolate", ["linear"],
+          ["zoom"], 7, ["case", ["has", "left_hand_traffic"], -0.427778, 0.427778], 13, ["case", ["has", "left_hand_traffic"], -1.24444, 1.24444], 18, ["case", ["has", "left_hand_traffic"], -4.97778, 4.97778]
+        ],
+        "line-pattern": {
+          "property": "traffic_level",
+          "stops": [
+            [0, "traffic-diagonal-closed"]
+          ],
+          "type": "interval"
+        },
+        "line-width": ["interpolate", ["linear"],
+          ["zoom"], 7, 0.763889, 13, 2.22222, 18, 8.88889
+        ]
+      },
+      "source": "vectorTilesFlow",
+      "source-layer": "Traffic flow",
+      "type": "line"
+    }, {
+      "filter": ["all", ["==", "road_type", "Motorway"],
+        ["!has", "road_closure"]
+      ],
+      "id": "Traffic flow Outline Motorway",
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round"
+      },
+      "metadata": "group:flow",
+      "minzoom": 7,
+      "paint": {
+        "line-color": {
+          "property": "traffic_level",
+          "stops": [
+            [0, "#a50704"],
+            [0.15, "#df4b15"],
+            [0.35, "#e87b3d"],
+            [0.75, "#245723"]
+          ],
+          "type": "interval"
+        },
+        "line-offset": ["interpolate", ["linear"],
+          ["zoom"], 7, ["case", ["has", "left_hand_traffic"], -0.320833, 0.320833], 18, ["case", ["has", "left_hand_traffic"], -3.15, 3.15]
+        ],
+        "line-width": ["interpolate", ["linear"],
+          ["zoom"], 7, 0.48125, 13, 1.4, 18, 6.3
+        ]
+      },
+      "source": "vectorTilesFlow",
+      "source-layer": "Traffic flow",
+      "type": "line"
+    }, {
+      "filter": ["all", ["==", "road_type", "Motorway"],
+        ["has", "road_closure"]
+      ],
+      "id": "Traffic flow Road Closure Outline Motorway",
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round"
+      },
+      "metadata": "group:flow",
+      "minzoom": 7,
+      "paint": {
+        "line-color": {
+          "property": "traffic_level",
+          "stops": [
+            [0, "#666666"]
+          ],
+          "type": "interval"
+        },
+        "line-offset": ["interpolate", ["linear"],
+          ["zoom"], 7, ["case", ["has", "left_hand_traffic"], -0.427778, 0.427778], 13, ["case", ["has", "left_hand_traffic"], -1.24444, 1.24444], 18, ["case", ["has", "left_hand_traffic"], -5.6, 5.6]
+        ],
+        "line-width": ["interpolate", ["linear"],
+          ["zoom"], 7, 1.06944, 13, 3.11111, 18, 14
+        ]
+      },
+      "source": "vectorTilesFlow",
+      "source-layer": "Traffic flow",
+      "type": "line"
+    }, {
+      "filter": ["all", ["==", "road_type", "Motorway"],
+        ["!has", "road_closure"]
+      ],
+      "id": "Traffic flow  Motorway",
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round"
+      },
+      "metadata": "group:flow",
+      "minzoom": 7,
+      "paint": {
+        "line-color": {
+          "property": "traffic_level",
+          "stops": [
+            [0, "#e70704"],
+            [0.15, "#f18237"],
+            [0.35, "#f1bf40"],
+            [0.75, "#2eab30"]
+          ],
+          "type": "interval"
+        },
+        "line-offset": ["interpolate", ["linear"],
+          ["zoom"], 7, ["case", ["has", "left_hand_traffic"], -0.320833, 0.320833], 18, ["case", ["has", "left_hand_traffic"], -3.15, 3.15]
+        ],
+        "line-width": ["interpolate", ["linear"],
+          ["zoom"], 7, 0.34375, 13, 1, 18, 4.5
+        ]
+      },
+      "source": "vectorTilesFlow",
+      "source-layer": "Traffic flow",
+      "type": "line"
+    }, {
+      "filter": ["all", ["==", "road_type", "Motorway"],
+        ["<=", "traffic_level", 0.75],
+        ["!has", "road_closure"]
+      ],
+      "id": "Traffic flow Pattern Motorway",
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round"
+      },
+      "metadata": "group:flow",
+      "minzoom": 15,
+      "paint": {
+        "line-offset": ["interpolate", ["linear"],
+          ["zoom"], 7, ["case", ["has", "left_hand_traffic"], -0.320833, 0.320833], 18, ["case", ["has", "left_hand_traffic"], -3.15, 3.15]
+        ],
+        "line-opacity": ["interpolate", ["linear"],
+          ["zoom"], 15, 0, 16, 1
+        ],
+        "line-pattern": {
+          "property": "traffic_level",
+          "stops": [
+            [0, "traffic-flow-stationary"],
+            [0.15, "traffic-flow-queueing"],
+            [0.35, "traffic-flow-slow"]
+          ],
+          "type": "interval"
+        },
+        "line-width": ["interpolate", ["linear"],
+          ["zoom"], 7, 0.34375, 13, 1, 18, 4.5
+        ]
+      },
+      "source": "vectorTilesFlow",
+      "source-layer": "Traffic flow",
+      "type": "line"
+    }, {
+      "filter": ["all", ["==", "road_type", "Motorway"],
+        ["<=", "traffic_level", 0.75],
+        ["has", "road_closure"]
+      ],
+      "id": "Traffic flow Road Closure Pattern Motorway",
+      "layout": {
+        "line-cap": "round",
+        "line-join": "round"
+      },
+      "metadata": "group:flow",
+      "minzoom": 7,
+      "paint": {
+        "line-offset": ["interpolate", ["linear"],
+          ["zoom"], 7, ["case", ["has", "left_hand_traffic"], -0.427778, 0.427778], 13, ["case", ["has", "left_hand_traffic"], -1.24444, 1.24444], 18, ["case", ["has", "left_hand_traffic"], -5.6, 5.6]
+        ],
+        "line-pattern": {
+          "property": "traffic_level",
+          "stops": [
+            [0, "traffic-diagonal-closed"]
+          ],
+          "type": "interval"
+        },
+        "line-width": ["interpolate", ["linear"],
+          ["zoom"], 7, 0.763889, 13, 2.22222, 18, 10
+        ]
+      },
+      "source": "vectorTilesFlow",
+      "source-layer": "Traffic flow",
+      "type": "line"
     },
     {
       "id": "Non public road label",
@@ -16317,7 +19209,12 @@
         "text-letter-spacing": 0.05,
         "text-offset": [0, 0.1],
         "text-rotation-alignment": "map",
-        "text-size": {"stops": [[0, 8], [12, 12]]}
+        "text-size": {
+          "stops": [
+            [0, 8],
+            [12, 12]
+          ]
+        }
       },
       "paint": {
         "text-color": "rgba(119, 119, 119, 1)",
@@ -16339,7 +19236,12 @@
         "text-letter-spacing": 0.05,
         "text-offset": [0, 0.1],
         "text-rotation-alignment": "map",
-        "text-size": {"stops": [[0, 8], [12, 12]]}
+        "text-size": {
+          "stops": [
+            [0, 8],
+            [12, 12]
+          ]
+        }
       },
       "paint": {
         "text-color": "rgba(119, 119, 119, 1)",
@@ -16361,7 +19263,12 @@
         "text-letter-spacing": 0.05,
         "text-offset": [0, 0.1],
         "text-rotation-alignment": "map",
-        "text-size": {"stops": [[0, 8], [12, 12]]}
+        "text-size": {
+          "stops": [
+            [0, 8],
+            [12, 12]
+          ]
+        }
       },
       "paint": {
         "text-color": "rgba(119, 119, 119, 1)",
@@ -16383,7 +19290,12 @@
         "text-letter-spacing": 0.05,
         "text-offset": [0, 0.1],
         "text-rotation-alignment": "map",
-        "text-size": {"stops": [[0, 8], [12, 12]]}
+        "text-size": {
+          "stops": [
+            [0, 8],
+            [12, 12]
+          ]
+        }
       },
       "paint": {
         "text-color": "rgba(119, 119, 119, 1)",
@@ -16406,7 +19318,12 @@
         "text-letter-spacing": 0.05,
         "text-offset": [0, 0.1],
         "text-rotation-alignment": "map",
-        "text-size": {"stops": [[0, 8], [12, 12]]}
+        "text-size": {
+          "stops": [
+            [0, 8],
+            [12, 12]
+          ]
+        }
       },
       "paint": {
         "text-color": "rgba(119, 119, 119, 1)",
@@ -16428,7 +19345,12 @@
         "text-letter-spacing": 0.05,
         "text-offset": [0, 0.1],
         "text-rotation-alignment": "map",
-        "text-size": {"stops": [[0, 8], [12, 12]]}
+        "text-size": {
+          "stops": [
+            [0, 8],
+            [12, 12]
+          ]
+        }
       },
       "paint": {
         "text-color": "rgba(119, 119, 119, 1)",
@@ -16450,7 +19372,12 @@
         "text-letter-spacing": 0.05,
         "text-offset": [0, 0.1],
         "text-rotation-alignment": "map",
-        "text-size": {"stops": [[0, 8], [12, 12]]}
+        "text-size": {
+          "stops": [
+            [0, 8],
+            [12, 12]
+          ]
+        }
       },
       "paint": {
         "text-color": "rgba(119, 119, 119, 1)",
@@ -16472,7 +19399,13 @@
         "text-letter-spacing": 0.05,
         "text-offset": [0, 0.1],
         "text-rotation-alignment": "map",
-        "text-size": {"stops": [[0, 8], [10, 12], [17, 13]]}
+        "text-size": {
+          "stops": [
+            [0, 8],
+            [10, 12],
+            [17, 13]
+          ]
+        }
       },
       "paint": {
         "text-color": "rgba(119, 119, 119, 1)",
@@ -16494,12 +19427,24 @@
         "text-letter-spacing": 0.05,
         "text-offset": [0, 0.1],
         "text-rotation-alignment": "map",
-        "text-size": {"stops": [[0, 8], [10, 12], [15, 13]]}
+        "text-size": {
+          "stops": [
+            [0, 8],
+            [10, 12],
+            [15, 13]
+          ]
+        }
       },
       "paint": {
         "text-color": "rgba(119, 119, 119, 1)",
         "text-halo-color": "rgba(255, 255, 255, 0.75)",
-        "text-halo-width": {"stops": [[0, 1], [16, 1.5], [17, 2]]}
+        "text-halo-width": {
+          "stops": [
+            [0, 1],
+            [16, 1.5],
+            [17, 2]
+          ]
+        }
       }
     },
     {
@@ -16516,12 +19461,25 @@
         "text-letter-spacing": 0.05,
         "text-offset": [0, 0.1],
         "text-rotation-alignment": "map",
-        "text-size": {"stops": [[9, 8], [10, 12], [14, 13], [15, 14]]}
+        "text-size": {
+          "stops": [
+            [9, 8],
+            [10, 12],
+            [14, 13],
+            [15, 14]
+          ]
+        }
       },
       "paint": {
         "text-color": "rgba(119, 119, 119, 1)",
         "text-halo-color": "rgba(255, 255, 255, 0.75)",
-        "text-halo-width": {"stops": [[0, 1], [16, 1.5], [17, 2]]}
+        "text-halo-width": {
+          "stops": [
+            [0, 1],
+            [16, 1.5],
+            [17, 2]
+          ]
+        }
       }
     },
     {
@@ -16538,12 +19496,26 @@
         "text-letter-spacing": 0.05,
         "text-offset": [0, 0.1],
         "text-rotation-alignment": "map",
-        "text-size": {"stops": [[0, 8], [10, 12], [13, 13], [14, 14], [15, 15]]}
+        "text-size": {
+          "stops": [
+            [0, 8],
+            [10, 12],
+            [13, 13],
+            [14, 14],
+            [15, 15]
+          ]
+        }
       },
       "paint": {
         "text-color": "rgba(119, 119, 119, 1)",
         "text-halo-color": "rgba(255, 255, 255, 0.75)",
-        "text-halo-width": {"stops": [[0, 1], [16, 1.5], [17, 2]]}
+        "text-halo-width": {
+          "stops": [
+            [0, 1],
+            [16, 1.5],
+            [17, 2]
+          ]
+        }
       }
     },
     {
@@ -16560,12 +19532,26 @@
         "text-letter-spacing": 0.05,
         "text-offset": [0, 0.1],
         "text-rotation-alignment": "map",
-        "text-size": {"stops": [[0, 8], [10, 12], [13, 13], [14, 14], [15, 15]]}
+        "text-size": {
+          "stops": [
+            [0, 8],
+            [10, 12],
+            [13, 13],
+            [14, 14],
+            [15, 15]
+          ]
+        }
       },
       "paint": {
         "text-color": "rgba(119, 119, 119, 1)",
         "text-halo-color": "rgba(255, 255, 255, 0.75)",
-        "text-halo-width": {"stops": [[0, 1], [16, 1.5], [17, 2]]}
+        "text-halo-width": {
+          "stops": [
+            [0, 1],
+            [16, 1.5],
+            [17, 2]
+          ]
+        }
       }
     },
     {
@@ -16582,12 +19568,26 @@
         "text-letter-spacing": 0.05,
         "text-offset": [0, 0.1],
         "text-rotation-alignment": "map",
-        "text-size": {"stops": [[0, 8], [10, 12], [13, 13], [14, 14], [15, 15]]}
+        "text-size": {
+          "stops": [
+            [0, 8],
+            [10, 12],
+            [13, 13],
+            [14, 14],
+            [15, 15]
+          ]
+        }
       },
       "paint": {
         "text-color": "rgba(119, 119, 119, 1)",
         "text-halo-color": "rgba(255, 255, 255, 0.75)",
-        "text-halo-width": {"stops": [[0, 1], [16, 1.5], [17, 2]]}
+        "text-halo-width": {
+          "stops": [
+            [0, 1],
+            [16, 1.5],
+            [17, 2]
+          ]
+        }
       }
     },
     {
@@ -16604,7 +19604,12 @@
         "text-letter-spacing": 0.05,
         "text-offset": [0, 0.1],
         "text-rotation-alignment": "map",
-        "text-size": {"stops": [[0, 8], [12, 12]]}
+        "text-size": {
+          "stops": [
+            [0, 8],
+            [12, 12]
+          ]
+        }
       },
       "paint": {
         "text-color": "rgba(119, 119, 119, 1)",
@@ -16626,7 +19631,12 @@
         "text-letter-spacing": 0.05,
         "text-offset": [0, 0.1],
         "text-rotation-alignment": "map",
-        "text-size": {"stops": [[0, 8], [12, 12]]}
+        "text-size": {
+          "stops": [
+            [0, 8],
+            [12, 12]
+          ]
+        }
       },
       "paint": {
         "text-color": "rgba(119, 119, 119, 1)",
@@ -16648,7 +19658,13 @@
         "text-letter-spacing": 0.05,
         "text-offset": [0, 0.1],
         "text-rotation-alignment": "map",
-        "text-size": {"stops": [[0, 8], [10, 12], [17, 13]]}
+        "text-size": {
+          "stops": [
+            [0, 8],
+            [10, 12],
+            [17, 13]
+          ]
+        }
       },
       "paint": {
         "text-color": "rgba(119, 119, 119, 1)",
@@ -16670,12 +19686,24 @@
         "text-letter-spacing": 0.05,
         "text-offset": [0, 0.1],
         "text-rotation-alignment": "map",
-        "text-size": {"stops": [[0, 8], [10, 12], [15, 13]]}
+        "text-size": {
+          "stops": [
+            [0, 8],
+            [10, 12],
+            [15, 13]
+          ]
+        }
       },
       "paint": {
         "text-color": "rgba(119, 119, 119, 1)",
         "text-halo-color": "rgba(255, 255, 255, 0.75)",
-        "text-halo-width": {"stops": [[0, 1], [16, 1.5], [17, 2]]}
+        "text-halo-width": {
+          "stops": [
+            [0, 1],
+            [16, 1.5],
+            [17, 2]
+          ]
+        }
       }
     },
     {
@@ -16692,12 +19720,25 @@
         "text-letter-spacing": 0.05,
         "text-offset": [0, 0.1],
         "text-rotation-alignment": "map",
-        "text-size": {"stops": [[9, 8], [10, 12], [14, 13], [15, 14]]}
+        "text-size": {
+          "stops": [
+            [9, 8],
+            [10, 12],
+            [14, 13],
+            [15, 14]
+          ]
+        }
       },
       "paint": {
         "text-color": "rgba(119, 119, 119, 1)",
         "text-halo-color": "rgba(255, 255, 255, 0.75)",
-        "text-halo-width": {"stops": [[0, 1], [16, 1.5], [17, 2]]}
+        "text-halo-width": {
+          "stops": [
+            [0, 1],
+            [16, 1.5],
+            [17, 2]
+          ]
+        }
       }
     },
     {
@@ -16714,12 +19755,26 @@
         "text-letter-spacing": 0.05,
         "text-offset": [0, 0.1],
         "text-rotation-alignment": "map",
-        "text-size": {"stops": [[0, 8], [10, 12], [13, 13], [14, 14], [15, 15]]}
+        "text-size": {
+          "stops": [
+            [0, 8],
+            [10, 12],
+            [13, 13],
+            [14, 14],
+            [15, 15]
+          ]
+        }
       },
       "paint": {
         "text-color": "rgba(119, 119, 119, 1)",
         "text-halo-color": "rgba(255, 255, 255, 0.75)",
-        "text-halo-width": {"stops": [[0, 1], [16, 1.5], [17, 2]]}
+        "text-halo-width": {
+          "stops": [
+            [0, 1],
+            [16, 1.5],
+            [17, 2]
+          ]
+        }
       }
     },
     {
@@ -16736,12 +19791,26 @@
         "text-letter-spacing": 0.05,
         "text-offset": [0, 0.1],
         "text-rotation-alignment": "map",
-        "text-size": {"stops": [[0, 8], [10, 12], [13, 13], [14, 14], [15, 15]]}
+        "text-size": {
+          "stops": [
+            [0, 8],
+            [10, 12],
+            [13, 13],
+            [14, 14],
+            [15, 15]
+          ]
+        }
       },
       "paint": {
         "text-color": "rgba(119, 119, 119, 1)",
         "text-halo-color": "rgba(255, 255, 255, 0.75)",
-        "text-halo-width": {"stops": [[0, 1], [16, 1.5], [17, 2]]}
+        "text-halo-width": {
+          "stops": [
+            [0, 1],
+            [16, 1.5],
+            [17, 2]
+          ]
+        }
       }
     },
     {
@@ -16758,12 +19827,26 @@
         "text-letter-spacing": 0.05,
         "text-offset": [0, 0.1],
         "text-rotation-alignment": "map",
-        "text-size": {"stops": [[0, 8], [10, 12], [13, 13], [14, 14], [15, 15]]}
+        "text-size": {
+          "stops": [
+            [0, 8],
+            [10, 12],
+            [13, 13],
+            [14, 14],
+            [15, 15]
+          ]
+        }
       },
       "paint": {
         "text-color": "rgba(119, 119, 119, 1)",
         "text-halo-color": "rgba(255, 255, 255, 0.75)",
-        "text-halo-width": {"stops": [[0, 1], [16, 1.5], [17, 2]]}
+        "text-halo-width": {
+          "stops": [
+            [0, 1],
+            [16, 1.5],
+            [17, 2]
+          ]
+        }
       }
     },
     {
@@ -16780,7 +19863,12 @@
         "text-letter-spacing": 0.05,
         "text-offset": [0, 0.1],
         "text-rotation-alignment": "map",
-        "text-size": {"stops": [[0, 8], [12, 12]]}
+        "text-size": {
+          "stops": [
+            [0, 8],
+            [12, 12]
+          ]
+        }
       },
       "paint": {
         "text-color": "rgba(119, 119, 119, 1)",
@@ -16802,7 +19890,12 @@
         "text-letter-spacing": 0.05,
         "text-offset": [0, 0.1],
         "text-rotation-alignment": "map",
-        "text-size": {"stops": [[0, 8], [12, 12]]}
+        "text-size": {
+          "stops": [
+            [0, 8],
+            [12, 12]
+          ]
+        }
       },
       "paint": {
         "text-color": "rgba(119, 119, 119, 1)",
@@ -16824,7 +19917,13 @@
         "text-letter-spacing": 0.05,
         "text-offset": [0, 0.1],
         "text-rotation-alignment": "map",
-        "text-size": {"stops": [[0, 8], [10, 12], [17, 13]]}
+        "text-size": {
+          "stops": [
+            [0, 8],
+            [10, 12],
+            [17, 13]
+          ]
+        }
       },
       "paint": {
         "text-color": "rgba(119, 119, 119, 1)",
@@ -16846,12 +19945,24 @@
         "text-letter-spacing": 0.05,
         "text-offset": [0, 0.1],
         "text-rotation-alignment": "map",
-        "text-size": {"stops": [[0, 8], [10, 12], [15, 13]]}
+        "text-size": {
+          "stops": [
+            [0, 8],
+            [10, 12],
+            [15, 13]
+          ]
+        }
       },
       "paint": {
         "text-color": "rgba(119, 119, 119, 1)",
         "text-halo-color": "rgba(255,255,255,0.75)",
-        "text-halo-width": {"stops": [[0, 1], [16, 1.5], [17, 2]]}
+        "text-halo-width": {
+          "stops": [
+            [0, 1],
+            [16, 1.5],
+            [17, 2]
+          ]
+        }
       }
     },
     {
@@ -16868,12 +19979,25 @@
         "text-letter-spacing": 0.05,
         "text-offset": [0, 0.1],
         "text-rotation-alignment": "map",
-        "text-size": {"stops": [[0, 8], [10, 12], [14, 13], [15, 14]]}
+        "text-size": {
+          "stops": [
+            [0, 8],
+            [10, 12],
+            [14, 13],
+            [15, 14]
+          ]
+        }
       },
       "paint": {
         "text-color": "rgba(119, 119, 119, 1)",
         "text-halo-color": "rgba(255,255,255,0.75)",
-        "text-halo-width": {"stops": [[0, 1], [16, 1.5], [17, 2]]}
+        "text-halo-width": {
+          "stops": [
+            [0, 1],
+            [16, 1.5],
+            [17, 2]
+          ]
+        }
       }
     },
     {
@@ -16890,12 +20014,26 @@
         "text-letter-spacing": 0.05,
         "text-offset": [0, 0.1],
         "text-rotation-alignment": "map",
-        "text-size": {"stops": [[0, 8], [10, 12], [13, 13], [14, 14], [15, 15]]}
+        "text-size": {
+          "stops": [
+            [0, 8],
+            [10, 12],
+            [13, 13],
+            [14, 14],
+            [15, 15]
+          ]
+        }
       },
       "paint": {
         "text-color": "rgba(119, 119, 119, 1)",
         "text-halo-color": "rgba(255,255,255,0.75)",
-        "text-halo-width": {"stops": [[0, 1], [16, 1.5], [17, 2]]}
+        "text-halo-width": {
+          "stops": [
+            [0, 1],
+            [16, 1.5],
+            [17, 2]
+          ]
+        }
       }
     },
     {
@@ -16912,12 +20050,26 @@
         "text-letter-spacing": 0.05,
         "text-offset": [0, 0.1],
         "text-rotation-alignment": "map",
-        "text-size": {"stops": [[0, 8], [10, 12], [13, 13], [14, 14], [15, 15]]}
+        "text-size": {
+          "stops": [
+            [0, 8],
+            [10, 12],
+            [13, 13],
+            [14, 14],
+            [15, 15]
+          ]
+        }
       },
       "paint": {
         "text-color": "rgba(119, 119, 119, 1)",
         "text-halo-color": "rgba(255,255,255,0.75)",
-        "text-halo-width": {"stops": [[0, 1], [16, 1.5], [17, 2]]}
+        "text-halo-width": {
+          "stops": [
+            [0, 1],
+            [16, 1.5],
+            [17, 2]
+          ]
+        }
       }
     },
     {
@@ -16934,12 +20086,26 @@
         "text-letter-spacing": 0.05,
         "text-offset": [0, 0.1],
         "text-rotation-alignment": "map",
-        "text-size": {"stops": [[0, 8], [10, 12], [13, 13], [14, 14], [15, 15]]}
+        "text-size": {
+          "stops": [
+            [0, 8],
+            [10, 12],
+            [13, 13],
+            [14, 14],
+            [15, 15]
+          ]
+        }
       },
       "paint": {
         "text-color": "rgba(119, 119, 119, 1)",
         "text-halo-color": "rgba(255,255,255,0.75)",
-        "text-halo-width": {"stops": [[0, 1], [16, 1.5], [17, 2]]}
+        "text-halo-width": {
+          "stops": [
+            [0, 1],
+            [16, 1.5],
+            [17, 2]
+          ]
+        }
       }
     },
     {
@@ -16956,7 +20122,12 @@
         "text-letter-spacing": 0.05,
         "text-offset": [0, 0.1],
         "text-rotation-alignment": "map",
-        "text-size": {"stops": [[0, 8], [12, 12]]}
+        "text-size": {
+          "stops": [
+            [0, 8],
+            [12, 12]
+          ]
+        }
       },
       "paint": {
         "text-color": "rgba(119, 119, 119, 1)",
@@ -16978,7 +20149,12 @@
         "text-letter-spacing": 0.05,
         "text-offset": [0, 0.1],
         "text-rotation-alignment": "map",
-        "text-size": {"stops": [[0, 8], [12, 12]]}
+        "text-size": {
+          "stops": [
+            [0, 8],
+            [12, 12]
+          ]
+        }
       },
       "paint": {
         "text-color": "rgba(119, 119, 119, 1)",
@@ -17000,7 +20176,13 @@
         "text-letter-spacing": 0.05,
         "text-offset": [0, 0.1],
         "text-rotation-alignment": "map",
-        "text-size": {"stops": [[0, 8], [10, 12], [17, 13]]}
+        "text-size": {
+          "stops": [
+            [0, 8],
+            [10, 12],
+            [17, 13]
+          ]
+        }
       },
       "paint": {
         "text-color": "rgba(119, 119, 119, 1)",
@@ -17022,12 +20204,24 @@
         "text-letter-spacing": 0.05,
         "text-offset": [0, 0.1],
         "text-rotation-alignment": "map",
-        "text-size": {"stops": [[0, 8], [10, 12], [15, 13]]}
+        "text-size": {
+          "stops": [
+            [0, 8],
+            [10, 12],
+            [15, 13]
+          ]
+        }
       },
       "paint": {
         "text-color": "rgba(119, 119, 119, 1)",
         "text-halo-color": "rgba(255,255,255,0.75)",
-        "text-halo-width": {"stops": [[0, 1], [16, 1.5], [17, 2]]}
+        "text-halo-width": {
+          "stops": [
+            [0, 1],
+            [16, 1.5],
+            [17, 2]
+          ]
+        }
       }
     },
     {
@@ -17044,12 +20238,25 @@
         "text-letter-spacing": 0.05,
         "text-offset": [0, 0.1],
         "text-rotation-alignment": "map",
-        "text-size": {"stops": [[0, 8], [10, 12], [14, 13], [15, 14]]}
+        "text-size": {
+          "stops": [
+            [0, 8],
+            [10, 12],
+            [14, 13],
+            [15, 14]
+          ]
+        }
       },
       "paint": {
         "text-color": "rgba(119, 119, 119, 1)",
         "text-halo-color": "rgba(255,255,255,0.75)",
-        "text-halo-width": {"stops": [[0, 1], [16, 1.5], [17, 2]]}
+        "text-halo-width": {
+          "stops": [
+            [0, 1],
+            [16, 1.5],
+            [17, 2]
+          ]
+        }
       }
     },
     {
@@ -17066,12 +20273,26 @@
         "text-letter-spacing": 0.05,
         "text-offset": [0, 0.1],
         "text-rotation-alignment": "map",
-        "text-size": {"stops": [[0, 8], [10, 12], [13, 13], [14, 14], [15, 15]]}
+        "text-size": {
+          "stops": [
+            [0, 8],
+            [10, 12],
+            [13, 13],
+            [14, 14],
+            [15, 15]
+          ]
+        }
       },
       "paint": {
         "text-color": "rgba(119, 119, 119, 1)",
         "text-halo-color": "rgba(255,255,255,0.75)",
-        "text-halo-width": {"stops": [[0, 1], [16, 1.5], [17, 2]]}
+        "text-halo-width": {
+          "stops": [
+            [0, 1],
+            [16, 1.5],
+            [17, 2]
+          ]
+        }
       }
     },
     {
@@ -17088,12 +20309,26 @@
         "text-letter-spacing": 0.05,
         "text-offset": [0, 0.1],
         "text-rotation-alignment": "map",
-        "text-size": {"stops": [[0, 8], [10, 12], [13, 13], [14, 14], [15, 15]]}
+        "text-size": {
+          "stops": [
+            [0, 8],
+            [10, 12],
+            [13, 13],
+            [14, 14],
+            [15, 15]
+          ]
+        }
       },
       "paint": {
         "text-color": "rgba(119, 119, 119, 1)",
         "text-halo-color": "rgba(255,255,255,0.75)",
-        "text-halo-width": {"stops": [[0, 1], [16, 1.5], [17, 2]]}
+        "text-halo-width": {
+          "stops": [
+            [0, 1],
+            [16, 1.5],
+            [17, 2]
+          ]
+        }
       }
     },
     {
@@ -17110,12 +20345,26 @@
         "text-letter-spacing": 0.05,
         "text-offset": [0, 0.1],
         "text-rotation-alignment": "map",
-        "text-size": {"stops": [[0, 8], [10, 12], [13, 13], [14, 14], [15, 15]]}
+        "text-size": {
+          "stops": [
+            [0, 8],
+            [10, 12],
+            [13, 13],
+            [14, 14],
+            [15, 15]
+          ]
+        }
       },
       "paint": {
         "text-color": "rgba(119, 119, 119, 1)",
         "text-halo-color": "rgba(255,255,255,0.75)",
-        "text-halo-width": {"stops": [[0, 1], [16, 1.5], [17, 2]]}
+        "text-halo-width": {
+          "stops": [
+            [0, 1],
+            [16, 1.5],
+            [17, 2]
+          ]
+        }
       }
     },
     {
@@ -17265,12 +20514,24 @@
         "text-font": ["Noto-Regular"],
         "text-letter-spacing": 0.1,
         "text-offset": [0, 0.1],
-        "text-size": {"stops": [[0, 11], [3, 13], [4, 17], [5, 20]]}
+        "text-size": {
+          "stops": [
+            [0, 11],
+            [3, 13],
+            [4, 17],
+            [5, 20]
+          ]
+        }
       },
       "paint": {
         "text-color": "#666666",
         "text-halo-color": "rgba(221, 221, 221, 0.5)",
-        "text-halo-width": {"stops": [[1, 1], [5, 2]]}
+        "text-halo-width": {
+          "stops": [
+            [1, 1],
+            [5, 2]
+          ]
+        }
       }
     },
     {
@@ -17286,12 +20547,24 @@
         "text-font": ["Noto-Regular"],
         "text-letter-spacing": 0.25,
         "text-offset": [0, 0.1],
-        "text-size": {"stops": [[0, 10], [3, 14], [4, 17], [5, 20]]}
+        "text-size": {
+          "stops": [
+            [0, 10],
+            [3, 14],
+            [4, 17],
+            [5, 20]
+          ]
+        }
       },
       "paint": {
         "text-color": "#666666",
         "text-halo-color": "rgba(221, 221, 221, 0.5)",
-        "text-halo-width": {"stops": [[1, 1], [5, 2]]}
+        "text-halo-width": {
+          "stops": [
+            [1, 1],
+            [5, 2]
+          ]
+        }
       }
     },
     {
@@ -17308,13 +20581,26 @@
         "text-letter-spacing": 0.15,
         "text-offset": [0, 0.1],
         "text-size": {
-          "stops": [[0, 8], [12, 13], [14, 14], [15, 15], [16, 16], [17, 18]]
+          "stops": [
+            [0, 8],
+            [12, 13],
+            [14, 14],
+            [15, 15],
+            [16, 16],
+            [17, 18]
+          ]
         }
       },
       "paint": {
         "text-color": "#666",
         "text-halo-color": "rgba(255, 255, 255, 1)",
-        "text-halo-width": {"stops": [[0, 1], [16, 1.5], [17, 2]]}
+        "text-halo-width": {
+          "stops": [
+            [0, 1],
+            [16, 1.5],
+            [17, 2]
+          ]
+        }
       }
     },
     {
@@ -17332,7 +20618,12 @@
         "text-font": ["Noto-Regular"],
         "text-letter-spacing": 0.05,
         "text-offset": [0, 2.5],
-        "text-size": {"stops": [[12, 9], [17, 13]]}
+        "text-size": {
+          "stops": [
+            [12, 9],
+            [17, 13]
+          ]
+        }
       },
       "paint": {
         "text-color": "rgba(102, 102, 102, 1)",
@@ -17354,7 +20645,12 @@
         "text-font": ["Noto-Regular"],
         "text-letter-spacing": 0.05,
         "text-offset": [0, 2.5],
-        "text-size": {"stops": [[12, 9], [17, 13]]}
+        "text-size": {
+          "stops": [
+            [12, 9],
+            [17, 13]
+          ]
+        }
       },
       "paint": {
         "text-color": {
@@ -17415,7 +20711,14 @@
         "text-letter-spacing": 0.1,
         "text-offset": [0, 0.1],
         "text-size": {
-          "stops": [[0, 8], [12, 11], [13, 12], [14, 13], [15, 14], [16, 15]]
+          "stops": [
+            [0, 8],
+            [12, 11],
+            [13, 12],
+            [14, 13],
+            [15, 14],
+            [16, 15]
+          ]
         }
       },
       "paint": {
@@ -17434,9 +20737,19 @@
         "symbol-placement": "point",
         "text-field": "{name}",
         "text-font": ["Noto-Regular"],
-        "text-letter-spacing": {"stops": [[12, 0.45], [17, 0.8]]},
+        "text-letter-spacing": {
+          "stops": [
+            [12, 0.45],
+            [17, 0.8]
+          ]
+        },
         "text-offset": [0, 1],
-        "text-size": {"stops": [[12, 17], [17, 26]]}
+        "text-size": {
+          "stops": [
+            [12, 17],
+            [17, 26]
+          ]
+        }
       },
       "paint": {
         "text-color": "#666",
@@ -17459,7 +20772,13 @@
         "text-letter-spacing": 0.1,
         "text-offset": [0, 0.1],
         "text-rotation-alignment": "map",
-        "text-size": {"stops": [[0, 8], [12, 12], [16, 16]]}
+        "text-size": {
+          "stops": [
+            [0, 8],
+            [12, 12],
+            [16, 16]
+          ]
+        }
       },
       "paint": {
         "text-color": "#666",
@@ -17598,7 +20917,10 @@
       },
       "paint": {
         "text-color": {
-          "stops": [[7, "rgba(160, 160, 160, 1)"], [9, "#4D4D4D"]]
+          "stops": [
+            [7, "rgba(160, 160, 160, 1)"],
+            [9, "#4D4D4D"]
+          ]
         },
         "text-halo-color": "rgba(255, 255, 255, 1)",
         "text-halo-width": 2
@@ -17633,7 +20955,10 @@
       },
       "paint": {
         "text-color": {
-          "stops": [[5, "rgba(150, 150, 150, 1)"], [7, "#4D4D4D"]]
+          "stops": [
+            [5, "rgba(150, 150, 150, 1)"],
+            [7, "#4D4D4D"]
+          ]
         },
         "text-halo-color": "rgba(255, 255, 255, 1)",
         "text-halo-width": 2
@@ -17653,12 +20978,22 @@
         "text-offset": [0, 0.1],
         "text-padding": 10,
         "text-size": {
-          "stops": [[0, 8], [4, 12], [5, 13], [6, 17], [7, 22], [8, 24]]
+          "stops": [
+            [0, 8],
+            [4, 12],
+            [5, 13],
+            [6, 17],
+            [7, 22],
+            [8, 24]
+          ]
         }
       },
       "paint": {
         "text-color": {
-          "stops": [[4, "rgba(138, 138, 138, 1)"], [5, "rgba(68, 68, 68, 1)"]]
+          "stops": [
+            [4, "rgba(138, 138, 138, 1)"],
+            [5, "rgba(68, 68, 68, 1)"]
+          ]
         },
         "text-halo-color": "rgba(255, 255, 255, 1)",
         "text-halo-width": 2
@@ -17677,7 +21012,15 @@
         "text-letter-spacing": 0.05,
         "text-offset": [0, 0.1],
         "text-padding": 10,
-        "text-size": {"stops": [[0, 10], [4, 11], [5, 12], [7, 14], [8, 16]]}
+        "text-size": {
+          "stops": [
+            [0, 10],
+            [4, 11],
+            [5, 12],
+            [7, 14],
+            [8, 16]
+          ]
+        }
       },
       "paint": {
         "text-color": "rgba(102, 102, 102, 1)",
@@ -17698,7 +21041,15 @@
         "text-letter-spacing": 0.3,
         "text-offset": [0, 0.1],
         "text-padding": 10,
-        "text-size": {"stops": [[0, 10], [4, 11], [5, 12], [7, 14], [8, 16]]}
+        "text-size": {
+          "stops": [
+            [0, 10],
+            [4, 11],
+            [5, 12],
+            [7, 14],
+            [8, 16]
+          ]
+        }
       },
       "paint": {
         "text-color": "rgba(102, 102, 102, 1)",
@@ -17721,16 +21072,31 @@
         "text-offset": [0, 0.1],
         "text-padding": 3,
         "text-size": {
-          "stops": [[0, 10], [4, 14], [5, 20], [6, 22], [7, 23], [8, 25]]
+          "stops": [
+            [0, 10],
+            [4, 14],
+            [5, 20],
+            [6, 22],
+            [7, 23],
+            [8, 25]
+          ]
         },
         "text-transform": "uppercase"
       },
       "paint": {
         "text-color": {
-          "stops": [[3, "rgba(117, 117, 117, 1)"], [6, "rgba(51, 50, 50, 1)"]]
+          "stops": [
+            [3, "rgba(117, 117, 117, 1)"],
+            [6, "rgba(51, 50, 50, 1)"]
+          ]
         },
         "text-halo-color": "rgb(255, 255, 255)",
-        "text-halo-width": {"stops": [[1, 0.5], [5, 2]]}
+        "text-halo-width": {
+          "stops": [
+            [1, 0.5],
+            [5, 2]
+          ]
+        }
       }
     },
     {
@@ -17738,7 +21104,9 @@
       "type": "line",
       "source": "vectorTiles",
       "source-layer": "Town garden path",
-      "paint": {"line-color": "rgba(204, 204, 204, 1)"}
+      "paint": {
+        "line-color": "rgba(204, 204, 204, 1)"
+      }
     }
   ],
   "id": "main"
